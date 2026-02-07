@@ -11,5 +11,14 @@ int main()
     Student s;
     std::cout << "Iveskite studento varda ir pavarde: " << std::endl;
     std::cin >> s.name >> s.surname;
+    std::cout << "Iveskite namu darbu skaiciu: " << std::endl;
+    std::cin >> s.n;
+    for (int i = 0; i < s.n; i++) {
+        std::cout << "Iveskite " << i + 1 << " darbo ivertinima: " << std::endl;
+        std::cin >> s.nd;
+        s.sum += s.nd;
+    }
+    s.avg = s.sum/s.n;
+    
     return 0;
 }
