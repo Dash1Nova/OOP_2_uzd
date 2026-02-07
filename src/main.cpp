@@ -19,6 +19,9 @@ int main()
         s.sum += s.nd;
     }
     s.avg = s.sum/s.n;
+    std::cout << "Iveskite egzamino ivertinima: " << std::endl;
+    std::cin >> s.egz;
+    s.final_mark = 0.4*s.avg + 0.6*s.egz;
     
     return 0;
 }
