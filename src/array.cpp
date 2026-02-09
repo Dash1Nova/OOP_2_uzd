@@ -72,7 +72,7 @@ for (auto& stud : Students) {
     double final_mark;
     if (output == 0) {
                 int sum = 0;
-                for (int i = 0; i < s.n; i++) {
+                for (int i = 0; i < stud.n; i++) {
                 sum += stud.nd[i];
                 }
                 double avg = (double)sum/stud.n;
@@ -81,7 +81,7 @@ for (auto& stud : Students) {
         } else {
             int temp;
             for (int i = 0; i < stud.n; i++) {
-                for (int j = j+1; j < stud.n; j++) {
+                for (int j = i+1; j < stud.n; j++) {
                     if (stud.nd[i] > stud.nd[j]) {
                         temp = stud.nd[i];
                         stud.nd[i] = stud.nd[j];
