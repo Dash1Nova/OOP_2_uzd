@@ -58,7 +58,7 @@ void Output(const std::vector<Student> &Students) {
 
                 for (int i = 0; i < stud.n; i++) {
                     for (int j = i+1; j < stud.n; j++) {
-                        if (stud.nd[i] > stud.nd[j]) {
+                        if (temp[i] > temp[j]) {
                             int t = temp[i];
                             temp[i] = temp[j];
                             temp[j] = t;
