@@ -87,6 +87,27 @@ void createFile (const std::vector<Student> &Students, int n) {
     kursiokai.close();
 }
 
+void readFile(const std::string &filename) {
+    std::ifstream stud_file(filename);
+    std::string line;
+    std::vector<Student> Students;
+    std::vector<int> nd;
+
+    std::ifstream myFile(filename);
+    while (std::getline(stud_file, line)) {
+        std::istringstream iss(line);
+        Student s;
+        iss >> s.name >> s.surname;
+        int mark;
+        s.nd.clear();
+        while (iss >> mark) {
+            nd.push_back(mark);
+        }
+    }
+
+    stud_file.close();
+}
+
 int main()
 {
     Student s;
