@@ -11,6 +11,7 @@ struct Student {
     std::string name, surname;
     int egz;
     std::vector<int> nd;
+    double finalAvg, finalMed;
 };
 
 void Output(const std::vector<Student>& Students) {
@@ -72,7 +73,7 @@ double avg(const std::vector<int> &nd, int egz) {
         for (int mark : nd) {
             sum += mark;
         }
-    return 0.4*((double)sum / nd.size()) + 0.6*egz;
+    return 0.4*(double(sum) / nd.size()) + 0.6*egz;
 }
 
 std::string GenerateName(const std::string &vardas,
@@ -89,7 +90,7 @@ std::string GenerateName(const std::string &vardas,
     return saknis + "is";
 }
 
-void createFile (const std::vector<Student> &Students, int n) {
+bool createFile (const std::vector<Student> &Students, int n) {
     std::ofstream kursiokai("kursiokai.txt");
     kursiokai << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde";
     for (int i = 0; i < n; i++) {
@@ -104,12 +105,11 @@ void createFile (const std::vector<Student> &Students, int n) {
         }
         kursiokai << stud.egz << "\n";
     }
-
     kursiokai.close();
+    return true;
 }
 
-
-void readFile(const std::string &filename) {
+bool readFile(const std::string &filename, std::vector<Student> &Students) {
     std::ifstream stud_file(filename);
     std::string line;
     std::getline(stud_file, line);
@@ -130,16 +130,40 @@ void readFile(const std::string &filename) {
         grades.pop_back();
         s.nd = grades;
 
-        double final_avg = avg(s.nd, s.egz);
-        double final_med = med(s.nd, s.egz);
-
-        std::cout << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(15) << std::fixed << std::setprecision(2) << final_avg << std::setw(20) << final_med << "\n";;
+        s.finalAvg = avg(s.nd, s.egz);
+        s.finalMed = med(s.nd, s.egz);
+        
+        std::cout << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(15) << std::fixed << std::setprecision(2) << s.finalAvg << std::setw(20) << s.finalMed << "\n";;
+        Students.push_back(s);
         }
     }
-    ///////////////////////////////////////std::cout << std::string(70, '-') << "\n";
     stud_file.close();
+    return true;
 }
 
+bool compareByName(const Student &a, const Student &b) {
+    return a.name < b.name;
+}
+
+bool compareBySurname(const Student &a, const Student &b) {
+    return a.surname < b.surname;
+}
+
+bool compareByMed(const Student &a, const Student &b) {
+    return a.finalMed < b.finalMed;
+}
+
+bool compareByAvg(const Student &a, const Student &b) {
+    return a.finalAvg < b.finalAvg;
+}
+
+void printResults(const std::vector<Student> &Students) {
+    std::cout << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(15) << "Galutinis (Vid.)" << std::setw(15) << "Galutinis (Med.)\n";
+    std::cout << "------------------------------------------------------\n";
+    for (const auto& s : Students) {
+        std::cout << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(15) << std::fixed << std::setprecision(2) << s.finalAvg << std::setw(15) << s.finalMed << "\n";
+    }
+}
 
 int main()
 {
@@ -156,8 +180,9 @@ int main()
         std::cout << "2 - generuoti tik pazymius.\n";
         std::cout << "3 - generuoti studentu vardus, pavardes ir pazymius.\n";
         std::cout << "4 - baigti darba.\n";
+        std::cout << "5 - nuskaityti is failo.\n";
         std::cin >> choice;
-        while (std::cin.fail() || choice < 1 || choice > 4) {
+        while (std::cin.fail() || choice < 1 || choice > 5) {
         std::cout << "Klaidinga ivestis. Iveskite skaiciu 1-4:\n";
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -264,8 +289,37 @@ int main()
         }
         
         else if (choice == 4) break;
-    }
-    
+        else if (choice == 5) {
+        std::string filename;
+        std::cout << "Iveskite failo pavadinima: ";
+        std::cin >> filename;
+        readFile(filename, Students);
+        
+        int sorting;
+        std::cout << "Pasirinkite pagal ka rusiuoti duomenis:\n";
+        std::cin >> sorting;
+        std::cout << "1 - rusiuoti pagal varda.\n";
+        std::cout << "2 - rusiuoti pagal pavarde.\n";
+        std::cout << "3 - rusiuoti pagal galutini ivertinima (Vid.).\n";
+        std::cout << "4 - rusiuoti pagal galutini ivertinima (Med.).\n";
+        while (std::cin.fail() || sorting < 1 || sorting > 4) {
+        std::cout << "Klaidinga ivestis. Iveskite 1-4:\n";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin >> sorting;
+        }
 
+        if (sorting == 1)
+            std::sort(Students.begin(), Students.end(), compareByName);
+        else if (sorting == 2)
+            std::sort(Students.begin(), Students.end(), compareBySurname);
+        else if (sorting == 3)
+            std::sort(Students.begin(), Students.end(), compareByAvg);
+        else if (sorting == 4)
+            std::sort(Students.begin(), Students.end(), compareByMed);
+
+        printResults(Students);
+    }
+    }    
     return 0;
 }
