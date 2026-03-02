@@ -214,29 +214,34 @@ void handleOutput(std::vector<Student>& Students) {
     }
 }
 
+int showMenu() {
+    int choice;
+    std::cout << "1 - iveskti viska ranka.\n";
+    std::cout << "2 - generuoti tik pazymius.\n";
+    std::cout << "3 - generuoti studentu vardus, pavardes ir pazymius.\n";
+    std::cout << "4 - baigti darba.\n";
+    std::cout << "5 - nuskaityti is failo.\n";
+    std::cout << "Pasirinkite: \n";
+    std::cin >> choice;
+    while (std::cin.fail() || choice < 1 || choice > 5) {
+    std::cout << "Klaidinga ivestis. Iveskite skaiciu 1-5:\n";
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin >> choice;
+    }
+    
+    return choice;
+}
+
 int main() {
     try {
     Student s;
     int mark;
     std::vector<Student> Students;
-    
-    int choice;
     srand(time(NULL));
-
+    
     while (true) {
-        std::cout << "1 - iveskti viska ranka.\n";
-        std::cout << "2 - generuoti tik pazymius.\n";
-        std::cout << "3 - generuoti studentu vardus, pavardes ir pazymius.\n";
-        std::cout << "4 - baigti darba.\n";
-        std::cout << "5 - nuskaityti is failo.\n";
-        std::cout << "Pasirinkite: \n";
-        std::cin >> choice;
-        while (std::cin.fail() || choice < 1 || choice > 5) {
-        std::cout << "Klaidinga ivestis. Iveskite skaiciu 1-5:\n";
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin >> choice;
-        }
+    int choice = showMenu();
         
         if (choice == 1) {
             while (true) {
