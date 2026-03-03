@@ -346,38 +346,20 @@ int showMenu() {
 void manualInput(std::vector<Student>& Students) {
     while (true) {
         Student s;
-        int mark;
-                
-        std::cout << "Iveskite studento varda arba zodi 'STOP', jei norite baigti ivesti: \n";
-        std::cin >> s.name;
-        if (s.name == "STOP") break;
-                
-        std::cout << "Iveskite studento pavarde: \n";
-        std::cin >> s.surname;
-                
-        std::cout << "Iveskite studento namu darbo ivertinima arba parasykite '0', jei norite baigti ivesti: \n";
-                
+        std::string name = inputWord(
+            "Iveskite studento varda arba zodi STOP, jei norite baigti: \n"
+        );
+        if (name == "STOP") break;
+        s.name = name;
+        s.surname = inputWord("Iveskite studento pavarde: \n");
+        std::cout << "Iveskite namu darbu pazymius arba 0, jei norite baigti ivesti): \n";
         while (true) {
-            std::cin >> mark;
-            while (std::cin.fail() || mark < 1 || mark > 10) {
-                std::cout << "Klaidinga ivestis. Iveskite skaiciu nuo 1 iki 10 imtinai.\n";
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cin >> mark;
-            }
+            int mark = inputInt("Namu darbo pazymys: \n", 0, 10);
             if (mark == 0) break;
             s.nd.push_back(mark);
         }
-                
-        std::cout << "Iveskite egzamino ivertinima: \n";
-        std::cin >> s.egz;
-        while (std::cin.fail() || s.egz <= 0 || s.egz > 10) {
-            std::cout << "Klaidinga ivestis. Iveskite skaiciu nuo 1 iki 10 imtinai.\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cin >> s.egz;
-        }
-                
+        s.egz = inputInt("Iveskite egzamino ivertinima: \n", 1, 10);
+
         s.finalAvg = avg(s.nd, s.egz);
         s.finalMed = med(s.nd, s.egz);
 
