@@ -312,7 +312,7 @@ void handleOutput(std::vector<Student>& Students) {
     printResults(Students, outputChoice == 2, "rezultatai.txt");
 }
 
-int showMenu() {
+int showMeniu() {
     return inputInt(
         "1 - ivesti viska ranka.\n"
         "2 - generuoti tik pazymius.\n"
@@ -425,7 +425,7 @@ int main() {
     srand(time(NULL));
     
     while (true) {
-    int choice = showMenu();
+    int choice = showMeniu();
         
         if (choice == 1) {
             manualInput(Students);
