@@ -390,17 +390,8 @@ void generateGrades(std::vector<Student>& Students) {
 }
 
 void generateNamesGrades(std::vector<Student>& Students) {
-    int numb, n;
-    std::cout << "Kiek studentu generuoti: \n";
-    std::cin >> numb;
-    std::cout << "Kiek namu darbu generuoti: \n";
-    std::cin >> n;
-    while (std::cin.fail() || n <= 0) {
-        std::cout << "Klaidinga ivestis. Iveskite teigiama skaiciu.\n";
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin >> n;
-    }
+    int numb = inputInt("Kiek studentu generuoti: \n", 1);
+    int n = inputInt("Kiek namu darbu generuoti: \n", 1);
     
     std::vector<std::string> Names = {"Jonas", "Domantas", "Martynas", "Edvinas", "Evelina", "Karolina", "Gabija", "Livija"};
     std::vector<std::string> Surnames = {"1Pavard", "2Pavard", "3Pavard", "4Pavard", "5Pavard"};
