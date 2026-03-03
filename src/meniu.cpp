@@ -47,7 +47,7 @@ void generateGrades(std::vector<Student>& Students) {
         Student s;
         s.name = inputWord("Iveskite studento varda arba zodi 'STOP', jei norite baigti:\n");
         if (s.name == "STOP" || s.name == "stop") break;
-        s.name = inputWord("Iveskite studento pavarde: \n");
+        s.surname = inputWord("Iveskite studento pavarde: \n");
         
         s.nd.clear();
         for (int i = 0; i < n; i++) {
