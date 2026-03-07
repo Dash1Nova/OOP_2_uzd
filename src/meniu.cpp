@@ -5,6 +5,9 @@
 #include "fileHandling.h"
 #include <iostream>
 #include <chrono>
+#include <iomanip>
+#include <random>
+#include <fstream>
 
 int showMeniu() {
     return inputInt(
@@ -13,8 +16,9 @@ int showMeniu() {
         "3 - generuoti studentu vardus, pavardes ir pazymius.\n"
         "4 - baigti darba.\n"
         "5 - nuskaityti is failo.\n"
-        "Pasirinkite (1-5): ",
-        1, 5);
+        "6 - generuoti failus.\n"
+        "Pasirinkite (1-6): ",
+        1, 6);
 }
 
 void manualInput(std::vector<Student>& Students) {
@@ -111,4 +115,64 @@ void scanFile(std::vector<Student>& Students) {
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     
     std::cout << "Vykdymo laikas: " << duration.count() << " ms\n";
+}
+
+bool generateFile() {
+    try {
+    int ndCount = 5;
+    int fnumb;
+    long long records;
+    
+    fnumb = inputInt("Kiek failu generuoti: \n", 1);
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> name;
+    std::uniform_int_distribution<> grade(1, 10);
+
+        for (int f = 0; f < fnumb; f++) {
+
+            records = inputInt("Kokio dydzio faila generuoti? Iveskite irasu skaiciu:\n", 1);
+            std::string filename = "studentai_" + std::to_string(records) + ".txt";
+
+            std::ofstream file(filename);
+
+            if (!file.is_open()) {
+                throw std::runtime_error("Nepavyko sukurti failo.");
+            }
+
+            file << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde";
+
+            for (int i = 0; i < ndCount; i++) {
+                file << std::setw(6) << ("ND" + std::to_string(i + 1));
+            }
+
+            file << std::setw(9) << "Egzaminas.\n";
+
+            name = std::uniform_int_distribution<>(1, records);
+
+            for (long long i = 0; i < records; i++) {
+
+                int newName = name(gen);
+                int newSurname = name(gen);
+
+                file << std::left << std::setw(15) << ("Vardas" + std::to_string(newName)) << std::setw(15) << ("Pavarde" + std::to_string(newSurname));
+
+                for (int j = 0; j < ndCount; j++) {
+                    file << std::setw(6) << grade(gen);
+                }
+
+                file << std::setw(10) << grade(gen) << "\n";
+            }
+        }
+    return true;
+}
+    catch (const std::exception &e) {
+        std::cerr << "Klaida: " << e.what() << std::endl;
+        return false;
+    }
+    catch (...) {
+        std::cerr << "Nezinoma klaida." << std::endl;
+        return false;
+    }
 }
