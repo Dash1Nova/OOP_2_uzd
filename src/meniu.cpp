@@ -127,13 +127,12 @@ bool generateFile() {
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> name;
     std::uniform_int_distribution<> grade(1, 10);
 
         for (int f = 0; f < fnumb; f++) {
 
             records = inputInt("Kokio dydzio faila generuoti? Iveskite irasu skaiciu:\n", 1);
-            std::string filename = "studentai_" + std::to_string(records) + ".txt";
+            std::string filename = "data/studentai_" + std::to_string(records) + ".txt";
 
             std::ofstream file(filename);
 
@@ -149,14 +148,8 @@ bool generateFile() {
 
             file << std::setw(9) << "Egzaminas.\n";
 
-            name = std::uniform_int_distribution<>(1, records);
-
-            for (long long i = 0; i < records; i++) {
-
-                int newName = name(gen);
-                int newSurname = name(gen);
-
-                file << std::left << std::setw(15) << ("Vardas" + std::to_string(newName)) << std::setw(15) << ("Pavarde" + std::to_string(newSurname));
+            for (long long i = 1; i <= records; ++i) {
+                file << std::left << std::setw(15) << ("Vardas" + std::to_string(i)) << std::setw(15) << ("Pavarde" + std::to_string(i));
 
                 for (int j = 0; j < ndCount; j++) {
                     file << std::setw(6) << grade(gen);
@@ -175,4 +168,39 @@ bool generateFile() {
         std::cerr << "Nezinoma klaida." << std::endl;
         return false;
     }
+}
+
+void sortingStudents(std::string sourceFile) {
+    std::ifstream in(sourceFile);
+    if (!in.is_open()) return;
+
+    std::vector<Student> vargsiukai, kietiakai;
+    std::string line;
+    std::getline(in, line);
+
+    Student temp;
+    int score;
+    while (in >> temp.name >> temp.surname) {
+        double sum = 0;
+        for (int i = 0; i < 5; i++) {
+            in >> score;
+            sum += score;
+        }
+        in >> temp.egz;
+        temp.finalAvg = avg(temp.nd, temp.egz);
+
+        if (temp.finalAvg < 5.0) vargsiukai.push_back(temp);
+        else kietiakai.push_back(temp);
+    }
+    in.close();
+
+    auto saveToFile = [](const std::vector<Student>& students, std::string filename) {
+        std::ofstream out(filename);
+        for (const auto& s : students) {
+            out << s.name << " " << s.surname << " " << s.finalAvg << "\n";
+        }
+    };
+
+    saveToFile(vargsiukai, "vargsiukai" + sourceFile);
+    saveToFile(kietiakai, "kietiakai" + sourceFile);
 }
