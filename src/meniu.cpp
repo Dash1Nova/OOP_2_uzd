@@ -17,8 +17,9 @@ int showMeniu() {
         "4 - baigti darba.\n"
         "5 - nuskaityti is failo.\n"
         "6 - generuoti failus.\n"
-        "Pasirinkite (1-6): ",
-        1, 6);
+        "7 - rusiuoti studentus i du atskirus failus.\n"
+        "Pasirinkite (1-7): ",
+        1, 7);
 }
 
 void manualInput(std::vector<Student>& Students) {
@@ -170,8 +171,12 @@ bool generateFile() {
     }
 }
 
-void sortingStudents(std::string sourceFile) {
-    std::ifstream in(sourceFile);
+void sortingStudents() {
+    std::string filename;
+    std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
+    system("powershell ls data/*.txt");
+    std::cin >> filename;
+    std::ifstream in(filename);
     if (!in.is_open()) return;
 
     std::vector<Student> vargsiukai, kietiakai;
@@ -201,6 +206,6 @@ void sortingStudents(std::string sourceFile) {
         }
     };
 
-    saveToFile(vargsiukai, "vargsiukai" + sourceFile);
-    saveToFile(kietiakai, "kietiakai" + sourceFile);
+    saveToFile(vargsiukai, "vargsiukai" + filename);
+    saveToFile(kietiakai, "kietiakai" + filename);
 }

@@ -38,6 +38,10 @@ int main() {
     generateFile();
     break;
     }
+    else if (choice == 7) {
+    sortingStudents();
+    break;
+    }
 }
     return 0;
 }
