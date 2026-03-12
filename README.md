@@ -32,4 +32,5 @@ Patvirtinimai, kad testavimai tikrai įvyko:
 <img width="618" height="293" alt="Ekrano kopija 2026-03-13 002107" src="https://github.com/user-attachments/assets/bcca40cd-4ecb-4a6d-995b-3bc8bf87f058" />
 <img width="621" height="297" alt="Ekrano kopija 2026-03-13 002228" src="https://github.com/user-attachments/assets/5c905760-de15-48c0-9e21-3d155148fcc9" />
 <img width="641" height="302" alt="Ekrano kopija 2026-03-13 002439" src="https://github.com/user-attachments/assets/ff958a9b-b3e8-4d21-a57b-64662779376e" />
+<img width="708" height="278" alt="Ekrano kopija 2026-03-13 002346" src="https://github.com/user-attachments/assets/b58556d1-7831-4e1e-9d82-649d08a0e0c1" />
 
