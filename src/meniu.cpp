@@ -217,13 +217,14 @@ void sortingStudents() {
     double readTime = std::chrono::duration<double>(readEnd - readStart).count();
     std::cout << "Failo skaitymas uztruko: " << readTime << " s\n";
 
-    auto sortStart = std::chrono::high_resolution_clock::now();
-
+    
     int choiceOutput = inputInt("Rusiuoti pagal:\n"
         "1 - Varda\n"
         "2 - Pavarde\n"
         "3 - Galutini bala\n", 1, 3);
-
+        
+    auto sortStart = std::chrono::high_resolution_clock::now();
+    
     if (choiceOutput == 1) {
     std::sort(vargsiukai.begin(), vargsiukai.end(), compareByName);
     std::sort(kietiakai.begin(), kietiakai.end(), compareByName);
@@ -257,8 +258,9 @@ void sortingStudents() {
 
     auto writeEnd = std::chrono::high_resolution_clock::now();
     double writeTime = std::chrono::duration<double>(writeEnd - writeStart).count();
-    std::cout << "Rašymas į failus uztruko: " << writeTime << " s\n";
+    std::cout << "Rasymas i failus uztruko: " << writeTime << " s\n";
 
     auto totalEnd = std::chrono::high_resolution_clock::now();
     double totalTime = std::chrono::duration<double>(totalEnd - totalStart).count();
+    std::cout << "Visos programos vykdymo laikas: " << totalTime << " s\n";
 }
