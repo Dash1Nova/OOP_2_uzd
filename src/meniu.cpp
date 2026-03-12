@@ -136,6 +136,8 @@ bool generateFile() {
             records = inputInt("Kokio dydzio faila generuoti? Iveskite irasu skaiciu:\n", 1);
             std::string filename = "data/studentai_" + std::to_string(records) + ".txt";
 
+            auto start = std::chrono::high_resolution_clock::now();
+
             std::ofstream file(filename);
 
             if (!file.is_open()) {
@@ -159,6 +161,9 @@ bool generateFile() {
 
                 file << std::setw(10) << grade(gen) << "\n";
             }
+            auto end = std::chrono::high_resolution_clock::now();
+            double seconds = std::chrono::duration<double>(end - start).count();
+            std::cout << "Failo generavimo laikas yra: " << seconds << " s\n";
         }
     return true;
 }
@@ -177,12 +182,17 @@ void sortingStudents() {
     std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
     system("powershell ls data/*.txt");
     std::cin >> filename;
+
+    auto totalStart = std::chrono::high_resolution_clock::now();
+
     std::ifstream in("data/" + filename);
     if (!in.is_open()) return;
 
     std::vector<Student> vargsiukai, kietiakai;
     std::string line;
     std::getline(in, line);
+
+    auto readStart = std::chrono::high_resolution_clock::now();
 
     Student temp;
     int score;
@@ -203,6 +213,12 @@ void sortingStudents() {
     }
     in.close();
 
+    auto readEnd = std::chrono::high_resolution_clock::now();
+    double readTime = std::chrono::duration<double>(readEnd - readStart).count();
+    std::cout << "Failo skaitymas uztruko: " << readTime << " s\n";
+
+    auto sortStart = std::chrono::high_resolution_clock::now();
+
     int choiceOutput = inputInt("Rusiuoti pagal:\n"
         "1 - Varda\n"
         "2 - Pavarde\n"
@@ -221,6 +237,12 @@ void sortingStudents() {
     std::sort(kietiakai.begin(), kietiakai.end(), compareByAvg);
     }
 
+    auto sortEnd = std::chrono::high_resolution_clock::now();
+    double sortTime = std::chrono::duration<double>(sortEnd - sortStart).count();
+    std::cout << "Studentu rusiavimas uztruko: " << sortTime << " s\n";
+
+    auto writeStart = std::chrono::high_resolution_clock::now();
+
     auto saveToFile = [](const std::vector<Student>& students, std::string filename) {
         std::ofstream out(filename);
         out << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(17) << "Galutinis (Vid.)\n";
@@ -232,4 +254,11 @@ void sortingStudents() {
 
     saveToFile(vargsiukai, "data/vargsiukai.txt");
     saveToFile(kietiakai, "data/kietiakai.txt");
+
+    auto writeEnd = std::chrono::high_resolution_clock::now();
+    double writeTime = std::chrono::duration<double>(writeEnd - writeStart).count();
+    std::cout << "Rašymas į failus uztruko: " << writeTime << " s\n";
+
+    auto totalEnd = std::chrono::high_resolution_clock::now();
+    double totalTime = std::chrono::duration<double>(totalEnd - totalStart).count();
 }
