@@ -32,6 +32,6 @@ int main() {
         sortingStudents();
     }
     else if (choice == 7) break;
-}
+    }
     return 0;
 }
