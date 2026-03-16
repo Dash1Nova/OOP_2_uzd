@@ -9,6 +9,9 @@
 #include <random>
 #include <fstream>
 #include <algorithm>
+#include <vector>
+#include <list>
+#include <deque>
 
 int showMeniu() {
     return inputInt(
@@ -181,8 +184,18 @@ bool generateFile() {
     }
 }
 
+template <typename Container, typename Compare>
+void sortContainer(Container& c, Compare comp) {
+    std::sort(c.begin(), c.end(), comp);
+}
+
+template <typename Compare>
+void sortContainer(std::list<Student>& c, Compare comp) {
+    c.sort(comp);
+}
+
 template <typename Container>
-void sortingStudents() {
+void sortingStudents(Container& students) {
     std::string filename;
     std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
     system("powershell ls data/*.txt");
@@ -193,7 +206,7 @@ void sortingStudents() {
     std::ifstream in("data/" + filename);
     if (!in.is_open()) return;
 
-    Container students;
+    students.clear();
     Container vargsiukai, kietiakai;
     std::string line;
     std::getline(in, line);
@@ -204,48 +217,44 @@ void sortingStudents() {
     int score;
     while (in >> temp.name >> temp.surname) {
         temp.nd.clear();
-
         for (int i = 0; i < 5; i++) {
             in >> score;
             temp.nd.push_back(score);
         }
-
         in >> temp.egz;
 
         temp.finalAvg = avg(temp.nd, temp.egz);
         students.push_back(temp);
-
     }
     in.close();
-    
+
     auto readEnd = std::chrono::high_resolution_clock::now();
     double readTime = std::chrono::duration<double>(readEnd - readStart).count();
     std::cout << "Failo skaitymas uztruko: " << readTime << " s\n";
-    
-    
+
     int choiceOutput = inputInt("Rusiuoti pagal:\n"
         "1 - Varda\n"
         "2 - Pavarde\n"
         "3 - Galutini bala\n", 1, 3);
-        
+
     auto sortStart = std::chrono::high_resolution_clock::now();
-        
-        for (const auto& s: students) {
-            if (s.finalAvg < 5.0) vargsiukai.push_back(s);
-            else kietiakai.push_back(s);
-        }
-        
+
+    for (const auto& s: students) {
+        if (s.finalAvg < 5.0) vargsiukai.push_back(s);
+        else kietiakai.push_back(s);
+    }
+
     if (choiceOutput == 1) {
-    std::sort(vargsiukai.begin(), vargsiukai.end(), compareByName);
-    std::sort(kietiakai.begin(), kietiakai.end(), compareByName);
+        sortContainer(vargsiukai, compareByName);
+        sortContainer(kietiakai, compareByName);
     }
     else if (choiceOutput == 2) {
-    std::sort(vargsiukai.begin(), vargsiukai.end(), compareBySurname);
-    std::sort(kietiakai.begin(), kietiakai.end(), compareBySurname);
+        sortContainer(vargsiukai, compareBySurname);
+        sortContainer(kietiakai, compareBySurname);
     }
     else if (choiceOutput == 3) {
-    std::sort(vargsiukai.begin(), vargsiukai.end(), compareByAvg);
-    std::sort(kietiakai.begin(), kietiakai.end(), compareByAvg);
+        sortContainer(vargsiukai, compareByAvg);
+        sortContainer(kietiakai, compareByAvg);
     }
 
     auto sortEnd = std::chrono::high_resolution_clock::now();
@@ -256,10 +265,14 @@ void sortingStudents() {
 
     auto saveToFile = [](const auto& students, std::string filename) {
         std::ofstream out(filename);
-        out << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(17) << "Galutinis (Vid.)\n";
+        out << std::left << std::setw(15) << "Vardas"
+            << std::setw(15) << "Pavarde"
+            << std::setw(17) << "Galutinis (Vid.)\n";
         out << "-----------------------------------------------------------------------\n";
         for (const auto& s : students) {
-            out << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(17) << s.finalAvg << "\n";
+            out << std::left << std::setw(15) << s.name
+                << std::setw(15) << s.surname
+                << std::setw(17) << s.finalAvg << "\n";
         }
     };
 
@@ -274,3 +287,23 @@ void sortingStudents() {
     double totalTime = std::chrono::duration<double>(totalEnd - totalStart).count();
     std::cout << "Visos programos vykdymo laikas: " << totalTime << " s\n";
 }
+
+template void manualInput<std::vector<Student>>(std::vector<Student>&);
+template void manualInput<std::list<Student>>(std::list<Student>&);
+template void manualInput<std::deque<Student>>(std::deque<Student>&);
+
+template void generateGrades<std::vector<Student>>(std::vector<Student>&);
+template void generateGrades<std::list<Student>>(std::list<Student>&);
+template void generateGrades<std::deque<Student>>(std::deque<Student>&);
+
+template void generateNamesGrades<std::vector<Student>>(std::vector<Student>&);
+template void generateNamesGrades<std::list<Student>>(std::list<Student>&);
+template void generateNamesGrades<std::deque<Student>>(std::deque<Student>&);
+
+template void scanFile<std::vector<Student>>(std::vector<Student>&);
+template void scanFile<std::list<Student>>(std::list<Student>&);
+template void scanFile<std::deque<Student>>(std::deque<Student>&);
+
+template void sortingStudents<std::vector<Student>>(std::vector<Student>&);
+template void sortingStudents<std::list<Student>>(std::list<Student>&);
+template void sortingStudents<std::deque<Student>>(std::deque<Student>&);
