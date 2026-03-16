@@ -28,7 +28,7 @@ int main() {
             else if (choice == 6) sortingStudents(Students);
             else if (choice == 7) break;
             }
-    } else if (meniu == 2) {
+        } else if (meniu == 2) {
         std::list<Student> Students;
         while (true) {
             int choice = showMeniu();
@@ -41,7 +41,7 @@ int main() {
             else if (choice == 6) sortingStudents(Students);
             else if (choice == 7) break;
             }
-    } else if (meniu == 3) {
+        } else if (meniu == 3) {
         std::deque<Student> Students;
         while (true) {
             int choice = showMeniu();
@@ -54,6 +54,6 @@ int main() {
             else if (choice == 6) sortingStudents(Students);
             else if (choice == 7) break;
             }
-    }
+        }
     return 0;
 }
