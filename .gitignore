@@ -41,8 +41,4 @@
 *.dwo
 
 # Ignore all student data files
-studentai*.txt
-kietiakai.txt
-kursiokai.txt
-rezultatai.txt
-vargsiukai.txt
+data
