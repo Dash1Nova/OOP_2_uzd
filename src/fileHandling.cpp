@@ -6,7 +6,8 @@
 #include <iostream>
 #include <iomanip>
 
-bool createFile (const std::vector<Student> &Students, int n) {
+template <typename Container>
+bool createFile (const Container &Students, int n) {
     try {
         std::ofstream kursiokai("kursiokai.txt");
 
@@ -42,7 +43,8 @@ bool createFile (const std::vector<Student> &Students, int n) {
     }
 }
 
-bool readFile(const std::string &filename, std::vector<Student> &Students) {
+template <typename Container>
+bool readFile(const std::string &filename, Container &Students) {
     try {
         std::ifstream stud_file(filename);
         if (!stud_file.is_open()) {

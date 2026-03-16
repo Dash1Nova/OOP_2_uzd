@@ -2,11 +2,16 @@
 #define OUTPUT_H
 
 #include <vector>
+#include <list>
+#include <deque>
 #include <string>
 #include "student.h"
 
-void printResults(const std::vector<Student>& Students, bool toFile = false, const std::string& filename = "rezultatai.txt");
-void outputToFileSorting(std::vector<Student>& Students);
-void handleOutput(std::vector<Student>& Students);
+template <typename Container>
+void printResults(const Container& Students, bool toFile = false, const std::string& filename = "rezultatai.txt");
+template <typename Container>
+void outputToFileSorting(Container& Students);
+template <typename Container>
+void handleOutput(Container& Students);
 
 #endif

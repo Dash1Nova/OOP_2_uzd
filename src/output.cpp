@@ -6,7 +6,8 @@
 #include <algorithm>
 #include <fstream>
 
-void printResults(const std::vector<Student> &Students, bool toFile, const std::string &filename) {
+template <typename Container>
+void printResults(const Container &Students, bool toFile, const std::string &filename) {
     if (Students.empty()) {
         throw std::runtime_error("Studentu sarasas tuscias.");
     }
@@ -35,7 +36,8 @@ void printResults(const std::vector<Student> &Students, bool toFile, const std::
 
 }
 
-void outputToFileSorting(std::vector<Student>& Students) {
+template <typename Container>
+void outputToFileSorting(Container& Students) {
     int sorting = inputInt(
     "Pasirinkite pagal ka rusiuoti duomenis:\n"
     "1 - rusiuoti pagal varda.\n"
@@ -52,7 +54,8 @@ void outputToFileSorting(std::vector<Student>& Students) {
     }
 }
 
-void handleOutput(std::vector<Student>& Students) {
+template <typename Container>
+void handleOutput(Container& Students) {
     outputToFileSorting(Students);
     int outputChoice = inputInt(
     "Kur isvesti rezultatus:\n"

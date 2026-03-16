@@ -2,13 +2,19 @@
 #define MENIU_H
 
 #include <vector>
+#include <list>
+#include <deque>
 #include "student.h"
 
 int showMeniu();
-void manualInput(std::vector<Student>& Students);
-void generateGrades(std::vector<Student>& Students);
-void generateNamesGrades(std::vector<Student>& Students);
-void scanFile(std::vector<Student>& Students);
+template <typename Container>
+void manualInput(Container& Students);
+template <typename Container>
+void generateGrades(Container& Students);
+template <typename Container>
+void generateNamesGrades(Container& Students);
+template <typename Container>
+void scanFile(Container& Students);
 bool generateFile();
 void sortingStudents();
 

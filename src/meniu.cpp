@@ -23,7 +23,8 @@ int showMeniu() {
         1, 7);
 }
 
-void manualInput(std::vector<Student>& Students) {
+template <typename Container>
+void manualInput(Container& Students) {
     while (true) {
         Student s;
         std::string name = inputWord(
@@ -47,7 +48,8 @@ void manualInput(std::vector<Student>& Students) {
     }
 }
 
-void generateGrades(std::vector<Student>& Students) {
+template <typename Container>
+void generateGrades(Container& Students) {
     int n = inputInt("Kiek namu darbu generuoti kiekvienam studentui: \n", 1);
     while (true) {
         Student s;
@@ -69,7 +71,8 @@ void generateGrades(std::vector<Student>& Students) {
     }
 }
 
-void generateNamesGrades(std::vector<Student>& Students) {
+template <typename Container>
+void generateNamesGrades(Container& Students) {
     int numb = inputInt("Kiek studentu generuoti: \n", 1);
     int n = inputInt("Kiek namu darbu generuoti: \n", 1);
     
@@ -95,7 +98,8 @@ void generateNamesGrades(std::vector<Student>& Students) {
         }
 }
 
-void scanFile(std::vector<Student>& Students) {
+template <typename Container>
+void scanFile(Container& Students) {
     std::string filename;
     std::cout << "Iveskite failo pavadinima: ";
     system("powershell ls *.txt");
@@ -177,6 +181,7 @@ bool generateFile() {
     }
 }
 
+template <typename Container>
 void sortingStudents() {
     std::string filename;
     std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
@@ -188,8 +193,8 @@ void sortingStudents() {
     std::ifstream in("data/" + filename);
     if (!in.is_open()) return;
 
-    std::vector<Student> students;
-    std::vector<Student> vargsiukai, kietiakai;
+    Container students;
+    Container vargsiukai, kietiakai;
     std::string line;
     std::getline(in, line);
 
@@ -249,7 +254,7 @@ void sortingStudents() {
 
     auto writeStart = std::chrono::high_resolution_clock::now();
 
-    auto saveToFile = [](const std::vector<Student>& students, std::string filename) {
+    auto saveToFile = [](const auto& students, std::string filename) {
         std::ofstream out(filename);
         out << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(17) << "Galutinis (Vid.)\n";
         out << "-----------------------------------------------------------------------\n";
