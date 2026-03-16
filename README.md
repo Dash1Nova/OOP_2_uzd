@@ -6,12 +6,12 @@ bei rezultatų išvedimo į failus sparta nepriklauso nuo naudojamo kontenerio t
 nuskaitymas iš failo į pasirinktą konteinerį, studentų rūšiavimas didėjimo tvarka konteneryje, studentų skirstymas į dvi grupes. Tyrimo patikimumui visi testai
 buvo atliekami su tais pačiais failais 5 skirtingų dydžių: 1000, 10000, 100000, 1000000 ir 10000000 įrašų apimties.
 
-Lentelėse pateikiami bendras šių trijų operacijų vykdymo laikas.
+Lentelėse pateikiamas bendras šių trijų operacijų vykdymo laikas.
 
-# Testavimo sistemos parametrai:
-CPU: AMD Ryzen 7 7730U with Radeon Graphics
-RAM: 16 GB DDR4
-Diskas: SSD 512 GB
+## Testavimo sistemos parametrai:
+• CPU: AMD Ryzen 7 7730U with Radeon Graphics;  
+• RAM: 16 GB DDR4;  
+• Diskas: SSD 512 GB.
 
 ## Laiko matavimų lentelė
 
