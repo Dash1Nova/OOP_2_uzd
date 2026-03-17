@@ -231,11 +231,32 @@ void sortingStudents(Container& students) {
 
     auto splitStart = std::chrono::high_resolution_clock::now();
 
-    Container vargsiukai, kietiakai;
+    /*Container vargsiukai, kietiakai;
     for (const auto& s : students) {
         if (s.finalAvg < 5.0) vargsiukai.push_back(s);
         else kietiakai.push_back(s);
+    }*/
+
+    
+    Container vargsiukai;
+    for (auto it = students.begin(); it != students.end(); ) {
+        if (it->finalAvg < 5.0) {
+            vargsiukai.push_back(*it);
+            it = students.erase(it);
+        }
+        else {
+            ++it;
+        }
     }
+    
+
+    /*
+    auto it = std::partition(students.begin(), students.end(),
+    [](const Student& s) { return s.finalAvg >= 5.0; });
+
+    Container vargsiukai(it, students.end());
+    students.erase(it, students.end());
+    */
 
     auto splitEnd = std::chrono::high_resolution_clock::now();
     double splitTime = std::chrono::duration<double>(splitEnd - splitStart).count();
