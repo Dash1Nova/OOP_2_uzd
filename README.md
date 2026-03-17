@@ -1,5 +1,6 @@
 # OOP-projects
 
+## Pradinis release
 Po v0.4 versijos programos pritaikymo naudojimui su 3 skirtingų tipų konteineriais (vector, list, deque), buvo atliktas papildomas programos veikimo spartos 
 tyrimas, kuriuo buvo siekiama įvertinti, kaip keičiasi programos našumas naudojant skirtingus C++ standartinės bibliotekos konteinerius. Kadangi failų kūrimo
 bei rezultatų išvedimo į failus sparta nepriklauso nuo naudojamo kontenerio tipo, šio tyrimo metu buvo matuojamas tik šių dalių įvykdymo sparta: duomenų 
@@ -50,3 +51,14 @@ turėjo būti std::vector, o lėčiausias std::list. Taip galėjo nutikti dėl k
 2. std::list konteineris rūšiuodamas naudoja savo merge sort algoritmą, kuris perjungia elementų rodykles, o ne perkelia pačius objektus;
 3. matavimo rezultatus taip pat gali paveikti kompiuterio architektūra, atminties talpyklos (cache) veikimas, kompiliatoriaus optimizacijos.
 Dėl šių priežasčių gauti praktiniai rezultatai galėjo ne visiškai sutapti su teorinėmis prielaidomis.
+
+## Galutinis release
+Po pradinio relese išleidimo buvo padarytas programos optimizavimas 3 skirtingomis strategijomis su fiksuotu konteneriu - std::vector. 
+
+| Failo dydis      | 1 strategija (s) - for ciklas | 2 strategija (s) - erase | 3 strategija (s) - std::partition |
+|------------------|-------------------------------|----------------------|-----------------------|
+| 1 000            | 0.00337755                    |                 |                           |
+| 10 000           | 0.0338204                     |             |              |
+| 100 000          | 0.3158115                     |              |               |
+| 1 000 000        | 3.533805                      |               |                |
+| 10 000 000       | 38.98205                      |               |                |
