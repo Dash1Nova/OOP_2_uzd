@@ -229,32 +229,38 @@ void sortingStudents(Container& students) {
     double sortTime = std::chrono::duration<double>(sortEnd - sortStart).count();
     std::cout << "Bendras studentu rusiavimas uztruko: " << sortTime << " s\n";
 
+    int splitChoice = inputInt(
+    "Pasirinkite skaidymo strategija:\n"
+    "1 - 2 konteineriai (for)\n"
+    "2 - erase\n"
+    "3 - partition\n", 1, 3);
+
     auto splitStart = std::chrono::high_resolution_clock::now();
 
-    /*Container vargsiukai, kietiakai;
-    for (const auto& s : students) {
-        if (s.finalAvg < 5.0) vargsiukai.push_back(s);
-        else kietiakai.push_back(s);
-    }*/
+    Container vargsiukai, kietiakai;
 
-    Container vargsiukai;
-    for (auto it = students.begin(); it != students.end(); ) {
-        if (it->finalAvg < 5.0) {
-            vargsiukai.push_back(*it);
-            it = students.erase(it);
+    if (splitChoice == 1) {
+        for (const auto& s : students) {
+            if (s.finalAvg < 5.0) vargsiukai.push_back(s);
+            else kietiakai.push_back(s);
         }
-        else {
-            ++it;
+    } else if (splitChoice == 2) {
+        for (auto it = students.begin(); it != students.end(); ) {
+            if (it->finalAvg < 5.0) {
+                vargsiukai.push_back(*it);
+                it = students.erase(it);
+            } else {
+                ++it;
+            }
         }
+        kietiakai = students;
+    } else if (splitChoice == 3) {
+        auto it = std::partition(students.begin(), students.end(),
+            [](const Student& s) { return s.finalAvg >= 5.0; });
+
+        vargsiukai = Container(it, students.end());
+        kietiakai = Container(students.begin(), it);
     }
-
-    /*
-    auto it = std::partition(students.begin(), students.end(),
-    [](const Student& s) { return s.finalAvg >= 5.0; });
-
-    Container vargsiukai(it, students.end());
-    students.erase(it, students.end());
-    */
 
     auto splitEnd = std::chrono::high_resolution_clock::now();
     double splitTime = std::chrono::duration<double>(splitEnd - splitStart).count();
