@@ -1,6 +1,32 @@
-# OOP-projects
+# Aprašymas
+Ši programa skaičiuoja studentų galutinius pažymius pagal suvestus ranka arba sugeneruotus namų darbų pažymius bei egzamino įvertinimus.
 
-## Pradinis release
+## Release v.pradinė
+Sukurtas pagrindinis programos funkcionalumas: programa leidžia įvesti studentų vardus, pavardes, namų darbų rezultatus ir egzamino balą. Galutinis balas 
+skaičiuojamas pagal namų darbų vidurkį arba medianą (vartotojas gali pasirinkti). Rezultatai pateikiami dviejų skaičių po kablelio tikslumu. Vieno studento 
+duomenys saugomi struktūroje.
+
+## Release v0.1
+Programa papildyta ir veikia su nežinomu studentų ir namų darbų skaičiumi prieš įvedimą. Yra dvi versijos: viena realizuota su C masyvais, kita - su std::vector.
+Pridėta galimybė atsitiktinai generuoti namų darbų ir egzamino įvertinimus. Sukurtas meniu skirtingiems programos vykdymo variantams: galima įvesti viską ranka,
+generuoti tik pažymius, generuoti studentų vardus, pavardes ir pažymius, baigti darbą.
+
+## Release v0.2
+Programa papildyta, kad vartotojas galėtų nuskaityti studentų duomenis iš failo (tik std::vector versija). Programa leidžia pasirinkti duomenų rūšiavimo būdą: 
+pagal vardą, pavardę arba galutinį pažymį (vidurkį arba medianą). Išvedimas galimas tiek terminale, tiek faile, išvestis išlygiuota.
+
+## Release v0.3
+Funkcijų deklaracijos ir structūra perkelti į atskirus antraštinius (*.h) failus. Programa padalinta į kelis *.cpp failus pagal funkcionalumą, kad būtų lengviau 
+peržiūrėti ir pildyti kodą. Pridėtas klaidų gaudymo metodas (Eception Handling): gaudomos failų atidarymo klaidos, tikrinama įvestis, kad vartotojas negalėtų 
+įvesti neleistinų reikšmių, visi pranešimai išvedami lietuvių kalba.
+
+## Release v0.4
+Sukurta funkcija, kuri generuoja studentų failus pagal nurodytą įrašų skaičių. Vardai ir pavardės generuojami šabloniškai. Studentai su galutiniu balu < 5.0 
+perkeliami į failą „vargšiukai“, studentai su galutiniu balu >= 5.0 perkeliami į failą „kietiakai“. Buvo atlikti du tyrimai: buvo matuojama, kiek užtrunka 
+sugeneruoti failą su nurodytu įrašų skaičiumi bei matuojamas duomenų apdorojimos laikas: failo nuskaitymas, studentų rūšiavimas į dvi grupes, išvedimas į failus,
+bendras programos vykdymo laikas. Tyrimų rezultatai užfiksuoti ir pateikti lentelėse README.md faile v0.4 šakoje su komentarais.
+
+## Release v1.0-initial
 Po v0.4 versijos programos pritaikymo naudojimui su 3 skirtingų tipų konteineriais (vector, list, deque), buvo atliktas papildomas programos veikimo spartos 
 tyrimas, kuriuo buvo siekiama įvertinti, kaip keičiasi programos našumas naudojant skirtingus C++ standartinės bibliotekos konteinerius. Kadangi failų kūrimo
 bei rezultatų išvedimo į failus sparta nepriklauso nuo naudojamo kontenerio tipo, šio tyrimo metu buvo matuojamas tik šių dalių įvykdymo sparta: duomenų 
@@ -51,3 +77,22 @@ turėjo būti std::vector, o lėčiausias std::list. Taip galėjo nutikti dėl k
 2. std::list konteineris rūšiuodamas naudoja savo merge sort algoritmą, kuris perjungia elementų rodykles, o ne perkelia pačius objektus;
 3. matavimo rezultatus taip pat gali paveikti kompiuterio architektūra, atminties talpyklos (cache) veikimas, kompiliatoriaus optimizacijos.
 Dėl šių priežasčių gauti praktiniai rezultatai galėjo ne visiškai sutapti su teorinėmis prielaidomis.
+
+## Release v1.0
+Po pradinio relese išleidimo buvo padarytas programos optimizavimas 3 skirtingomis strategijomis su fiksuotu konteneriu - std::vector. Lentelėje pateikiami
+matavimų vidurkiai.
+
+| Failo dydis      | 1 strategija (s) - for ciklas | 2 strategija (s) - erase | 3 strategija (s) - std::partition |
+|------------------|-------------------------------|--------------------------|-----------------------------------|
+| 1 000            | 0.0030354                     | 0.0371157                | 0.0025987                         |
+| 10 000           | 0.0240486                     | 3.45011                  | 0.0255509                         |
+| 100 000          | 0.28094                       | 385.784                  | 0.276189                          |
+| 1 000 000        | 2.72145                       | 3617.46                  | 3.0776                            |
+| 10 000 000       | 31.6804                       | 35117.1                  | 33.412                            |
+
+
+## Naudojimosi instrukcija
+Atsisiųskite repozitoriją ir išarchyvuokite zip katalogą. Jei dar neturite, įdiekite MinGW C/C++ kompiliatorių. Atidarykite katalogą pasirinktoje IDE. Atidarykite 
+terminalą. Jei įdiegėte MinGW ir norite paleisti programą, terminale surinkite komandą mingw32-make run (priklausomai nuo MinGW diegimo versijos gali būti 
+paleidimui reikalingos komandos mingw-make run arba make run). Dabar terminale matysite meniu. Perskaitykite jį, pasirinkę punktą, surinkite skaičių terminale ir 
+spauskite Enter. Sekite meniu terminale.
