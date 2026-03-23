@@ -91,6 +91,7 @@ matavimų vidurkiai.
 | 10 000 000       | 31.6804                       | 35117.1                  | 33.412                            |
 
 Nuotraukos, kad tyrimai įvyko:
+
 <img width="628" height="293" alt="Ekrano kopija 2026-03-23 194906" src="https://github.com/user-attachments/assets/e939ed13-3195-457b-8df9-4aec73089b37" />
 <img width="628" height="293" alt="Ekrano kopija 2026-03-23 195102" src="https://github.com/user-attachments/assets/7a0ce1bc-e794-499d-a64f-18a327bdae39" />
 <img width="628" height="293" alt="Ekrano kopija 2026-03-23 195132" src="https://github.com/user-attachments/assets/0286e212-79ca-4fe3-b33d-36eaabd7ea2b" />
