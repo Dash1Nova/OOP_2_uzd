@@ -82,13 +82,37 @@ Dėl šių priežasčių gauti praktiniai rezultatai galėjo ne visiškai sutapt
 Po pradinio relese išleidimo buvo padarytas programos optimizavimas 3 skirtingomis strategijomis su fiksuotu konteneriu - std::vector. Lentelėje pateikiami
 matavimų vidurkiai.
 
-| Failo dydis      | 1 strategija (s) - for ciklas | 2 strategija (s) - erase | 3 strategija (s) - std::partition |
+## 1 strategija (pateikiamas kelių testų laikų vidurkis)
+
+| Failo dydis      | std::vector                   | std::list                | std::deque                        |
 |------------------|-------------------------------|--------------------------|-----------------------------------|
-| 1 000            | 0.0030354                     | 0.0371157                | 0.0025987                         |
-| 10 000           | 0.0240486                     | 3.45011                  | 0.0255509                         |
-| 100 000          | 0.28094                       | 385.784                  | 0.276189                          |
-| 1 000 000        | 2.72145                       | 3617.46                  | 3.0776                            |
-| 10 000 000       | 31.6804                       | 35117.1                  | 33.412                            |
+| 1 000            | 0.0030354                     | 0.0023829                | 0.0039401                         |
+| 10 000           | 0.0240486                     | 0.0324099                | 0.0570868                         |
+| 100 000          | 0.28094                       | 0.332449                 | 0.538205                          |
+| 1 000 000        | 2.72145                       | 3.55926                  | 4.5782                            |
+| 10 000 000       | 31.6804                       | 31.3818                  | 52.5077                           |
+
+## 2 strategija (pateikiamas kelių testų laikų vidurkis)
+
+| Failo dydis      | std::vector                   | std::list                | std::deque                        |
+|------------------|-------------------------------|--------------------------|-----------------------------------|
+| 1 000            | 0.0371157                     | 0.0032958                | 0.0209625                         |
+| 10 000           | 3.45011                       | 0.0320269                | 2.27534                           |
+| 100 000          | 385.784                       | 0.344122                 | 174.784                           |
+| 1 000 000        | > 1 h (nebaigta)              | 3.73521                  | > 1 h (nebaigta)                  |
+| 10 000 000       | > 1 h (nebaigta)              | 32.9376                  | > 1 h (nebaigta)                  |
+
+Testavimas su std:: vector ir std::deque dideliems failams (1 000 000 ir 10 000 000 įrašų) nebuvo pilnai užbaigtas dėl labai ilgo vykdymo laiko (virš 1 valandos). Tai rodo, kad ši strategija su šiuo konteineriu yra neefektyvi dideliems duomenų kiekiams.
+
+## 3 strategija (pateikiamas kelių testų laikų vidurkis)
+
+| Failo dydis      | std::vector                   | std::list                | std::deque                        |
+|------------------|-------------------------------|--------------------------|-----------------------------------|
+| 1 000            | 0.0025987                     | 0.0034226                | 0.0046571                         |
+| 10 000           | 0.0255509                     | 0.0374303                | 0.0391001                         |
+| 100 000          | 0.276189                      | 0.351151                 | 0.55269                           |
+| 1 000 000        | 3.0776                        | 3.90309                  | 4.80778                           |
+| 10 000 000       | 33.412                        | 33.9702                  | 53.0299                           |
 
 Nuotraukos, kad tyrimai įvyko:
 
@@ -101,4 +125,5 @@ Nuotraukos, kad tyrimai įvyko:
 Atsisiųskite repozitoriją ir išarchyvuokite zip katalogą. Jei dar neturite, įdiekite MinGW C/C++ kompiliatorių. Atidarykite katalogą pasirinktoje IDE. 
 Atidarykite terminalą. Jei įdiegėte MinGW ir norite paleisti programą, terminale surinkite komandą mingw32-make run (priklausomai nuo MinGW diegimo versijos gali 
 būti paleidimui reikalingos komandos mingw-make run arba make run). Dabar terminale matysite meniu. Perskaitykite jį, pasirinkę punktą, surinkite skaičių 
-terminale ir spauskite Enter. Sekite meniu terminale.
+terminale ir spauskite Enter. Sekite meniu terminale. (šis būdas tinka naudojant CMake MakeFile)
+
