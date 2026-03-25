@@ -254,8 +254,9 @@ void sortingStudents(Container& students) {
     kietiakai = students;
     } else if (strategy == 3) {
         auto it = std::partition(
-            students.begin(), students.end(),
-            [](const Student& s){ return s.finalAvg < 5.0; }
+            students.begin(), students.end(), [](const Student& s) { 
+                return s.finalAvg < 5.0; 
+            }
         );
 
         vargsiukai.assign(students.begin(), it);
