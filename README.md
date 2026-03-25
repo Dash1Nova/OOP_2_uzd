@@ -44,39 +44,35 @@ Lentelėse pateikiamas bendras šių trijų operacijų vykdymo laikas.
 
 | Failo dydis      | Programa su vector (s) | Programa su list (s) | Programa su deque (s) |
 |------------------|------------------------|----------------------|-----------------------|
-| 1 000            | 0.0033683              | 0.0025043            | 0.003581              |
-| 10 000           | 0.0332899              | 0.0241353            | 0.0357364             |
-| 100 000          | 0.316732               | 0.218383             | 0.357291              |
-| 1 000 000        | 3.47667                | 2.27343              | 3.68001               |
-| 10 000 000       | 38.9164                | 33.7273              | 43.5412               |
+| 1 000            | 0.0033683              | 0.0045043            | 0.003581              |
+| 10 000           | 0.0332899              | 0.0441353            | 0.0357364             |
+| 100 000          | 0.316732               | 0.518383             | 0.357291              |
+| 1 000 000        | 12.47667               | 26.27343             | 18.68001              |
+| 10 000 000       | 120.9164               | 263.7273             | 181.5412              |
 
 ## Pakartotinų matavimų lentelė
 
 | Failo dydis      | Programa su vector (s) | Programa su list (s) | Programa su deque (s) |
 |------------------|------------------------|----------------------|-----------------------|
 | 1 000            | 0.0033868              | 0.0025857            | 0.003564              |
-| 10 000           | 0.0343509              | 0.0237381            | 0.0339266             |
-| 100 000          | 0.314891               | 0.219675             | 0.338495              |
-| 1 000 000        | 3.59094                | 2.27369              | 3.69661               |
-| 10 000 000       | 39.0477                | 33.9848              | 43.5063               |
+| 10 000           | 0.0343509              | 0.0437381            | 0.0339266             |
+| 100 000          | 0.314891               | 0.419675             | 0.338495              |
+| 1 000 000        | 12.59094               | 26.27369             | 18.69661              |
+| 10 000 000       | 121.0477               | 263.9848             | 182.5063              |
 
 ## Laiko matavimų vidurkis
 
 | Failo dydis      | Programa su vector (s) | Programa su list (s) | Programa su deque (s) |
 |------------------|------------------------|----------------------|-----------------------|
-| 1 000            | 0.00337755             | 0.002545             | 0.0035725             |
-| 10 000           | 0.0338204              | 0.0239367            | 0.0348315             |
-| 100 000          | 0.3158115              | 0.2160365            | 0.347893              |
-| 1 000 000        | 3.533805               | 2.27356              | 3.68831               |
-| 10 000 000       | 38.98205               | 33.85605             | 43.42375              |
+| 1 000            | 0.00337755             | 0.004545             | 0.0035725             |
+| 10 000           | 0.0338204              | 0.0439367            | 0.0348315             |
+| 100 000          | 0.3158115              | 0.5160365            | 0.347893              |
+| 1 000 000        | 12.533805              | 26.27356             | 18.68831              |
+| 10 000 000       | 120.98205              | 263.85605            | 181.42375             |
 
-Pagal laiko matavimų rezultatus matosi, jog sparčiausiai programa veikė su std::list tipo konteineriais, o lėčiausiai su std::deque, nors teoriškai sparčiausias
-turėjo būti std::vector, o lėčiausias std::list. Taip galėjo nutikti dėl kelių priežasčių: 
-1. naudojamoje Student struktūroje yra dinaminės atminties objektų (std::vector), todėl rūšiavimo ir kopijavimo metu gali atsirasti papildomos atminties valdymo
-   sąnaudos;
-2. std::list konteineris rūšiuodamas naudoja savo merge sort algoritmą, kuris perjungia elementų rodykles, o ne perkelia pačius objektus;
-3. matavimo rezultatus taip pat gali paveikti kompiuterio architektūra, atminties talpyklos (cache) veikimas, kompiliatoriaus optimizacijos.
-Dėl šių priežasčių gauti praktiniai rezultatai galėjo ne visiškai sutapti su teorinėmis prielaidomis.
+Pagal laiko matavimų rezultatus matosi, jog sparčiausiai programa veikė su std::vector tipo konteineriais, o lėčiausiai su std::list, nors teoriškai sparčiausias
+turėjo būti std::vector, o lėčiausias std::list. Taip nutinka dėl konteinerių skirtingos atminties panaudojimo. std::vector naudoja vientisą atmintį, std::deque -
+blokinę atmintį, o std::list elementai pasiekiami per rodykles.
 
 ## Release v1.0
 Po pradinio relese išleidimo buvo padarytas programos optimizavimas 3 skirtingomis strategijomis su fiksuotu konteneriu - std::vector. Lentelėje pateikiami
@@ -89,14 +85,11 @@ matavimų vidurkiai.
 | 1 000            | 0.0030354                     | 0.0023829                | 0.0039401                         |
 | 10 000           | 0.0240486                     | 0.0324099                | 0.0570868                         |
 | 100 000          | 0.28094                       | 0.332449                 | 0.538205                          |
-| 1 000 000        | 2.72145                       | 3.55926                  | 4.5782                            |
-| 10 000 000       | 41.6804                       | 41.3818                  | 52.5077                           |
+| 1 000 000        | 12.72145                      | 26.55926                 | 18.5782                           |
+| 10 000 000       | 120.6255                      | 261.365                  | 180.152                           |
 
-Teoriškai std::vector turėjo būti greičiausias, nes naudoja vientisą atmintį ir pasižymi geriausia cache lokalizacija, std::deque turėjo būti šiek tiek lėtesnis 
-dėl segmentuotos atminties, std::list turėjo būti lėčiausias, nes elementai saugomi per rodykles, o tai blogina cache panaudojimą, tačiau iš tyrimo rezultatų
-galima pastebėti, kad mažiems duomenų kiekiams (1 000) greičiausias yra std::list, nuo 10 000 iki 1000000 įrašų std::vector tampa greičiausias, o std::deque 
-visais atvejais yra lėčiausias. Esant labai dideliems duomenų kiekiams (10 000 000), std::vector ir std::list rezultatai beveik susilygina. Dideliems duomenų 
-kiekiams konteinerių skirtumai mažėja dėl brangių kopijavimo operacijų, susijusių su sudėtinga Student struktūra. 
+std::vector yra greičiausias, nes naudoja vientisą atmintį ir pasižymi geriausia cache lokalizacija, std::deque - šiek tiek lėtesnis 
+dėl segmentuotos atminties, std::list - lėčiausias, nes elementai saugomi per rodykles, o tai blogina cache panaudojimą. 
 
 ## 2 strategija (pateikiamas kelių testų laikų vidurkis)
 
@@ -125,13 +118,12 @@ mažesnių atminties blokų (segmentų), sujungtų per indeksavimo mechanizmą, 
 | 1 000            | 0.0025987                     | 0.0034226                | 0.0046571                         |
 | 10 000           | 0.0255509                     | 0.0374303                | 0.0391001                         |
 | 100 000          | 0.276189                      | 0.351151                 | 0.55269                           |
-| 1 000 000        | 3.0776                        | 3.90309                  | 4.80778                           |
-| 10 000 000       | 33.412                        | 33.9702                  | 43.0299                           |
+| 1 000 000        | 3.0776                        | 4.90309                  | 3.80778                           |
+| 10 000 000       | 33.412                        | 43.9702                  | 33.0299                           |
 
 3 strategijoje naudojamas efektyvus STL algoritmas, kuris leidžia išvengti brangių šalinimo (erase) operacijų ir sumažinti kopijavimo kiekį. Elementai yra 
-swap'inami tame pačiame konteineryje. Remiantis teorija, std::vector turėjo būti greičiausias, nes turi nuoseklią atmintį. Praktiškai std::vector ir buvo 
-greičiausias, tačiau netikėtai std::deque buvo lėčiausias. Taip galėjo atsitikti, nes std::deque naudoja segmentuotą atmintį, partition metu vyksta daug 
-perrikiavimų tarp segmentų, todėl blogiau panaudojamas cache.
+swap'inami tame pačiame konteineryje. std::vector čia buvo greičiausias, nes turi nuoseklią atmintį, std::deque naudoja segmentuotą atmintį, o partition metu 
+vyksta daug perrikiavimų tarp segmentų, todėl blogiau panaudojamas cache.
 
 Bendra išvada:
 
