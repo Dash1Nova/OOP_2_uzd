@@ -29,23 +29,25 @@ int showMeniu() {
 template <typename Container>
 void manualInput(Container& Students) {
     while (true) {
-        Student s;
         std::string name = inputWord(
             "Iveskite studento varda arba zodi STOP, jei norite baigti: \n"
         );
         if (name == "STOP") break;
-        s.name = name;
-        s.surname = inputWord("Iveskite studento pavarde: \n");
-        std::cout << "Iveskite namu darbu pazymius arba 0, jei norite baigti ivesti): \n";
+
+        std::string surname = inputWord("Iveskite studento pavarde: \n");
+
+        std::vector<int> nd;
+        std::cout << "Iveskite namu darbu pazymius (0 - baigti): \n";
+
         while (true) {
             int mark = inputInt("Namu darbo pazymys: \n", 0, 10);
             if (mark == 0) break;
-            s.nd.push_back(mark);
+            nd.push_back(mark);
         }
-        s.egz = inputInt("Iveskite egzamino ivertinima: \n", 1, 10);
 
-        s.finalAvg = avg(s.nd, s.egz);
-        s.finalMed = med(s.nd, s.egz);
+        int egz = inputInt("Iveskite egzamino ivertinima: \n", 1, 10);
+
+        Student s(name, surname, nd, egz);
 
         Students.push_back(s);
     }
@@ -53,23 +55,26 @@ void manualInput(Container& Students) {
 
 template <typename Container>
 void generateGrades(Container& Students) {
-    int n = inputInt("Kiek namu darbu generuoti kiekvienam studentui: \n", 1);
+    int n = inputInt("Kiek namu darbu generuoti: \n", 1);
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dist(1, 10);
+
     while (true) {
-        Student s;
-        s.name = inputWord("Iveskite studento varda arba zodi 'STOP', jei norite baigti:\n");
-        if (s.name == "STOP" || s.name == "stop") break;
-        s.surname = inputWord("Iveskite studento pavarde: \n");
-        
-        s.nd.clear();
+        std::string name = inputWord("Iveskite varda arba STOP:\n");
+        if (name == "STOP" || name == "stop") break;
+
+        std::string surname = inputWord("Iveskite pavarde:\n");
+
+        std::vector<int> nd;
         for (int i = 0; i < n; i++) {
-            int exs = (rand() % 10) + 1;
-            s.nd.push_back(exs);
+            nd.push_back(dist(gen));
         }
-        s.egz = (rand() % 10) + 1;
 
-        s.finalAvg = avg(s.nd, s.egz);
-        s.finalMed = med(s.nd, s.egz);
+        int egz = dist(gen);
 
+        Student s(name, surname, nd, egz);
         Students.push_back(s);
     }
 }
@@ -77,28 +82,30 @@ void generateGrades(Container& Students) {
 template <typename Container>
 void generateNamesGrades(Container& Students) {
     int numb = inputInt("Kiek studentu generuoti: \n", 1);
-    int n = inputInt("Kiek namu darbu generuoti: \n", 1);
-    
-    std::vector<std::string> Names = {"Jonas", "Domantas", "Martynas", "Edvinas", "Evelina", "Karolina", "Gabija", "Livija"};
-    std::vector<std::string> Surnames = {"1Pavard", "2Pavard", "3Pavard", "4Pavard", "5Pavard"};
-        
-    for (int i = 0; i < numb; i++){
-        Student s;
-        s.name = Names.at(rand() % Names.size());
-        s.surname = GenerateName(s.name, Surnames);
-            
-        s.nd.clear();
-        for (int i = 0; i < n; i++) {
-        int exs = (rand() % 10) + 1;
-        s.nd.push_back(exs);
+    int n = inputInt("Kiek ND generuoti: \n", 1);
+
+    std::vector<std::string> Names = {"Jonas","Domantas","Martynas","Edvinas","Evelina","Karolina","Gabija","Livija"};
+    std::vector<std::string> Surnames = {"1Pavard","2Pavard","3Pavard","4Pavard","5Pavard"};
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> gradeDist(1, 10);
+    std::uniform_int_distribution<> nameDist(0, Names.size() - 1);
+
+    for (int i = 0; i < numb; i++) {
+        std::string name = Names.at(nameDist(gen));
+        std::string surname = GenerateName(name, Surnames);
+
+        std::vector<int> nd;
+        for (int j = 0; j < n; j++) {
+            nd.push_back(gradeDist(gen));
         }
-        s.egz = (rand() % 10) + 1;
 
-        s.finalAvg = avg(s.nd, s.egz);
-        s.finalMed = med(s.nd, s.egz);
+        int egz = gradeDist(gen);
 
+        Student s(name, surname, nd, egz);
         Students.push_back(s);
-        }
+    }
 }
 
 template <typename Container>
@@ -188,17 +195,18 @@ void sortingStudents(Container& students) {
 
     auto readStart = std::chrono::high_resolution_clock::now();
 
-    Student temp;
     int score;
-    while (in >> temp.name >> temp.surname) {
-        temp.nd.clear();
+    std::string name, surname;
+    while (in >> name >> surname) {
+        std::vector<int> nd;
         for (int i = 0; i < 5; i++) {
             in >> score;
-            temp.nd.push_back(score);
+            nd.push_back(score);
         }
-        in >> temp.egz;
+        int egz;
+        in >> egz;
 
-        temp.finalAvg = avg(temp.nd, temp.egz);
+        Student temp(name, surname, nd, egz);
         students.push_back(temp);
     }
     in.close();
@@ -239,12 +247,12 @@ void sortingStudents(Container& students) {
 
     if (strategy == 1) {
         for (const auto& s : students) {
-            if (s.finalAvg < 5.0) vargsiukai.push_back(s);
+            if (s.getFinalAvg() < 5.0) vargsiukai.push_back(s);
             else kietiakai.push_back(s);
         }
     } else if (strategy == 2) {
     for (auto it = students.begin(); it != students.end(); ) {
-        if (it->finalAvg < 5.0) {
+        if (it->getFinalAvg() < 5.0) {
             vargsiukai.push_back(*it);
             it = students.erase(it);
         } else {
@@ -255,7 +263,7 @@ void sortingStudents(Container& students) {
     } else if (strategy == 3) {
         auto it = std::partition(
             students.begin(), students.end(), [](const Student& s) { 
-                return s.finalAvg < 5.0; 
+                return s.getFinalAvg() < 5.0; 
             }
         );
 
@@ -277,7 +285,7 @@ void sortingStudents(Container& students) {
         out << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(17) << "Galutinis (Vid.)\n";
         out << "--------------------------------------------------------\n";
         for (const auto& s : students) {
-            out << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(17) << std::fixed << std::setprecision(2) << s.finalAvg << "\n";
+            out << std::left << std::setw(15) << s.getName() << std::setw(15) << s.getSurname() << std::setw(17) << std::fixed << std::setprecision(2) << s.getFinalAvg() << "\n";
         }
     };
 
