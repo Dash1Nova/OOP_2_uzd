@@ -1,10 +1,7 @@
 #include "student.h"
 #include <algorithm>
 
-Student::Student() : egz_(0), finalAvg_(0), finalMed_(0) {}
-
-Student::Student(const std::string& name, const std::string& surname, const std::vector<int>& nd, int egz)
-    : name_(name), surname_(surname), nd_(nd), egz_(egz) {
+Student::Student(const std::string& name, const std::string& surname, const std::vector<int>& nd, int egz): name_(name), surname_(surname), nd_(nd), egz_(egz) {
     calculate();
 }
 
