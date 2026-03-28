@@ -37,7 +37,7 @@ void printResults(const Container &Students, bool toFile, const std::string &fil
     out << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde" << std::setw(20) << "Galutinis (Vid.)" << std::setw(17) << "Galutinis (Med.)\n";
     out << "-----------------------------------------------------------------------\n";
     for (const auto& s : Students) {
-        out << std::left << std::setw(15) << s.name << std::setw(15) << s.surname << std::setw(20) << std::fixed << std::setprecision(2) << s.finalAvg << std::setw(17) << std::fixed << std::setprecision(2) << s.finalMed << "\n";
+        out << std::left << std::setw(15) << s.getName() << std::setw(15) << s.getSurname() << std::setw(20) << std::fixed << std::setprecision(2) << s.getFinalAvg() << std::setw(17) << std::fixed << std::setprecision(2) << s.getFinalMed() << "\n";
     }
     if (!out) {
         throw std::runtime_error("Klaida rasant rezultatus.");
