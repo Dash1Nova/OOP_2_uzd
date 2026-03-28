@@ -7,8 +7,6 @@
 #include <deque>
 
 int main() {
-    srand(time(NULL));
-
     int meniu = inputInt(
         "Koki konteineri naudoti:\n"
         "1 - vector\n"

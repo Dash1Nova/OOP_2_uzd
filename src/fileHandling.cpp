@@ -24,11 +24,11 @@ bool createFile (const Container &Students, int n) {
         kursiokai << std::setw(9) << "Egzaminas\n";
 
         for (const auto &stud : Students) {
-            kursiokai << std::left << std::setw(15) << stud.name << std::setw(15) << stud.surname;
-            for (const auto &grade : stud.nd) {
+            kursiokai << std::left << std::setw(15) << stud.getName() << std::setw(15) << stud.getSurname();
+            for (const auto &grade : stud.getNd()) {
                 kursiokai << std::setw(6) << grade;
             }
-            kursiokai << stud.egz << "\n";
+            kursiokai << stud.getEgz() << "\n";
 
             if (!kursiokai) {
                 throw std::runtime_error("Klaida rasant i kursiokai.txt");
@@ -58,26 +58,28 @@ bool readFile(const std::string &filename, Container &Students) {
         std::string line;
         std::getline(stud_file, line);
 
-        while (std::getline(stud_file, line)) {
-            if (line.empty()) continue;
+    while (std::getline(stud_file, line)) {
+        if (line.empty()) continue;
 
-            Student s;
-            std::istringstream iss(line);
+        std::istringstream iss(line);
 
-            iss >> s.name >> s.surname;
-            int mark;
-            while (iss >> mark) {
-                s.nd.push_back(mark);
-            }
+        std::string name, surname;
+        iss >> name >> surname;
 
-            s.egz = s.nd.back();
-            s.nd.pop_back();
+        std::vector<int> nd;
+        int mark;
 
-            s.finalAvg = avg(s.nd, s.egz);
-            s.finalMed = med(s.nd, s.egz);
-
-            Students.push_back(s);
+        while (iss >> mark) {
+            nd.push_back(mark);
         }
+
+        int egz = nd.back();
+        nd.pop_back();
+
+        Student s(name, surname, nd, egz);
+
+        Students.push_back(s);
+    }
 
         stud_file.close();
         return true;
