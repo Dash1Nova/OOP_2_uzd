@@ -13,6 +13,8 @@ kokios įtakos jie turi programos vykdymo spartai. Tyrimo rezultatai pateikti le
 | Klasė                    | 1 000 000            | 1.30656                  | 1.28801                  | 1.30197                  |
 | Klasė                    | 10 000 000           | 13.7888                  | 13.4625                  | 13.4954                  |
 
+## exe failų dydžių lentelė
+
 | Versija                  | exe failo dydis su O1 (KB)     | exe failo dydis su O2 (KB)    | exe failo dydis su O3 (KB)     |
 |--------------------------|--------------------------------|-------------------------------|--------------------------------|
 | Struktūra                | 459                            | 431                           | 429                            |
