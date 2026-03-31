@@ -49,3 +49,5 @@ void Student::calculate() {
 
     finalMed_ = 0.4 * median + 0.6 * egz_;
 }
+
+Student::~Student() {}
