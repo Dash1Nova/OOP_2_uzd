@@ -20,6 +20,8 @@ public:
     Student() = delete;
     Student(const std::string& name, const std::string& surname, const std::vector<int>& nd, int egz);
 
+        ~Student();
+
         const std::string& getName() const;
         const std::string& getSurname() const;
         const std::vector<int>& getNd() const;
