@@ -43,9 +43,9 @@ void Student::calculate() {
 
     double median;
     if (temp.size() % 2 == 0)
-        median = (temp[temp.size()/2 - 1] + temp[temp.size()/2]) / 2.0;
+        median = (temp.at(temp.size()/2 - 1) + temp.at(temp.size()/2)) / 2.0;
     else
-        median = temp[temp.size()/2];
+        median = temp.at(temp.size()/2);
 
     finalMed_ = 0.4 * median + 0.6 * egz_;
 }
