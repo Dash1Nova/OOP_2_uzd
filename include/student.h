@@ -17,8 +17,7 @@ private:
     void calculate();
 
 public:
-    Student() = delete;
-    Student(const std::string& name, const std::string& surname, const std::vector<int>& nd, int egz);
+    Student(const std::string name = "Julius", const std::string surname = "Petraitis", const std::vector<int> nd = {1, 2}, int egz = 5);
 
         ~Student();
 

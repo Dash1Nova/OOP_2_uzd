@@ -1,7 +1,8 @@
 #include "student.h"
 #include <algorithm>
+#include <iostream>
 
-Student::Student(const std::string& name, const std::string& surname, const std::vector<int>& nd, int egz): name_(name), surname_(surname), nd_(nd), egz_(egz) {
+Student::Student(const std::string name, const std::string surname, const std::vector<int> nd, int egz) : name_(name), surname_(surname), nd_(nd), egz_(egz) {
     calculate();
 }
 
@@ -50,4 +51,8 @@ void Student::calculate() {
     finalMed_ = 0.4 * median + 0.6 * egz_;
 }
 
-Student::~Student() {}
+Student::~Student() { 
+    name_.clear();
+    surname_.clear();
+    nd_.clear();
+}
