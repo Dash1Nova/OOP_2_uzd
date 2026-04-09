@@ -21,6 +21,12 @@ public:
 
         ~Student();
 
+        Student(const Student& other);
+        Student& operator=(const Student& other);
+
+        Student(Student&& other) noexcept;
+        Student& operator=(Student&& other) noexcept;
+
         const std::string& getName() const;
         const std::string& getSurname() const;
         const std::vector<int>& getNd() const;
