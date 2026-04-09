@@ -31,8 +31,10 @@ public:
 
         void setNd(const std::vector<int>& nd);
         void setEgz(int egz);
-
         void addNd(int mark);
+
+        friend std::ostream& operator<<(std::ostream& os, const Student& s);
+        friend std::istream& operator>>(std::istream& is, Student& s);
     };
 
 #endif
