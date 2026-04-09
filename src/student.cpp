@@ -6,6 +6,12 @@ Student::Student(const std::string name, const std::string surname, const std::v
     calculate();
 }
 
+Student::~Student() { 
+    name_.clear();
+    surname_.clear();
+    nd_.clear();
+}
+
 Student::Student(const Student& other) : name_(other.name_), surname_(other.surname_), nd_(other.nd_), egz_(other.egz_), finalAvg_(other.finalAvg_), finalMed_(other.finalMed_) {}
 
 Student& Student::operator=(const Student& other) {
@@ -20,7 +26,27 @@ Student& Student::operator=(const Student& other) {
     return *this;
 }
 
+Student::Student(Student&& other) noexcept : name_(std::move(other.name_)), surname_(std::move(other.surname_)), nd_(std::move(other.nd_)), egz_(other.egz_), finalAvg_(other.finalAvg_), finalMed_(other.finalMed_) {
+    other.egz_ = 0;
+    other.finalAvg_ = 0;
+    other.finalMed_ = 0;
+}
 
+Student& Student::operator=(Student&& other) noexcept {
+    if (this != &other) {
+        name_ = std::move(other.name_);
+        surname_ = std::move(other.surname_);
+        nd_ = std::move(other.nd_);
+        egz_ = other.egz_;
+        finalAvg_ = other.finalAvg_;
+        finalMed_ = other.finalMed_;
+
+        other.egz_ = 0;
+        other.finalAvg_ = 0;
+        other.finalMed_ = 0;
+    }
+    return *this;
+}
 
 const std::string& Student::getName() const { return name_; }
 const std::string& Student::getSurname() const { return surname_; }
@@ -65,10 +91,4 @@ void Student::calculate() {
         median = temp.at(temp.size()/2);
 
     finalMed_ = 0.4 * median + 0.6 * egz_;
-}
-
-Student::~Student() { 
-    name_.clear();
-    surname_.clear();
-    nd_.clear();
 }
