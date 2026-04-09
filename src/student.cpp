@@ -6,6 +6,22 @@ Student::Student(const std::string name, const std::string surname, const std::v
     calculate();
 }
 
+Student::Student(const Student& other) : name_(other.name_), surname_(other.surname_), nd_(other.nd_), egz_(other.egz_), finalAvg_(other.finalAvg_), finalMed_(other.finalMed_) {}
+
+Student& Student::operator=(const Student& other) {
+    if (this != &other) {
+        name_ = other.name_;
+        surname_ = other.surname_;
+        nd_ = other.nd_;
+        egz_ = other.egz_;
+        finalAvg_ = other.finalAvg_;
+        finalMed_ = other.finalMed_;
+    }
+    return *this;
+}
+
+
+
 const std::string& Student::getName() const { return name_; }
 const std::string& Student::getSurname() const { return surname_; }
 const std::vector<int>& Student::getNd() const { return nd_; }
