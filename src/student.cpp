@@ -92,3 +92,30 @@ void Student::calculate() {
 
     finalMed_ = 0.4 * median + 0.6 * egz_;
 }
+
+std::ostream& operator<<(std::ostream& os, const Student& s) {
+    os << s.name_ << " " << s.surname_ << " | ND: ";
+    for (int x : s.nd_) os << x << " ";
+    os << "| Egz: " << s.egz_;
+    os << " | Galutinis (Vid): " << s.finalAvg_;
+    os << " | Galutinis (Med): " << s.finalMed_;
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, Student& s) {
+    s.nd_.clear();
+
+    int n;
+    is >> s.name_ >> s.surname_ >> n;
+
+    for (int i = 0; i < n; i++) {
+        int x;
+        is >> x;
+        s.nd_.push_back(x);
+    }
+
+    is >> s.egz_;
+    s.calculate();
+
+    return is;
+}
