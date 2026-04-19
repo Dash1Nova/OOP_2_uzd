@@ -12,7 +12,13 @@ Student::~Student() {
     nd_.clear();
 }
 
-Student::Student(const Student& other) : name_(other.name_), surname_(other.surname_), nd_(other.nd_), egz_(other.egz_), finalAvg_(other.finalAvg_), finalMed_(other.finalMed_) {}
+Student::Student(const Student& other) : 
+    name_(other.name_), 
+    surname_(other.surname_), 
+    nd_(other.nd_), 
+    egz_(other.egz_), 
+    finalAvg_(other.finalAvg_), 
+    finalMed_(other.finalMed_) {}
 
 Student& Student::operator=(const Student& other) {
     if (this != &other) {
@@ -26,11 +32,13 @@ Student& Student::operator=(const Student& other) {
     return *this;
 }
 
-Student::Student(Student&& other) noexcept : name_(std::move(other.name_)), surname_(std::move(other.surname_)), nd_(std::move(other.nd_)), egz_(other.egz_), finalAvg_(other.finalAvg_), finalMed_(other.finalMed_) {
-    other.egz_ = 0;
-    other.finalAvg_ = 0;
-    other.finalMed_ = 0;
-}
+Student::Student(Student&& other) noexcept
+    : name_(std::move(other.name_)),
+      surname_(std::move(other.surname_)),
+      nd_(std::move(other.nd_)),
+      egz_(other.egz_),
+      finalAvg_(other.finalAvg_),
+      finalMed_(other.finalMed_) {}
 
 Student& Student::operator=(Student&& other) noexcept {
     if (this != &other) {
