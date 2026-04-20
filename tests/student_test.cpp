@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cassert>
 #include <sstream>
+#include <fstream>
 
 void testConstructors() {
     std::cout << "Konstruktoriu testavimas\n";
@@ -91,8 +92,6 @@ void testMoveConstructor() {
     assert(moved.getSurname() == originalSurname);
     assert(std::abs(moved.getFinalAvg() - originalAvg) < 0.0001);
     
-    assert(original.getNd().empty() || true);
-    
     std::cout << "Perkelimo konstruktorius veikia tinkamai!\n";
 }
 
@@ -178,7 +177,7 @@ void testInputOutput() {
 }
 
 void testCalculationAccuracy() {
-    std::cout << "Testuojame skaiciavimu tiksluma:\n";
+    std::cout << "Testuojame skaiciavimu tiksluma\n";
     
     Student s1("Test1", "Test", {}, 10);
     assert(std::abs(s1.getFinalAvg() - 6.0) < 0.0001);
@@ -199,6 +198,38 @@ void testCalculationAccuracy() {
     std::cout << "Skaiciavimu tikslumas yra tinkamas!\n";
 }
 
+void testFileInput() {
+    std::cout << "Failo ivedimo testavimas\n";
+
+    std::ofstream fout("data/student_IN.txt");
+    fout << "Jonas Jonaitis 3 8 9 7 8\n";
+    fout.close();
+
+    std::ifstream fin("data/student_IN.txt");
+    Student s;
+    fin >> s;
+    fin.close();
+
+    assert(s.getName() == "Jonas");
+    assert(s.getSurname() == "Jonaitis");
+    assert(s.getNd().size() == 3);
+    assert(s.getEgz() == 8);
+
+    std::cout << "Failo ivedimas veikia!\n";
+}
+
+void testFileOutput() {
+    std::cout << "Failo isvedimo testavimas\n";
+
+    Student s("Petras", "Petraitis", {10, 9}, 8);
+
+    std::ofstream fout("data/student_OUT.txt");
+    fout << s;
+    fout.close();
+
+    std::cout << "Failo isvedimas veikia!\n";
+}
+
 int main() {    
     testConstructors();
     testCopyConstructor();
@@ -209,6 +240,8 @@ int main() {
     testGettersAndSetters();
     testInputOutput();
     testCalculationAccuracy();
+    testFileInput();
+    testFileOutput();
     
     std::cout << "Visi testai ivyko sekmingai!\n";
     
