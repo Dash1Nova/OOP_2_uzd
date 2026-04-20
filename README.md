@@ -1,7 +1,7 @@
 # Aprašymas
 
 Ši programa skirta studentų duomenų valdymui.
-Programos Student klasė saugo studento vardą, pavardę, namu darbų pažymius, egzamino pažymius bei apskaičiuoja
+Programos Student klasė saugo studento vardą, pavardę, namų darbų pažymius, egzamino pažymius bei apskaičiuoja
 galutinį įvertinimą pagal medianą ir vidurkį.
 
 ## Student klasės struktūra
@@ -25,8 +25,8 @@ Klasės objektų naudojimosi patogumui buvo perdengti įvedimo ir išvedimo oper
 3. įvedimu iš failo (`ifstream`)
 
 Išvestis vykdoma per std::ostream, todėl išvesties operatorius gali būti naudojamas:
-1. išvedimui į ekraną (cout)
-2. išvedimui į failą (ofstream)
+1. išvedimui į ekraną (`cout`)
+2. išvedimui į failą (`ofstream`)
 
 Programa taip pat turi rankinius testus, kurie tikrina:
 - konstruktorius
