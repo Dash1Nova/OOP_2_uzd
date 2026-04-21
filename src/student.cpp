@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <iostream>
 
-Student::Student(const std::string name, const std::string surname, const std::vector<int> nd, int egz) : name_(name), surname_(surname), nd_(nd), egz_(egz) {
+Student::Student(const std::string name, const std::string surname, const std::vector<int> nd, int egz) : Person(name, surname), nd_(nd), egz_(egz) {
     calculate();
 }
 
@@ -12,18 +12,16 @@ Student::~Student() {
     nd_.clear();
 }
 
-Student::Student(const Student& other) : 
-    name_(other.name_), 
-    surname_(other.surname_), 
-    nd_(other.nd_), 
-    egz_(other.egz_), 
-    finalAvg_(other.finalAvg_), 
-    finalMed_(other.finalMed_) {}
+Student::Student(const Student& other)
+    : Person(other),
+      nd_(other.nd_),
+      egz_(other.egz_),
+      finalAvg_(other.finalAvg_),
+      finalMed_(other.finalMed_) {}
 
 Student& Student::operator=(const Student& other) {
     if (this != &other) {
-        name_ = other.name_;
-        surname_ = other.surname_;
+        Person::operator=(other);
         nd_ = other.nd_;
         egz_ = other.egz_;
         finalAvg_ = other.finalAvg_;
@@ -33,8 +31,7 @@ Student& Student::operator=(const Student& other) {
 }
 
 Student::Student(Student&& other) noexcept
-    : name_(std::move(other.name_)),
-      surname_(std::move(other.surname_)),
+    : Person(std::move(other)),
       nd_(std::move(other.nd_)),
       egz_(other.egz_),
       finalAvg_(other.finalAvg_),
@@ -42,8 +39,7 @@ Student::Student(Student&& other) noexcept
 
 Student& Student::operator=(Student&& other) noexcept {
     if (this != &other) {
-        name_ = std::move(other.name_);
-        surname_ = std::move(other.surname_);
+        Person::operator=(std::move(other));
         nd_ = std::move(other.nd_);
         egz_ = other.egz_;
         finalAvg_ = other.finalAvg_;
@@ -56,8 +52,6 @@ Student& Student::operator=(Student&& other) noexcept {
     return *this;
 }
 
-const std::string& Student::getName() const { return name_; }
-const std::string& Student::getSurname() const { return surname_; }
 const std::vector<int>& Student::getNd() const { return nd_; }
 int Student::getEgz() const { return egz_; }
 
@@ -99,6 +93,10 @@ void Student::calculate() {
         median = temp.at(temp.size()/2);
 
     finalMed_ = 0.4 * median + 0.6 * egz_;
+}
+
+void Student::print() const {
+    std::cout << name_ << " " << surname_ << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& os, const Student& s) {
