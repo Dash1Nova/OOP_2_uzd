@@ -73,3 +73,4 @@ Fototgrafijos, įrodančios, kad taip tikrai yra:
 
 Programa išliko veiksni po 1.2 versijos logikos įgyvendinimo:
 
+<img width="1212" height="737" alt="Ekrano kopija 2026-04-21 224544" src="https://github.com/user-attachments/assets/2a8d77c2-0661-4967-8114-40cf61de36a0" />
