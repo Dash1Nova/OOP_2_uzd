@@ -112,7 +112,7 @@ void testMoveAssignment() {
     assert(s2.getName() == s1Name);
     assert(std::abs(s2.getFinalAvg() - s1Avg) < 0.0001);
     
-    assert(s1.getNd().empty() || true);
+    assert(s1.getNd().empty());
     
     std::cout << "Perkelimo priskyrimo operatorius veikia tinkamai!\n";
 }
@@ -230,7 +230,14 @@ void testFileOutput() {
     std::cout << "Failo isvedimas veikia!\n";
 }
 
+void testPolymorphism() {
+    Student s("Jonas", "Jonaitis", {8,9}, 10);
+    Person* p = &s;
+    p->print();
+}
+
 void testAbstractClass() {
+    std::cout << "Testuojama abstrakti klase Person\n";
     //Person p;
     std::cout << "Person klase yra abstrakti - jos objektu sukurti negalima (su jos konstruktoriumi nekompiliuojamas failas)\n";
 }
