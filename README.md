@@ -42,3 +42,27 @@ Fotografijos:
 <img width="905" height="126" alt="Ekrano kopija 2026-04-20 235559" src="https://github.com/user-attachments/assets/35fb71c6-d68d-472f-bb04-2373aaf1f3d2" />
 <img width="905" height="126" alt="Ekrano kopija 2026-04-20 235610" src="https://github.com/user-attachments/assets/550631cd-9a87-446f-a1a1-639ae8c7a6f9" />
 <img width="905" height="300" alt="Ekrano kopija 2026-04-20 235700" src="https://github.com/user-attachments/assets/375c59d8-9eb8-432c-9e4f-f5748b166c43" />
+
+## Versija 1.5.
+
+Taip pat vėliau buvo pridėta abstrakti klasė Person.
+Person klasė turi čiuos kintamuosius: 
+
+| Kintamasis     | Tipas                | Aprašymas                  |
+|----------------|----------------------|----------------------------|
+| name_          | std::string          | Vardas                     |
+| surname_       | std::string          | Pavardė                    |
+
+Tada Student klasėje lieka tik šie keturi kintamieji:
+
+| Kintamasis     | Tipas                | Aprašymas                  |
+|----------------|----------------------|----------------------------|
+| nd_            | std::vector<int>     | Namų darbų balai           |
+| egz_           | int                  | Egzamino balas             |
+| finalAvg_      | double               | Galutinis pagal vidurkį    |
+| finalMed_      | double               | Galutinis pagal medianą    |
+
+Kadangi ši klasė yra abstrakti, negalima sukurti šios klasės objektų. Tai pagrindžia šios klasės testas, kuris bando 
+sukurti Person objektą, tačiau tuo atveju testavimų failas nesikompiliuoja. 
+
+Fototgrafijos, įrodančios, kad taip tikrai yra:
