@@ -1,4 +1,5 @@
 # Aprašymas
+## Versija 1.2.
 
 Ši programa skirta studentų duomenų valdymui.
 Programos Student klasė saugo studento vardą, pavardę, namų darbų pažymius, egzamino pažymius bei apskaičiuoja
@@ -66,3 +67,9 @@ Kadangi ši klasė yra abstrakti, negalima sukurti šios klasės objektų. Tai p
 sukurti Person objektą, tačiau tuo atveju testavimų failas nesikompiliuoja. 
 
 Fototgrafijos, įrodančios, kad taip tikrai yra:
+
+<img width="1212" height="764" alt="Ekrano kopija 2026-04-21 220104" src="https://github.com/user-attachments/assets/7df3b2b9-effa-4096-9a66-33a738b8cfbf" />
+<img width="1212" height="963" alt="Ekrano kopija 2026-04-21 220512" src="https://github.com/user-attachments/assets/7627a3ef-a043-4e03-b9f0-164dfc028167" />
+
+Programa išliko veiksni po 1.2 versijos logikos įgyvendinimo:
+
