@@ -230,6 +230,11 @@ void testFileOutput() {
     std::cout << "Failo isvedimas veikia!\n";
 }
 
+void testAbstractClass() {
+    //Person p;
+    std::cout << "Person klase yra abstrakti - jos objektu sukurti negalima (su jos konstruktoriumi nekompiliuojamas failas)\n";
+}
+
 int main() {    
     testConstructors();
     testCopyConstructor();
@@ -242,6 +247,7 @@ int main() {
     testCalculationAccuracy();
     testFileInput();
     testFileOutput();
+    testAbstractClass();
     
     std::cout << "Visi testai ivyko sekmingai!\n";
     
