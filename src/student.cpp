@@ -95,10 +95,6 @@ void Student::calculate() {
     finalMed_ = 0.4 * median + 0.6 * egz_;
 }
 
-void Student::print() const {
-    std::cout << name_ << " " << surname_ << std::endl;
-}
-
 std::ostream& operator<<(std::ostream& os, const Student& s) {
     os << s.name_ << " " << s.surname_ << " | ND: ";
     for (int x : s.nd_) os << x << " ";
