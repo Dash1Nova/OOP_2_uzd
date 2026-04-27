@@ -91,6 +91,13 @@ void testMoveConstructor() {
     assert(moved.getName() == originalName);
     assert(moved.getSurname() == originalSurname);
     assert(std::abs(moved.getFinalAvg() - originalAvg) < 0.0001);
+
+    assert(original.getName().empty());
+    assert(original.getSurname().empty());
+    assert(original.getNd().empty());
+    assert(original.getEgz() == 0);
+    assert(original.getFinalAvg() == 0.0);
+    assert(original.getFinalMed() == 0.0);
     
     std::cout << "Perkelimo konstruktorius veikia tinkamai!\n";
 }
@@ -112,7 +119,12 @@ void testMoveAssignment() {
     assert(s2.getName() == s1Name);
     assert(std::abs(s2.getFinalAvg() - s1Avg) < 0.0001);
     
+    assert(s1.getName().empty());
+    assert(s1.getSurname().empty());
     assert(s1.getNd().empty());
+    assert(s1.getEgz() == 0);
+    assert(s1.getFinalAvg() == 0.0);
+    assert(s1.getFinalMed() == 0.0);
     
     std::cout << "Perkelimo priskyrimo operatorius veikia tinkamai!\n";
 }
