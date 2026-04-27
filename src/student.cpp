@@ -10,6 +10,9 @@ Student::~Student() {
     name_.clear();
     surname_.clear();
     nd_.clear();
+    egz_ = 0;
+    finalAvg_ = 0.0;
+    finalMed_ = 0.0;
 }
 
 Student::Student(const Student& other)
