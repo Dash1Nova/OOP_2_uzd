@@ -42,3 +42,6 @@
 
 # Ignore all student data files
 data
+
+# Ignore build folders
+build*
