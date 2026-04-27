@@ -14,6 +14,12 @@ public:
 
     virtual ~Person() = default;
 
+    Person(const Person& other);
+    Person& operator=(const Person& other);
+
+    Person(Person&& other) noexcept;
+    Person& operator=(Person&& other) noexcept;
+
     virtual void print() const = 0;
 
     const std::string& getName() const { return name_; }
