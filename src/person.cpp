@@ -1,7 +1,5 @@
 #include "../include/person.h"
 
-Person::Person(const std::string& name, const std::string& surname) : name_(name), surname_(surname) {}
-
 Person::Person(const Person& other) : name_(other.name_), surname_(other.surname_) {}
 
 Person& Person::operator=(const Person& other) {
