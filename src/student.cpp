@@ -38,19 +38,27 @@ Student::Student(Student&& other) noexcept
       nd_(std::move(other.nd_)),
       egz_(other.egz_),
       finalAvg_(other.finalAvg_),
-      finalMed_(other.finalMed_) {}
+      finalMed_(other.finalMed_) 
+{
+    other.nd_.clear();
+    other.egz_ = 0;
+    other.finalAvg_ = 0.0;
+    other.finalMed_ = 0.0;
+}
 
 Student& Student::operator=(Student&& other) noexcept {
     if (this != &other) {
         Person::operator=(std::move(other));
+
         nd_ = std::move(other.nd_);
         egz_ = other.egz_;
         finalAvg_ = other.finalAvg_;
         finalMed_ = other.finalMed_;
 
+        other.nd_.clear();
         other.egz_ = 0;
-        other.finalAvg_ = 0;
-        other.finalMed_ = 0;
+        other.finalAvg_ = 0.0;
+        other.finalMed_ = 0.0;
     }
     return *this;
 }
@@ -123,4 +131,8 @@ std::istream& operator>>(std::istream& is, Student& s) {
     s.calculate();
 
     return is;
+}
+
+void Student::print() const {
+    std::cout << name_ << " " << surname_ << " | Galutinis (Vid): " << finalAvg_ << " | Galutinis (Med): " << finalMed_ << std::endl;
 }
