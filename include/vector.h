@@ -97,6 +97,8 @@ public:
         return data_[index];
     }
 
+    size_t size() const { return size_; }
+
 };
 
 #endif
