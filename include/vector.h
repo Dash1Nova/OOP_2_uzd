@@ -39,7 +39,14 @@ public:
 
     void push_back(const T& value)
     {
-        
+        if(size_ >= capacity_)
+        {
+            size_t newCapacity = (capacity_ == 0) ? 1 : capacity_ * 2;
+            reallocate(newCapacity);
+        }
+
+        data_[size_] = value;
+        size_++;
     }
 
     size_t size() const
