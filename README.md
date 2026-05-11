@@ -295,6 +295,27 @@ Vektoriaus funkcijų pavyzdžių aprašymai:
    v.push_back(10);
    int x = v.at(0);
 
+std::vector ir Vector spartos palyginimas
+Benchmark atliktas naudojant <chrono> biblioteka.  
+Matuotas push_back() operacijos laikas, užpildant tuščius vektorius.  
+Kiekvienas testas vykdytas atskirai, naudojant naujus (tuščius) vektorius.
+Kompiliuojama buvo su -O2 vėliavėle.
+
+| Elementų skaičius | std::vector (ms) | Vector (ms) | Skirtumas (ms)   |
+|-------------------|------------------|-------------|------------------|
+| 10 000            | 0                | 0           | 0                |
+| 100 000           | 0                | 0           | 0                |
+| 1 000 000         | 2                | 2           | 0                |
+| 10 000 000        | 29               | 44          | 15               |
+| 100 000 000       | 351              | 461         | 110              |
+
+Rezultatų analizė: std::vector yra žymiai greitesnis už sukurtą Vector konteinerį. std::vector yra optimizuotas STL konteineris, kuris naudoja efektyvų atminties 
+valdymą ir mažina reallocations skaičių. Sukurtas Vector naudoja paprastą new/delete ir rankinį kopijavimą, todėl yra lėtesnis. Didėjant elementų skaičiui, 
+skirtumas tampa ryškesnis dėl dažnesnių atminties perskirstymų.
+
+<img width="765" height="487" alt="Ekrano kopija 2026-05-12 013644" src="https://github.com/user-attachments/assets/a1700ce4-bc04-44cf-bed3-2c6625dae25e" />
+
+
 ## Naudojimosi instrukcija
 
 Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.10). Atidarykite terminalą ir nueikite į projekto katalogą. 
