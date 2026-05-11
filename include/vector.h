@@ -100,23 +100,60 @@ public:
 
     T* end() { return data_ + size_; }
 
-    T* erase(T* it) {
-        if(it < data_ || it >= data_ + size_)
+    void erase(size_t index) {
+        if (index >= size_)
         {
-            throw std::out_of_range("Invalid iterator");
+            throw std::out_of_range("Index out of range");
         }
 
-        for(T* p = it; p < data_ + size_ - 1; p++)
+        for (size_t i = index; i < size_ - 1; i++)
         {
-            *p = *(p + 1);
+            data_[i] = data_[i + 1];
         }
 
         size_--;
-
-        return it;
     }
 
     bool empty() const { return size_ == 0; }
+
+    size_t capacity() const { return capacity_; }
+
+    void reserve(size_t newCapacity) {
+        if (newCapacity > capacity_)
+        {
+            reallocate(newCapacity);
+        }
+    }
+
+    void resize(size_t newSize) {
+        if (newSize > capacity_)
+        {
+            size_t newCapacity;
+
+            if (capacity_ == 0)
+            {
+                newCapacity = 1;
+            }
+            else
+            {
+                newCapacity = capacity_;
+            }
+
+            while (newCapacity < newSize)
+            {
+                newCapacity *= 2;
+            }
+
+            reallocate(newCapacity);
+        }
+
+        for (size_t i = size_; i < newSize; i++)
+        {
+            data_[i] = T();
+        }
+
+        size_ = newSize;
+    }
 
 };
 
