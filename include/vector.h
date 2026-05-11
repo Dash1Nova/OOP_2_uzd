@@ -36,10 +36,6 @@ public:
         delete[] data_;
     }
 
-    size_t size() const {
-        return size_;
-    }
-
     void push_back(const T& value) {
         if(size_ >= capacity_) {
             size_t newCapacity;
