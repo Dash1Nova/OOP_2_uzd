@@ -1,0 +1,109 @@
+\doxysection{file\+Handling.\+cpp}
+\hypertarget{file_handling_8cpp_source}{}\label{file_handling_8cpp_source}\index{src/fileHandling.cpp@{src/fileHandling.cpp}}
+\doxymbox{\hyperlink{file_handling_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{file_handling_8h}{fileHandling.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{calculations_8h}{calculations.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{input_valid_8h}{inputValid.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00012}00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Container>}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00013}\doxymbox{\hyperlink{file_handling_8h_abd98d4e6a0351b31b6b7294e3acc7438}{00013}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8cpp_abd98d4e6a0351b31b6b7294e3acc7438}{createFile}}\ (\textcolor{keyword}{const}\ Container\ \&Students,\ \textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ std::ofstream\ kursiokai(\textcolor{stringliteral}{"{}kursiokai.txt"{}});}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!kursiokai.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Nepavyko\ sukurti\ failo\ kursiokai.txt"{}});}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ kursiokai\ <<\ std::left\ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Vardas"{}}\ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Pavarde"{}};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ kursiokai\ <<\ std::setw(6)\ <<\ (\textcolor{stringliteral}{"{}ND"{}}\ +\ std::to\_string(i+1));}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ kursiokai\ <<\ std::setw(9)\ <<\ \textcolor{stringliteral}{"{}Egzaminas\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&stud\ :\ Students)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ kursiokai\ <<\ std::left\ <<\ std::setw(15)\ <<\ stud.getName()\ <<\ std::setw(15)\ <<\ stud.getSurname();}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&grade\ :\ stud.getNd())\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kursiokai\ <<\ std::setw(6)\ <<\ grade;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ kursiokai\ <<\ stud.getEgz()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!kursiokai)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Klaida\ rasant\ i\ kursiokai.txt"{}});}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Klaida:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Nezinoma\ klaida."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00049}00049\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Container>}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00050}\doxymbox{\hyperlink{file_handling_8h_af8f71673900e8a607a597a387679d2e0}{00050}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8cpp_af8f71673900e8a607a597a387679d2e0}{readFile}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ Container\ \&Students)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ std::ifstream\ stud\_file(filename);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!stud\_file.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Nepavyko\ atidaryti\ failo:\ "{}}\ +\ filename);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Failas\ '"{}}\ <<\ filename\ <<\ \textcolor{stringliteral}{"{}'\ sekmingai\ atidarytas.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ std::getline(stud\_file,\ line);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(stud\_file,\ line))\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line.empty())\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ std::istringstream\ iss(line);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ std::string\ name,\ surname;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ iss\ >>\ name\ >>\ surname;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ std::vector<int>\ nd;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mark;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (iss\ >>\ mark)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ nd.push\_back(mark);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ egz\ =\ nd.back();}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ nd.pop\_back();}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_student}{Student}}\ s(name,\ surname,\ nd,\ egz);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ Students.push\_back(s);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ stud\_file.close();}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00087}00087\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\&\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failo\ atidarymo\ klaida:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)\ \{}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Nezinoma\ klaida."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00095}00095\ \}}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00097}\doxymbox{\hyperlink{file_handling_8cpp_a9156bbe8afc79cdbe595f0f55448d4be}{00097}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_abd98d4e6a0351b31b6b7294e3acc7438}{createFile<std::vector<Student>}}>(\textcolor{keyword}{const}\ std::vector<Student>\&,\ int);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00098}\doxymbox{\hyperlink{file_handling_8cpp_ab15f2cfa6801a1a685b1636c222de267}{00098}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_abd98d4e6a0351b31b6b7294e3acc7438}{createFile<std::list<Student>}}>(\textcolor{keyword}{const}\ std::list<Student>\&,\ int);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00099}\doxymbox{\hyperlink{file_handling_8cpp_ad4f42232033cf8afa9185496496b7148}{00099}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_abd98d4e6a0351b31b6b7294e3acc7438}{createFile<std::deque<Student>}}>(\textcolor{keyword}{const}\ std::deque<Student>\&,\ int);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00101}\doxymbox{\hyperlink{file_handling_8cpp_a7dbc9aa6f03a2ee45a8b46abc75c3a05}{00101}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_af8f71673900e8a607a597a387679d2e0}{readFile<std::vector<Student>}}>(\textcolor{keyword}{const}\ std::string\&,\ std::vector<Student>\&);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00102}\doxymbox{\hyperlink{file_handling_8cpp_acd2767983257307a1e262e710e4ee199}{00102}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_af8f71673900e8a607a597a387679d2e0}{readFile<std::list<Student>}}>(\textcolor{keyword}{const}\ std::string\&,\ std::list<Student>\&);}
+\DoxyCodeLine{\Hypertarget{file_handling_8cpp_source_l00103}\doxymbox{\hyperlink{file_handling_8cpp_abcaa042a2af00b8cc514e6de33ee5f9b}{00103}}\ \textcolor{keyword}{template}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{file_handling_8h_af8f71673900e8a607a597a387679d2e0}{readFile<std::deque<Student>}}>(\textcolor{keyword}{const}\ std::string\&,\ std::deque<Student>\&);}
+
+\end{DoxyCode}

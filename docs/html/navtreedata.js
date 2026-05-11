@@ -24,19 +24,40 @@
 */
 var NAVTREE =
 [
-  [ "Studentų duomenų saugojimas", "index.html", [
+  [ "Antroji_uzduotis", "index.html", [
     [ "Aprašymas", "md__r_e_a_d_m_e.html", [
       [ "Versija 1.2.", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "Student klasės struktūra", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
       [ "Išvesties ir įvesties operatorių perdengimas", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
       [ "Versija 1.5.", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html",
+"build__wtests_2_c_make_files_24_83_80_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a4607cccf070750927b458473ca82c090"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
