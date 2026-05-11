@@ -253,6 +253,48 @@ Visi Google unit testai (jų iš viso yra 12) buvo įvykdyti sėkmingai:
 
 Klasė ir visi Rule of Five komponentai veikia teisingai, failų I/O ir skaičiavimų logika taip pat yra teisinga. 
 
+## Versija 3.0.
+
+Vektoriaus funkcijų pavyzdžių aprašymai:
+1. push_back()
+   Prideda naują elementą į vector pabaigą. Jei dabartinė talpa (capacity) yra pilna, automatiškai išskiriama nauja atmintis ir talpa padidinama (dvigubinama).
+   Pvz.:
+   Vector<int> v;
+   v.push_back(1);
+   v.push_back(2);
+   
+2. erase()
+   Pašalina elementą pagal indeksą. Visi elementai po pašalinto elemento yra perstumiami į kairę. Operacijos sudėtingumas yra O(n), nes reikia perkopijuoti
+   likusius elementus.
+   Pvz.:
+   Vector<int> v;
+   v.push_back(1);
+   v.push_back(2);
+   v.push_back(3);
+
+   v.erase(1);
+   
+3. resize()
+   Pakeičia vector dydį. Jei naujas dydis didesnis, pridedami nauji elementai su default reikšme. Jei mažesnis – pertekliniai elementai pašalinami.
+   Pvz.:
+   Vector<int> v;
+   v.push_back(1);
+   v.resize(5);
+   
+4. operator[]
+   Leidžia tiesiogiai pasiekti elementą pagal indeksą be ribų tikrinimo. Greita, bet nesaugu operacija (gali sukelti undefined behavior jei indeksas neteisingas).
+   Pvz.:
+   Vector<int> v;
+   v.push_back(10);
+   v[0] = 100;
+   
+5. at()
+   Veikia kaip operator[], bet su papildomu vektoriaus ribų tikrinimu. Jei elemento indeksas yra už ribų, išvedama std::out_of_range žinutė.
+   Pvz.:
+   Vector<int> v;
+   v.push_back(10);
+   int x = v.at(0);
+
 ## Naudojimosi instrukcija
 
 Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.10). Atidarykite terminalą ir nueikite į projekto katalogą. 
