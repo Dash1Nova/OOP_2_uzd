@@ -9,8 +9,7 @@ private:
     size_t size_;
     size_t capacity_;
 
-    void reallocate(size_t newCapacity)
-    {
+    void reallocate(size_t newCapacity) {
         T* newData = new T[newCapacity];
 
         for(size_t i = 0; i < size_; i++)
@@ -37,8 +36,11 @@ public:
         delete[] data_;
     }
 
-    void push_back(const T& value)
-    {
+    size_t size() const {
+        return size_;
+    }
+
+    void push_back(const T& value) {
         if(size_ >= capacity_)
         {
             size_t newCapacity = (capacity_ == 0) ? 1 : capacity_ * 2;
@@ -49,10 +51,16 @@ public:
         size_++;
     }
 
-    size_t size() const
+    void pop_back()
     {
-        return size_;
+        if(size_ > 0)
+        {
+            size_--;
+        }
     }
+
+    
+
 };
 
 #endif
