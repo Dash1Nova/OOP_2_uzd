@@ -75,6 +75,23 @@ public:
         size_++;
     }
 
+    
+    T& operator[](size_t index) { return data_[index]; }
+    
+    const T& operator[](size_t index) const { return data_[index]; }
+    
+    T& at(size_t index) {
+        if (index >= size_) { throw std::out_of_range("Index out of range"); }
+        return data_[index];
+    }
+    
+    const T& at(size_t index) const {
+        if (index >= size_) { throw std::out_of_range("Index out of range"); }
+        return data_[index];
+    }
+    
+    size_t size() const { return size_; }
+    
     void pop_back()
     {
         if(size_ > 0)
@@ -83,21 +100,9 @@ public:
         }
     }
 
-    T& operator[](size_t index) { return data_[index]; }
+    T* begin() { return data_; }
 
-    const T& operator[](size_t index) const { return data_[index]; }
-
-    T& at(size_t index) {
-        if (index >= size_) { throw std::out_of_range("Index out of range"); }
-        return data_[index];
-    }
-
-    const T& at(size_t index) const {
-        if (index >= size_) { throw std::out_of_range("Index out of range"); }
-        return data_[index];
-    }
-
-    size_t size() const { return size_; }
+    T* end() { return data_ + size_; }
 
 };
 
