@@ -230,13 +230,37 @@ public:
         size_ = newSize;
     }
 
-    T& front() { return data_[0]; }
+    T& front() {
+        if(empty())
+        {
+            throw std::out_of_range("Vector is empty");
+        }
+        return data_[0]; 
+    }
 
-    const T& front() const { return data_[0]; }
+    const T& front() const {
+        if(empty())
+        {
+            throw std::out_of_range("Vector is empty");
+        }
+        return data_[0]; 
+    }
 
-    T& back() { return data_[size_ - 1]; }
+    T& back() { 
+        if(empty())
+        {
+            throw std::out_of_range("Vector is empty");
+        }
+        return data_[size_ - 1]; 
+    }
 
-    const T& back() const { return data_[size_ - 1]; }
+    const T& back() const { 
+        if(empty())
+        {
+            throw std::out_of_range("Vector is empty");
+        }
+        return data_[size_ - 1]; 
+    }
 
 };
 
