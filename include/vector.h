@@ -41,13 +41,37 @@ public:
     }
 
     void push_back(const T& value) {
-        if(size_ >= capacity_)
-        {
-            size_t newCapacity = (capacity_ == 0) ? 1 : capacity_ * 2;
+        if(size_ >= capacity_) {
+            size_t newCapacity;
+            if (capacity_ == 0) { newCapacity = 1; }
+            else { newCapacity = capacity_ * 2; }
             reallocate(newCapacity);
         }
 
         data_[size_] = value;
+        size_++;
+    }
+
+    void insert(size_t index, const T& value) {
+        if(index > size_)
+        {
+            throw std::out_of_range("Index out of range");
+        }
+
+        if(size_ >= capacity_)
+        {
+            size_t newCapacity;
+            if (capacity_ == 0) { newCapacity = 1; }
+            else { newCapacity = capacity_ * 2; }
+            reallocate(newCapacity);
+        }
+
+        for(size_t i = size_; i > index; i--)
+        {
+            data_[i] = data_[i - 1];
+        }
+
+        data_[index] = value;
         size_++;
     }
 
@@ -59,7 +83,7 @@ public:
         }
     }
 
-    
+
 
 };
 
