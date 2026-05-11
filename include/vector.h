@@ -114,6 +114,8 @@ public:
         size_--;
     }
 
+    void clear() { size_ = 0; }
+
     bool empty() const { return size_ == 0; }
 
     size_t capacity() const { return capacity_; }
@@ -154,6 +156,14 @@ public:
 
         size_ = newSize;
     }
+
+    T& front() { return data_[0]; }
+
+    const T& front() const { return data_[0]; }
+
+    T& back() { return data_[size_ - 1]; }
+
+    const T& back() const { return data_[size_ - 1]; }
 
 };
 
