@@ -104,6 +104,24 @@ public:
 
     T* end() { return data_ + size_; }
 
+    T* erase(T* it) {
+        if(it < data_ || it >= data_ + size_)
+        {
+            throw std::out_of_range("Invalid iterator");
+        }
+
+        for(T* p = it; p < data_ + size_ - 1; p++)
+        {
+            *p = *(p + 1);
+        }
+
+        size_--;
+
+        return it;
+    }
+
+    bool empty() const { return size_ == 0; }
+
 };
 
 #endif
