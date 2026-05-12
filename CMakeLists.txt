@@ -18,7 +18,6 @@ file(GLOB APP_SOURCES "src/*.cpp")
 list(REMOVE_ITEM APP_SOURCES "${CMAKE_SOURCE_DIR}/src/main.cpp")
 
 add_library(core ${APP_SOURCES})
-
 target_include_directories(core PUBLIC include)
 
 add_executable(programa src/main.cpp)
@@ -40,7 +39,6 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
-
 include(GoogleTest)
 
 add_executable(student_tests tests/student_test.cpp)
@@ -54,3 +52,38 @@ gtest_discover_tests(vector_tests)
 add_executable(benchmark_tests tests/benchmark_test.cpp)
 target_link_libraries(benchmark_tests gtest gtest_main core)
 gtest_discover_tests(benchmark_tests)
+
+install(TARGETS programa
+    RUNTIME DESTINATION .
+)
+
+install(FILES
+    data/studentai_10000.txt
+    data/studentai_100000.txt
+    DESTINATION data
+)
+
+include(InstallRequiredSystemLibraries)
+
+set(CPACK_PACKAGE_NAME "StudentuValdymas")
+set(CPACK_PACKAGE_VERSION "1.5")
+set(CPACK_PACKAGE_VENDOR "VU")
+
+set(CPACK_PACKAGE_FILE_NAME "setup")
+
+set(CPACK_GENERATOR "NSIS")
+
+set(CPACK_NSIS_INSTALL_ROOT "$PROGRAMFILES64")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "VU\\\\Vardenis-Pavardenis")
+
+set(CPACK_NSIS_REQUEST_EXECUTION_LEVEL admin)
+
+set(CPACK_NSIS_CREATE_ICONS_EXTRA
+    "CreateShortCut '$DESKTOP\\\\VU - Vardenis-Pavardenis.lnk' '$INSTDIR\\\\programa.exe'"
+)
+
+set(CPACK_NSIS_MENU_LINKS
+    "programa.exe" "VU\\\\Vardenis-Pavardenis"
+)
+
+include(CPack)
