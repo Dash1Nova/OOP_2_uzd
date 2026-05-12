@@ -315,6 +315,20 @@ skirtumas tampa ryškesnis dėl dažnesnių atminties perskirstymų.
 
 <img width="765" height="487" alt="Ekrano kopija 2026-05-12 013644" src="https://github.com/user-attachments/assets/a1700ce4-bc04-44cf-bed3-2c6625dae25e" />
 
+Realokacijų skaičiaus analizė:
+Buvo palygintas std::vector ir realizuoto Vector konteinerių atminties perskirstymų skaičius užpildant konteinerius 10000, 100000, 1000000, 10000000, 
+100000000 elementų. Atminties perskirstymas buvo laikomas įvykusiu tada, kai konteinerio capacity() reikšmė pasikeisdavo po push_back() operacijos.
+
+| Elementų skaičius    | std::vector laikas    | std::vector perskirstymai   | Vector laikas     | Vector perskirstymai    |
+|----------------------|-----------------------|-----------------------------|-------------------|-------------------------|
+| 10 000               | 0 ms                  | 15                          | 0 ms              | 15                      |
+| 100 000              | 0 ms                  | 18                          | 0 ms              | 18                      |
+| 1 000 000            | 2 ms                  | 21                          | 2 ms              | 21                      |
+| 10 000 000           | 40 ms                 | 25                          | 49 ms             | 25                      |
+| 100 000 000          | 380 ms                | 28                          | 422 ms            | 28                      |
+
+Išvados: Tiek std::vector, tiek realizuotas Vector konteineriai atliko vienodą skaičių atminties perskirstymų visais testuotais dydžiais.
+std::vector visais atvejais veikė šiek tiek greičiau nei realizuotas Vector.
 
 ## Naudojimosi instrukcija
 
