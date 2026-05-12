@@ -1,0 +1,94 @@
+\doxysection{include/\+meniu.h File Reference}
+\hypertarget{meniu_8h}{}\label{meniu_8h}\index{include/meniu.h@{include/meniu.h}}
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$list$>$}\newline
+{\ttfamily \+\#include $<$deque$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}student.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{meniu_8h_a1d9b2ed0e3e468b249ff1c7b017f8878}{show\+Meniu}} ()
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_a2536355042e89f48e1129d52fceb4d44}{manual\+Input}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_aa387e4d880809fdc102d3245500bfe59}{generate\+Grades}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_aebe7e315298953aad3820c5188092133}{generate\+Names\+Grades}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_aa8a887d1ed5a8f7f5dba105b6be6e6c8}{scan\+File}} (Container \&Students)
+\item 
+bool \doxymbox{\hyperlink{meniu_8h_aa2cca741a5aa427af6233d81297f0639}{generate\+File}} ()
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_a3d8cad61e66e7d1eec298c19e4d831cc}{sorting\+Students}} (Container \&Students, bool benchmark\+Mode=false, const std::\+string \&filename="{}"{})
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8h_a7406dcc5afce7304d3453bb39d840134}{handle\+Output}} (Container \&)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\bool \doxymbox{\hyperlink{meniu_8h_a155e3bc94239c6ad4a78c61402144090}{read\+File}} (const std::\+string \&, Container \&)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{meniu_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{meniu_8h_aa2cca741a5aa427af6233d81297f0639}\index{meniu.h@{meniu.h}!generateFile@{generateFile}}
+\index{generateFile@{generateFile}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{generateFile()}{generateFile()}}
+{\footnotesize\ttfamily \label{meniu_8h_aa2cca741a5aa427af6233d81297f0639} 
+bool generate\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_aa387e4d880809fdc102d3245500bfe59}\index{meniu.h@{meniu.h}!generateGrades@{generateGrades}}
+\index{generateGrades@{generateGrades}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{generateGrades()}{generateGrades()}}
+{\footnotesize\ttfamily \label{meniu_8h_aa387e4d880809fdc102d3245500bfe59} 
+template$<$typename Container$>$ \\
+void generate\+Grades (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_aebe7e315298953aad3820c5188092133}\index{meniu.h@{meniu.h}!generateNamesGrades@{generateNamesGrades}}
+\index{generateNamesGrades@{generateNamesGrades}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{generateNamesGrades()}{generateNamesGrades()}}
+{\footnotesize\ttfamily \label{meniu_8h_aebe7e315298953aad3820c5188092133} 
+template$<$typename Container$>$ \\
+void generate\+Names\+Grades (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_a7406dcc5afce7304d3453bb39d840134}\index{meniu.h@{meniu.h}!handleOutput@{handleOutput}}
+\index{handleOutput@{handleOutput}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{handleOutput()}{handleOutput()}}
+{\footnotesize\ttfamily \label{meniu_8h_a7406dcc5afce7304d3453bb39d840134} 
+template$<$typename Container$>$ \\
+void handle\+Output (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_a2536355042e89f48e1129d52fceb4d44}\index{meniu.h@{meniu.h}!manualInput@{manualInput}}
+\index{manualInput@{manualInput}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{manualInput()}{manualInput()}}
+{\footnotesize\ttfamily \label{meniu_8h_a2536355042e89f48e1129d52fceb4d44} 
+template$<$typename Container$>$ \\
+void manual\+Input (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_a155e3bc94239c6ad4a78c61402144090}\index{meniu.h@{meniu.h}!readFile@{readFile}}
+\index{readFile@{readFile}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily \label{meniu_8h_a155e3bc94239c6ad4a78c61402144090} 
+template$<$typename Container$>$ \\
+bool read\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_aa8a887d1ed5a8f7f5dba105b6be6e6c8}\index{meniu.h@{meniu.h}!scanFile@{scanFile}}
+\index{scanFile@{scanFile}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{scanFile()}{scanFile()}}
+{\footnotesize\ttfamily \label{meniu_8h_aa8a887d1ed5a8f7f5dba105b6be6e6c8} 
+template$<$typename Container$>$ \\
+void scan\+File (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_a1d9b2ed0e3e468b249ff1c7b017f8878}\index{meniu.h@{meniu.h}!showMeniu@{showMeniu}}
+\index{showMeniu@{showMeniu}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{showMeniu()}{showMeniu()}}
+{\footnotesize\ttfamily \label{meniu_8h_a1d9b2ed0e3e468b249ff1c7b017f8878} 
+int show\+Meniu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8h_a3d8cad61e66e7d1eec298c19e4d831cc}\index{meniu.h@{meniu.h}!sortingStudents@{sortingStudents}}
+\index{sortingStudents@{sortingStudents}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{sortingStudents()}{sortingStudents()}}
+{\footnotesize\ttfamily \label{meniu_8h_a3d8cad61e66e7d1eec298c19e4d831cc} 
+template$<$typename Container$>$ \\
+void sorting\+Students (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{, }\item[{bool}]{benchmark\+Mode}{ = {\ttfamily false}, }\item[{const std::\+string \&}]{filename}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
