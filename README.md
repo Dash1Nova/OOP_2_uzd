@@ -335,14 +335,16 @@ std::vector visais atvejais veikė šiek tiek greičiau nei realizuotas Vector.
 Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.10). Atidarykite terminalą ir nueikite į projekto katalogą. 
 
 **Programos paruošimas naudojimuisi:** (šituos žingsnius reikia daryti tik pirmą kartą leidžiant programą)
-1. Sukurkite programos direktoriją terminale įrašydami: mkdir build
-2. Pereikite į sukurtą aplankalą terminale įrašydami komandą: cd build
-3. Paruoškite programą kompiliavimui su komanda: cmake ..
-4. Sukompiliuokite projektą: cmake --build . (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite
-   projektą))
+1. Paruoškite programą kompiliavimui: cmake -S . -B build
+2. Suompiliuokite programą (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite
+   projektą)): cmake --build build --config Release
+(jei kažką pakeitėte kode, prieš paleisdami programą būtinai ištrinkite pagrindiniame programos kataloge aplankalą build ir pakartokite visas komandas iš naujo)
 
 **Programos paleidimas:**
 
-Norėdami paleisti programą, terminale įveskite komandą: output\Debug\programa.exe
+Norėdami paleisti programą, terminale įveskite komandą: build\output\Release\programa.exe
 
-Norėdami paleisti testus, terminale įveskite komandą: build\Debug\testai.exe
+Norėdami paleisti testus, terminale įveskite komandą (pasirinktinai vieną iš trijų, priklausomai nuo to, kurį testą norite paleisti): 
+• build\Release\student_tests.exe
+• build\Release\vector_tests.exe
+• build\Release\benchmark_tests.exe
