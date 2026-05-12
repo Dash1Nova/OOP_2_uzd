@@ -295,6 +295,41 @@ Vektoriaus funkcijų pavyzdžių aprašymai:
    v.push_back(10);
    int x = v.at(0);
 
+std::vector ir Vector spartos palyginimas
+Benchmark atliktas naudojant <chrono> biblioteka.  
+Matuotas push_back() operacijos laikas, užpildant tuščius vektorius.  
+Kiekvienas testas vykdytas atskirai, naudojant naujus (tuščius) vektorius.
+Kompiliuojama buvo su -O2 vėliavėle.
+
+| Elementų skaičius | std::vector (ms) | Vector (ms) | Skirtumas (ms)   |
+|-------------------|------------------|-------------|------------------|
+| 10 000            | 0                | 0           | 0                |
+| 100 000           | 0                | 0           | 0                |
+| 1 000 000         | 2                | 2           | 0                |
+| 10 000 000        | 29               | 44          | 15               |
+| 100 000 000       | 351              | 461         | 110              |
+
+Rezultatų analizė: std::vector yra žymiai greitesnis už sukurtą Vector konteinerį. std::vector yra optimizuotas STL konteineris, kuris naudoja efektyvų atminties 
+valdymą ir mažina reallocations skaičių. Sukurtas Vector naudoja paprastą new/delete ir rankinį kopijavimą, todėl yra lėtesnis. Didėjant elementų skaičiui, 
+skirtumas tampa ryškesnis dėl dažnesnių atminties perskirstymų.
+
+<img width="765" height="487" alt="Ekrano kopija 2026-05-12 013644" src="https://github.com/user-attachments/assets/a1700ce4-bc04-44cf-bed3-2c6625dae25e" />
+
+Realokacijų skaičiaus analizė:
+Buvo palygintas std::vector ir realizuoto Vector konteinerių atminties perskirstymų skaičius užpildant konteinerius 10000, 100000, 1000000, 10000000, 
+100000000 elementų. Atminties perskirstymas buvo laikomas įvykusiu tada, kai konteinerio capacity() reikšmė pasikeisdavo po push_back() operacijos.
+
+| Elementų skaičius    | std::vector laikas    | std::vector perskirstymai   | Vector laikas     | Vector perskirstymai    |
+|----------------------|-----------------------|-----------------------------|-------------------|-------------------------|
+| 10 000               | 0 ms                  | 15                          | 0 ms              | 15                      |
+| 100 000              | 0 ms                  | 18                          | 0 ms              | 18                      |
+| 1 000 000            | 2 ms                  | 21                          | 2 ms              | 21                      |
+| 10 000 000           | 40 ms                 | 25                          | 49 ms             | 25                      |
+| 100 000 000          | 380 ms                | 28                          | 422 ms            | 28                      |
+
+Išvados: Tiek std::vector, tiek realizuotas Vector konteineriai atliko vienodą skaičių atminties perskirstymų visais testuotais dydžiais.
+std::vector visais atvejais veikė šiek tiek greičiau nei realizuotas Vector.
+
 ## Naudojimosi instrukcija
 
 Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.10). Atidarykite terminalą ir nueikite į projekto katalogą. 
