@@ -352,13 +352,11 @@ duomenų kiekiams.
 1. Paruoškite programą kompiliavimui: cmake -S . -B build
 2. Suompiliuokite programą (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite
    projektą)): cmake --build build --config Release
+3. Pereikyte į naujai sukurtą katalogą: cd build
+4. Sugeneruokite programą: cpack -G NSIS
 (jei kažką pakeitėte kode, prieš paleisdami programą būtinai ištrinkite pagrindiniame programos kataloge aplankalą build ir pakartokite visas komandas iš naujo)
 
 **Programos paleidimas:**
 
-Norėdami paleisti programą, terminale įveskite komandą: build\output\Release\programa.exe
-
-Norėdami paleisti testus, terminale įveskite komandą (pasirinktinai vieną iš trijų, priklausomai nuo to, kurį testą norite paleisti): 
-• build\Release\student_tests.exe
-• build\Release\vector_tests.exe
-• build\Release\benchmark_tests.exe
+Norėdami paleisti programą, galite atidaryti schortcut'ą, kuris atsirado darbo lauke po programos generavimo arba paleisti ja per start meniu paieškos laukelyje
+surinkę "VU - Vardenis-Pavardenis"
