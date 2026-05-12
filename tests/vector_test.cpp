@@ -37,6 +37,13 @@ TEST(Vector, PopBack)
 
     for(size_t i = 0; i < stdV.size(); i++)
         EXPECT_EQ(stdV[i], myV[i]);
+
+    Vector<int> v;
+
+    v.pop_back();
+
+    EXPECT_EQ(v.size(), 0);
+    EXPECT_TRUE(v.empty());
 }
 
 TEST(Vector, Insert)
@@ -71,6 +78,11 @@ TEST(Vector, Erase)
 
     for(size_t i = 0; i < stdV.size(); i++)
         EXPECT_EQ(stdV[i], myV[i]);
+
+    Vector<int> v;
+    v.push_back(1);
+
+    ASSERT_THROW(v.erase(100), std::out_of_range);
 }
 
 TEST(Vector, Clear)
@@ -87,6 +99,10 @@ TEST(Vector, Clear)
 
     EXPECT_EQ(stdV.size(), myV.size());
     EXPECT_EQ(stdV.empty(), myV.empty());
+
+    size_t capBefore = myV.capacity();
+    myV.clear();
+    EXPECT_EQ(myV.capacity(), capBefore);
 }
 
 TEST(Vector, Empty)
@@ -138,7 +154,7 @@ TEST(Vector, Reserve)
     Vector<int> myV;
     myV.reserve(100);
 
-    EXPECT_TRUE(myV.capacity(), 100);
+    EXPECT_GE(myV.capacity(), 100);
 }
 
 TEST(Vector, FrontBack)
@@ -152,6 +168,11 @@ TEST(Vector, FrontBack)
 
     EXPECT_EQ(stdV.front(), myV.front());
     EXPECT_EQ(stdV.back(), myV.back());
+
+    Vector<int> v;
+
+    ASSERT_THROW(v.front(), std::out_of_range);
+    ASSERT_THROW(v.back(), std::out_of_range);
 }
 
 TEST(Vector, OperatorAccess)
@@ -181,19 +202,83 @@ TEST(Vector, At)
 
 TEST(Vector, Iteration)
 {
-    std::vector<int> stdV = {1,2,3};
+    std::vector<int> stdV = {1, 2, 3};
     Vector<int> myV;
 
     myV.push_back(1);
     myV.push_back(2);
     myV.push_back(3);
 
-    int s1 = 0, s2 = 0;
+    EXPECT_EQ(stdV.size(), myV.size());
 
-    for(int x : stdV) s1 += x;
+    auto it = myV.begin();
 
-    for(auto it = myV.begin(); it != myV.end(); ++it)
-        s2 += *it;
+    for (size_t i = 0; i < stdV.size(); i++, ++it)
+    {
+        EXPECT_EQ(stdV[i], *it);
+    }
 
-    EXPECT_EQ(s1, s2);
+    EXPECT_EQ(it, myV.end());
+}
+
+TEST(Vector, CopyConstructor) 
+{
+    Vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+
+    Vector<int> v2 = v1;
+
+    EXPECT_EQ(v1.size(), v2.size()); 
+    
+    for (size_t i = 0; i < v1.size(); i++) 
+        EXPECT_EQ(v1[i], v2[i]); 
+}
+
+TEST(Vector, CopyAssignment)
+{
+    Vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+
+    Vector<int> v2;
+    v2 = v1;
+
+    EXPECT_EQ(v1.size(), v2.size());
+
+    for (size_t i = 0; i < v1.size(); i++)
+        EXPECT_EQ(v1[i], v2[i]);
+}
+
+TEST(Vector, MoveConstructor)
+{
+    Vector<int> v1;
+    v1.push_back(10);
+    v1.push_back(20);
+
+    Vector<int> v2 = std::move(v1);
+
+    EXPECT_EQ(v2.size(), 2);
+    EXPECT_EQ(v2[0], 10);
+    EXPECT_EQ(v2[1], 20);
+
+    EXPECT_EQ(v1.size(), 0);
+    EXPECT_TRUE(v1.empty());
+}
+
+TEST(Vector, MoveAssignment)
+{
+    Vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+
+    Vector<int> v2;
+    v2 = std::move(v1);
+
+    EXPECT_EQ(v2.size(), 2);
+    for (size_t i = 0; i < v2.size(); i++)
+        EXPECT_EQ(v2[i], i + 1);
+
+    EXPECT_EQ(v1.size(), 0);
+    EXPECT_TRUE(v1.empty());
 }
