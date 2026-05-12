@@ -187,6 +187,21 @@ public:
         size_--;
     }
 
+    T* erase(T* it)
+    {
+        size_t index = it - data_;
+
+        if (index >= size_)
+            throw std::out_of_range("Index out of range");
+
+        for (size_t i = index; i < size_ - 1; i++)
+            data_[i] = data_[i + 1];
+
+        size_--;
+
+        return data_ + index;
+    }
+
     void clear() { size_ = 0; }
 
     bool empty() const { return size_ == 0; }
@@ -260,6 +275,15 @@ public:
             throw std::out_of_range("Vector is empty");
         }
         return data_[size_ - 1]; 
+    }
+
+    template <typename Iter>
+    void assign(Iter first, Iter last)
+    {
+        clear();
+
+        for (; first != last; ++first)
+            push_back(*first);
     }
 
 };
