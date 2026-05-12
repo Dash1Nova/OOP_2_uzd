@@ -1,0 +1,48 @@
+\doxysection{build/\+\+\_\+deps/\+googletest-\/src/\+googletest/\+include/\+gtest/\+internal/\+custom Directory Reference}
+\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96}{}\label{dir_1d775d305344cfd1bbc62e0179de2c96}\index{build/\_deps/googletest-\/src/googletest/include/gtest/internal/custom Directory Reference@{build/\_deps/googletest-\/src/googletest/include/gtest/internal/custom Directory Reference}}
+\doxysubsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \doxymbox{\hyperlink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2custom_2gtest-port_8h}{gtest-\/port.\+h}}
+\item 
+file \doxymbox{\hyperlink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2custom_2gtest-printers_8h}{gtest-\/printers.\+h}}
+\item 
+file \doxymbox{\hyperlink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2custom_2gtest_8h}{gtest.\+h}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md387}{}\doxysubsection{\texorpdfstring{Customization Points}{Customization Points}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md387}
+The custom directory is an injection point for custom user configurations.\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md388}{}\doxysubsection{\texorpdfstring{Header {\ttfamily gtest.\+h}}{Header {\ttfamily gtest.\+h}}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md388}
+\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md389}{}\doxysubsubsection{\texorpdfstring{The following macros can be defined:\+}{The following macros can be defined:\+}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md389}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+OS\+\_\+\+STACK\+\_\+\+TRACE\+\_\+\+GETTER\+\_\+} -\/ The name of an implementation of {\ttfamily Os\+Stack\+Trace\+Getter\+Interface}.
+\item {\ttfamily GTEST\+\_\+\+CUSTOM\+\_\+\+TEMPDIR\+\_\+\+FUNCTION\+\_\+} -\/ An override for {\ttfamily \doxylink{namespacetesting_aae1bbe7c3cc99bf56263d51d3982a52e}{testing::\+\+Temp\+Dir()}}. See {\ttfamily \doxylink{namespacetesting_aae1bbe7c3cc99bf56263d51d3982a52e}{testing::\+\+Temp\+Dir}} for semantics and signature.
+\end{DoxyItemize}\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md390}{}\doxysubsection{\texorpdfstring{Header {\ttfamily gtest-\/port.\+h}}{Header {\ttfamily gtest-\/port.\+h}}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md390}
+The following macros can be defined:\+\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md391}{}\doxysubsubsection{\texorpdfstring{Logging:\+}{Logging:\+}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md391}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_a8ef4cb4c465db8c15464aecc6d9510ef}{GTEST\+\_\+\+LOG\+\_\+(severity)}}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_ab54343f0a36dc4cb0ce8a478dd7847b8}{GTEST\+\_\+\+CHECK\+\_\+(condition)}}
+\item Functions {\ttfamily Log\+To\+Stderr()} and {\ttfamily Flush\+Info\+Log()} have to be provided too.
+\end{DoxyItemize}\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md392}{}\doxysubsubsection{\texorpdfstring{Threading:\+}{Threading:\+}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md392}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_af32361ecb11a04425870ea6ae93323b5}{GTEST\+\_\+\+HAS\+\_\+\+NOTIFICATION\+\_\+}} -\/ Enabled if Notification is already provided.
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_a790f114f04a22110c153ee0814c58776}{GTEST\+\_\+\+HAS\+\_\+\+MUTEX\+\_\+\+AND\+\_\+\+THREAD\+\_\+\+LOCAL\+\_\+}} -\/ Enabled if {\ttfamily Mutex} and {\ttfamily Thread\+Local} are already provided. Must also provide {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_af0970cdea09f16dbb1dbfccdaa693eeb}{GTEST\+\_\+\+DECLARE\+\_\+\+STATIC\+\_\+\+MUTEX\+\_\+(mutex)}} and {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_a85d5cd679fdbe87383e7dfd1c6651eaa}{GTEST\+\_\+\+DEFINE\+\_\+\+STATIC\+\_\+\+MUTEX\+\_\+(mutex)}}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_a149f693bd59fa1bc937af54c0cdcb32f}{GTEST\+\_\+\+EXCLUSIVE\+\_\+\+LOCK\+\_\+\+REQUIRED\+\_\+(locks)}}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_a69abff5a4efdd07bd5faebe3dd318d06}{GTEST\+\_\+\+LOCK\+\_\+\+EXCLUDED\+\_\+(locks)}}
+\end{DoxyItemize}\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md393}{}\doxysubsubsection{\texorpdfstring{Underlying library support features}{Underlying library support features}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md393}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_ae6239a8ccf4c230008d1db1ea8bd738e}{GTEST\+\_\+\+HAS\+\_\+\+CXXABI\+\_\+\+H\+\_\+}}
+\end{DoxyItemize}\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md394}{}\doxysubsubsection{\texorpdfstring{Exporting API symbols:\+}{Exporting API symbols:\+}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md394}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{__deps_2googletest-src_2googletest_2include_2gtest_2internal_2gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{GTEST\+\_\+\+API\+\_\+}} -\/ Specifier for exported symbols.
+\end{DoxyItemize}\hypertarget{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md395}{}\doxysubsection{\texorpdfstring{Header {\ttfamily gtest-\/printers.\+h}}{Header {\ttfamily gtest-\/printers.\+h}}}\label{dir_1d775d305344cfd1bbc62e0179de2c96_autotoc_md395}
+
+\begin{DoxyItemize}
+\item See documentation at {\ttfamily gtest/\+gtest-\/printers.\+h} for details on how to define a custom printer. 
+\end{DoxyItemize}

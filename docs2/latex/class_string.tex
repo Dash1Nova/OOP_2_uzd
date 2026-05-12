@@ -1,0 +1,110 @@
+\doxysubsection{String Class Reference}
+\hypertarget{class_string}{}\label{class_string}\index{String@{String}}
+
+
+{\ttfamily \+\#include $<$gtest-\/string.\+h$>$}
+
+\doxysubsubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_string_aea55761bd8e9ff8e3cbad262ac983d9b}{Clone\+CString}} (const char \texorpdfstring{$\ast$}{*}c\+\_\+str)
+\item 
+static bool \doxymbox{\hyperlink{class_string_a8bea7b33e7effbd299a0b4a5522ea96e}{CString\+Equals}} (const char \texorpdfstring{$\ast$}{*}lhs, const char \texorpdfstring{$\ast$}{*}rhs)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_aaf7e376ff580677ea4954d5913d5b917}{Show\+Wide\+CString}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}wide\+\_\+c\+\_\+str)
+\item 
+static bool \doxymbox{\hyperlink{class_string_ab0373bf6e96453d6ca0de2e68df13d3a}{Wide\+CString\+Equals}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}lhs, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}rhs)
+\item 
+static bool \doxymbox{\hyperlink{class_string_a116ca435d63306927ba19f90a3596787}{Case\+Insensitive\+CString\+Equals}} (const char \texorpdfstring{$\ast$}{*}lhs, const char \texorpdfstring{$\ast$}{*}rhs)
+\item 
+static bool \doxymbox{\hyperlink{class_string_a1f12d1780ca7afbf8975f5d425b9f362}{Case\+Insensitive\+Wide\+CString\+Equals}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}lhs, const wchar\+\_\+t \texorpdfstring{$\ast$}{*}rhs)
+\item 
+static bool \doxymbox{\hyperlink{class_string_a968f242b709f8c7c0ed5ecf246553321}{Ends\+With\+Case\+Insensitive}} (const std::\+string \&str, const std::\+string \&suffix)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_af50b18d588355871e1982c4043523e0f}{Format\+Int\+Width2}} (int value)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_ad36bb9d3f5bc2014b7badb38cfc57da1}{Format\+Int\+WidthN}} (int value, int width)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_affe59102e49092fc0684388e9b0c5c1e}{Format\+Hex\+Int}} (int value)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_a5e1ab9d4d03b4218e761459a099a8286}{Format\+Hex\+UInt32}} (uint32\+\_\+t value)
+\item 
+static std::\+string \doxymbox{\hyperlink{class_string_af702dc7cbd569589d8e3ff215a7cafa9}{Format\+Byte}} (unsigned char value)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_string_doc-func-members}
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{class_string_a116ca435d63306927ba19f90a3596787}\index{String@{String}!CaseInsensitiveCStringEquals@{CaseInsensitiveCStringEquals}}
+\index{CaseInsensitiveCStringEquals@{CaseInsensitiveCStringEquals}!String@{String}}
+\doxyparagraph{\texorpdfstring{CaseInsensitiveCStringEquals()}{CaseInsensitiveCStringEquals()}}
+{\footnotesize\ttfamily \label{class_string_a116ca435d63306927ba19f90a3596787} 
+bool \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_a116ca435d63306927ba19f90a3596787}{testing::\+internal::\+\+String::\+\+Case\+Insensitive\+CString\+Equals}} (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{lhs}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_a1f12d1780ca7afbf8975f5d425b9f362}\index{String@{String}!CaseInsensitiveWideCStringEquals@{CaseInsensitiveWideCStringEquals}}
+\index{CaseInsensitiveWideCStringEquals@{CaseInsensitiveWideCStringEquals}!String@{String}}
+\doxyparagraph{\texorpdfstring{CaseInsensitiveWideCStringEquals()}{CaseInsensitiveWideCStringEquals()}}
+{\footnotesize\ttfamily \label{class_string_a1f12d1780ca7afbf8975f5d425b9f362} 
+bool \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_a1f12d1780ca7afbf8975f5d425b9f362}{testing::\+internal::\+\+String::\+\+Case\+Insensitive\+Wide\+CString\+Equals}} (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{lhs}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_aea55761bd8e9ff8e3cbad262ac983d9b}\index{String@{String}!CloneCString@{CloneCString}}
+\index{CloneCString@{CloneCString}!String@{String}}
+\doxyparagraph{\texorpdfstring{CloneCString()}{CloneCString()}}
+{\footnotesize\ttfamily \label{class_string_aea55761bd8e9ff8e3cbad262ac983d9b} 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_aea55761bd8e9ff8e3cbad262ac983d9b}{testing::\+internal::\+\+String::\+\+Clone\+CString}} (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{c\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_a8bea7b33e7effbd299a0b4a5522ea96e}\index{String@{String}!CStringEquals@{CStringEquals}}
+\index{CStringEquals@{CStringEquals}!String@{String}}
+\doxyparagraph{\texorpdfstring{CStringEquals()}{CStringEquals()}}
+{\footnotesize\ttfamily \label{class_string_a8bea7b33e7effbd299a0b4a5522ea96e} 
+bool \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_a8bea7b33e7effbd299a0b4a5522ea96e}{testing::\+internal::\+\+String::\+\+CString\+Equals}} (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{lhs}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_a968f242b709f8c7c0ed5ecf246553321}\index{String@{String}!EndsWithCaseInsensitive@{EndsWithCaseInsensitive}}
+\index{EndsWithCaseInsensitive@{EndsWithCaseInsensitive}!String@{String}}
+\doxyparagraph{\texorpdfstring{EndsWithCaseInsensitive()}{EndsWithCaseInsensitive()}}
+{\footnotesize\ttfamily \label{class_string_a968f242b709f8c7c0ed5ecf246553321} 
+bool \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_a968f242b709f8c7c0ed5ecf246553321}{testing::\+internal::\+\+String::\+\+Ends\+With\+Case\+Insensitive}} (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{str}{, }\item[{const std::\+string \&}]{suffix}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_af702dc7cbd569589d8e3ff215a7cafa9}\index{String@{String}!FormatByte@{FormatByte}}
+\index{FormatByte@{FormatByte}!String@{String}}
+\doxyparagraph{\texorpdfstring{FormatByte()}{FormatByte()}}
+{\footnotesize\ttfamily \label{class_string_af702dc7cbd569589d8e3ff215a7cafa9} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_af702dc7cbd569589d8e3ff215a7cafa9}{testing::\+internal::\+\+String::\+\+Format\+Byte}} (\begin{DoxyParamCaption}\item[{unsigned char}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_affe59102e49092fc0684388e9b0c5c1e}\index{String@{String}!FormatHexInt@{FormatHexInt}}
+\index{FormatHexInt@{FormatHexInt}!String@{String}}
+\doxyparagraph{\texorpdfstring{FormatHexInt()}{FormatHexInt()}}
+{\footnotesize\ttfamily \label{class_string_affe59102e49092fc0684388e9b0c5c1e} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_affe59102e49092fc0684388e9b0c5c1e}{testing::\+internal::\+\+String::\+\+Format\+Hex\+Int}} (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_a5e1ab9d4d03b4218e761459a099a8286}\index{String@{String}!FormatHexUInt32@{FormatHexUInt32}}
+\index{FormatHexUInt32@{FormatHexUInt32}!String@{String}}
+\doxyparagraph{\texorpdfstring{FormatHexUInt32()}{FormatHexUInt32()}}
+{\footnotesize\ttfamily \label{class_string_a5e1ab9d4d03b4218e761459a099a8286} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_a5e1ab9d4d03b4218e761459a099a8286}{testing::\+internal::\+\+String::\+\+Format\+Hex\+UInt32}} (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_af50b18d588355871e1982c4043523e0f}\index{String@{String}!FormatIntWidth2@{FormatIntWidth2}}
+\index{FormatIntWidth2@{FormatIntWidth2}!String@{String}}
+\doxyparagraph{\texorpdfstring{FormatIntWidth2()}{FormatIntWidth2()}}
+{\footnotesize\ttfamily \label{class_string_af50b18d588355871e1982c4043523e0f} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_af50b18d588355871e1982c4043523e0f}{testing::\+internal::\+\+String::\+\+Format\+Int\+Width2}} (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_ad36bb9d3f5bc2014b7badb38cfc57da1}\index{String@{String}!FormatIntWidthN@{FormatIntWidthN}}
+\index{FormatIntWidthN@{FormatIntWidthN}!String@{String}}
+\doxyparagraph{\texorpdfstring{FormatIntWidthN()}{FormatIntWidthN()}}
+{\footnotesize\ttfamily \label{class_string_ad36bb9d3f5bc2014b7badb38cfc57da1} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_ad36bb9d3f5bc2014b7badb38cfc57da1}{testing::\+internal::\+\+String::\+\+Format\+Int\+WidthN}} (\begin{DoxyParamCaption}\item[{int}]{value}{, }\item[{int}]{width}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_aaf7e376ff580677ea4954d5913d5b917}\index{String@{String}!ShowWideCString@{ShowWideCString}}
+\index{ShowWideCString@{ShowWideCString}!String@{String}}
+\doxyparagraph{\texorpdfstring{ShowWideCString()}{ShowWideCString()}}
+{\footnotesize\ttfamily \label{class_string_aaf7e376ff580677ea4954d5913d5b917} 
+std::\+string \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_aaf7e376ff580677ea4954d5913d5b917}{testing::\+internal::\+\+String::\+\+Show\+Wide\+CString}} (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{wide\+\_\+c\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_string_ab0373bf6e96453d6ca0de2e68df13d3a}\index{String@{String}!WideCStringEquals@{WideCStringEquals}}
+\index{WideCStringEquals@{WideCStringEquals}!String@{String}}
+\doxyparagraph{\texorpdfstring{WideCStringEquals()}{WideCStringEquals()}}
+{\footnotesize\ttfamily \label{class_string_ab0373bf6e96453d6ca0de2e68df13d3a} 
+bool \doxymbox{\hyperlink{classtesting_1_1internal_1_1_string_ab0373bf6e96453d6ca0de2e68df13d3a}{testing::\+internal::\+\+String::\+\+Wide\+CString\+Equals}} (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{lhs}{, }\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

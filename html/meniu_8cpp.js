@@ -1,0 +1,25 @@
+var meniu_8cpp =
+[
+    [ "generateFile", "meniu_8cpp.html#aa2cca741a5aa427af6233d81297f0639", null ],
+    [ "generateGrades", "meniu_8cpp.html#aa387e4d880809fdc102d3245500bfe59", null ],
+    [ "generateGrades< std::deque< Student > >", "meniu_8cpp.html#a3bb12ad6ad1336579e3de727f0436a3a", null ],
+    [ "generateGrades< std::list< Student > >", "meniu_8cpp.html#a5985987a1d9c37523950572b719bb491", null ],
+    [ "generateGrades< std::vector< Student > >", "meniu_8cpp.html#af0ea601fbace22649d739b1097defcf3", null ],
+    [ "generateNamesGrades", "meniu_8cpp.html#aebe7e315298953aad3820c5188092133", null ],
+    [ "generateNamesGrades< std::deque< Student > >", "meniu_8cpp.html#a561952b1e1b8208ec60802c48b847324", null ],
+    [ "generateNamesGrades< std::list< Student > >", "meniu_8cpp.html#a6a4535fa49a33c43ab5c60bf477a18a4", null ],
+    [ "generateNamesGrades< std::vector< Student > >", "meniu_8cpp.html#afdd8d0aece732554a5748283804d24c2", null ],
+    [ "manualInput", "meniu_8cpp.html#a2536355042e89f48e1129d52fceb4d44", null ],
+    [ "manualInput< std::deque< Student > >", "meniu_8cpp.html#a7c93bcf8fae64e95dfeea036a1ed73d2", null ],
+    [ "manualInput< std::list< Student > >", "meniu_8cpp.html#a33210b42a62aa0cc6fbb838cfda7d5fd", null ],
+    [ "manualInput< std::vector< Student > >", "meniu_8cpp.html#ac2d2014826a109ad18e8b77998ab68ae", null ],
+    [ "scanFile", "meniu_8cpp.html#aa8a887d1ed5a8f7f5dba105b6be6e6c8", null ],
+    [ "scanFile< std::deque< Student > >", "meniu_8cpp.html#a9331c97bd45a259460d8f56c60054a29", null ],
+    [ "scanFile< std::list< Student > >", "meniu_8cpp.html#a425e4e61b489516314d850331ce2d2e3", null ],
+    [ "scanFile< std::vector< Student > >", "meniu_8cpp.html#af482b321e54bd624ba4e8c30fda3194e", null ],
+    [ "showMeniu", "meniu_8cpp.html#a1d9b2ed0e3e468b249ff1c7b017f8878", null ],
+    [ "sortingStudents", "meniu_8cpp.html#ae15a60e88f8f43c0f4d1944f9a945898", null ],
+    [ "sortingStudents< std::deque< Student > >", "meniu_8cpp.html#ac9b1346de7963ba83f8fcfb4a23e6b21", null ],
+    [ "sortingStudents< std::list< Student > >", "meniu_8cpp.html#a0e1b35457d8fa9499318f7e8ac26d515", null ],
+    [ "sortingStudents< std::vector< Student > >", "meniu_8cpp.html#ae64e3fed30fa575c81401804465943af", null ]
+];

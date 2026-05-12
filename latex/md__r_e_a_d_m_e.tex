@@ -1,0 +1,77 @@
+\chapter{Aprašymas }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Aprašymas@{Aprašymas}}
+\label{md__r_e_a_d_m_e_autotoc_md1260}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md1260}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1261}{}\doxysection{\texorpdfstring{Versija 1.\+2.}{Versija 1.\+2.}}\label{md__r_e_a_d_m_e_autotoc_md1261}
+Ši programa skirta studentų duomenų valdymui. Programos \doxylink{class_student}{Student} klasė saugo studento vardą, pavardę, namų darbų pažymius, egzamino pažymius bei apskaičiuoja galutinį įvertinimą pagal medianą ir vidurkį.\hypertarget{md__r_e_a_d_m_e_autotoc_md1262}{}\doxysection{\texorpdfstring{Student klasės struktūra}{Student klasės struktūra}}\label{md__r_e_a_d_m_e_autotoc_md1262}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+name\+\_\+  &std::\+string  &Vardas  \\
+surname\+\_\+  &std::\+string  &Pavardė  \\
+nd\+\_\+  &std::\+vector$<$int$>$  &Namų darbų balai  \\
+egz\+\_\+  &int  &Egzamino balas  \\
+final\+Avg\+\_\+  &double  &Galutinis pagal vidurkį  \\
+final\+Med\+\_\+  &double  &Galutinis pagal medianą  \\
+\end{DoxyTable}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1263}{}\doxysection{\texorpdfstring{Išvesties ir įvesties operatorių perdengimas}{Išvesties ir įvesties operatorių perdengimas}}\label{md__r_e_a_d_m_e_autotoc_md1263}
+Klasės objektų naudojimosi patogumui buvo perdengti įvedimo ir išvedimo operatoriai.
+
+Įvestis vykdoma per {\ttfamily std::\+istream}, todėl įvesties operatorius veikia su:\+
+\begin{DoxyEnumerate}
+\item rankiniu įvedimu ({\ttfamily cin})
+\item automatiniu įvedimu ({\ttfamily stringstream})
+\item įvedimu iš failo ({\ttfamily ifstream})
+\end{DoxyEnumerate}
+
+Išvestis vykdoma per std::\+ostream, todėl išvesties operatorius gali būti naudojamas:\+
+\begin{DoxyEnumerate}
+\item išvedimui į ekraną ({\ttfamily cout})
+\item išvedimui į failą ({\ttfamily ofstream})
+\end{DoxyEnumerate}
+
+Programa taip pat turi rankinius testus, kurie tikrina:\+
+\begin{DoxyItemize}
+\item konstruktorius
+\item kopijavimą
+\item move semantiką
+\item destruktorių
+\item getter\textquotesingle{}ius ir setter\textquotesingle{}ius
+\item įvesties ir išvesties operatorius
+\item skaičiavimo tikslumą
+\end{DoxyItemize}
+
+Fotografijos:\+
+
+  \hypertarget{md__r_e_a_d_m_e_autotoc_md1264}{}\doxysection{\texorpdfstring{Versija 1.\+5.}{Versija 1.\+5.}}\label{md__r_e_a_d_m_e_autotoc_md1264}
+Taip pat vėliau buvo pridėta abstrakti klasė \doxylink{class_person}{Person}. \doxylink{class_person}{Person} klasė turi čiuos kintamuosius:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+name\+\_\+  &std::\+string  &Vardas  \\
+surname\+\_\+  &std::\+string  &Pavardė  \\
+\end{DoxyTable}
+
+
+Tada \doxylink{class_student}{Student} klasėje lieka tik šie keturi kintamieji:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+nd\+\_\+  &std::\+vector$<$int$>$  &Namų darbų balai  \\
+egz\+\_\+  &int  &Egzamino balas  \\
+final\+Avg\+\_\+  &double  &Galutinis pagal vidurkį  \\
+final\+Med\+\_\+  &double  &Galutinis pagal medianą  \\
+\end{DoxyTable}
+
+
+Kadangi ši klasė yra abstrakti, negalima sukurti šios klasės objektų. Tai pagrindžia šios klasės testas, kuris bando sukurti \doxylink{class_person}{Person} objektą, tačiau tuo atveju testavimų failas nesikompiliuoja.
+
+Fototgrafijos, įrodančios, kad taip tikrai yra:\+
+
+ 
+
+Programa išliko veiksni po 1.\+2 versijos logikos įgyvendinimo:\+
+
+ 

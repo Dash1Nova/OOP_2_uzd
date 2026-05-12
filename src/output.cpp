@@ -1,6 +1,7 @@
 #include "output.h"
 #include "inputValid.h"
 #include "calculations.h"
+#include "vector.h"
 #include <iostream>
 #include <iomanip>
 #include <algorithm>
@@ -89,3 +90,7 @@ template void outputToFileSorting<std::deque<Student>>(std::deque<Student>&);
 template void handleOutput<std::vector<Student>>(std::vector<Student>&);
 template void handleOutput<std::list<Student>>(std::list<Student>&);
 template void handleOutput<std::deque<Student>>(std::deque<Student>&);
+
+template void printResults<Vector<Student>>(const Vector<Student>&, bool, const std::string&);
+template void outputToFileSorting<Vector<Student>>(Vector<Student>&);
+template void handleOutput<Vector<Student>>(Vector<Student>&);

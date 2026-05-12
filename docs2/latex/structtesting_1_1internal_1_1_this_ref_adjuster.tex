@@ -1,0 +1,52 @@
+\doxysubsection{testing::\+internal::\+This\+Ref\+Adjuster\texorpdfstring{$<$}{<} Pattern \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structtesting_1_1internal_1_1_this_ref_adjuster}{}\label{structtesting_1_1internal_1_1_this_ref_adjuster}\index{testing::internal::ThisRefAdjuster$<$ Pattern $>$@{testing::internal::ThisRefAdjuster$<$ Pattern $>$}}
+
+
+{\ttfamily \+\#include $<$gmock-\/function-\/mocker.\+h$>$}
+
+\doxysubsubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\using \doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster_a9fe36cc2a6928f4d0218413a42008088}{AdjustT}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Mock\+Type$>$ }\\static \doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster_a9fe36cc2a6928f4d0218413a42008088}{AdjustT}}$<$ Mock\+Type $>$ \doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster_adfffcd5147f6da9b06b5eb90168b7133}{Adjust}} (const Mock\+Type \&mock)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{structtesting_1_1internal_1_1_this_ref_adjuster_doc-typedef-members}
+\doxysubsubsection{Member Typedef Documentation}
+\Hypertarget{structtesting_1_1internal_1_1_this_ref_adjuster_a9fe36cc2a6928f4d0218413a42008088}\index{testing::internal::ThisRefAdjuster$<$ Pattern $>$@{testing::internal::ThisRefAdjuster$<$ Pattern $>$}!AdjustT@{AdjustT}}
+\index{AdjustT@{AdjustT}!testing::internal::ThisRefAdjuster$<$ Pattern $>$@{testing::internal::ThisRefAdjuster$<$ Pattern $>$}}
+\doxyparagraph{\texorpdfstring{AdjustT}{AdjustT}}
+{\footnotesize\ttfamily \label{structtesting_1_1internal_1_1_this_ref_adjuster_a9fe36cc2a6928f4d0218413a42008088} 
+template$<$typename Pattern$>$ \\
+template$<$typename T$>$ \\
+using \doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster}{testing::\+internal::\+\+This\+Ref\+Adjuster}}$<$ Pattern $>$::\+\+AdjustT}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typename}\ std::conditional<}
+\DoxyCodeLine{\ \ \ \ \ std::is\_const<typename\ std::remove\_reference<Pattern>::type>\doxymbox{\hyperlink{namespacetesting_1_1internal_ad7da35b6168ebdf6ce743fc557e2f748}{::value}},}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keyword}{typename}\ std::conditional<std::is\_lvalue\_reference<Pattern>::value,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\&,\ \textcolor{keyword}{const}\ T\&\&>::type,}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keyword}{typename}\ std::conditional<std::is\_lvalue\_reference<Pattern>::value,\ T\&,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\&\&>::type>::type}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{structtesting_1_1internal_1_1_this_ref_adjuster_doc-func-members}
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{structtesting_1_1internal_1_1_this_ref_adjuster_adfffcd5147f6da9b06b5eb90168b7133}\index{testing::internal::ThisRefAdjuster$<$ Pattern $>$@{testing::internal::ThisRefAdjuster$<$ Pattern $>$}!Adjust@{Adjust}}
+\index{Adjust@{Adjust}!testing::internal::ThisRefAdjuster$<$ Pattern $>$@{testing::internal::ThisRefAdjuster$<$ Pattern $>$}}
+\doxyparagraph{\texorpdfstring{Adjust()}{Adjust()}}
+{\footnotesize\ttfamily \label{structtesting_1_1internal_1_1_this_ref_adjuster_adfffcd5147f6da9b06b5eb90168b7133} 
+template$<$typename Pattern$>$ \\
+template$<$typename Mock\+Type$>$ \\
+\doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster_a9fe36cc2a6928f4d0218413a42008088}{AdjustT}}$<$ Mock\+Type $>$ \doxymbox{\hyperlink{structtesting_1_1internal_1_1_this_ref_adjuster}{testing::\+internal::\+\+This\+Ref\+Adjuster}}$<$ Pattern $>$::\+\+Adjust (\begin{DoxyParamCaption}\item[{const Mock\+Type \&}]{mock}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+

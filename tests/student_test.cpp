@@ -181,3 +181,8 @@ TEST(StudentTest, Polymorphism) {
 
     EXPECT_NO_THROW(p->print());
 }
+
+TEST(numberTest, equality) {
+    int a=5;
+    EXPECT_EQ(a, 5);
+}

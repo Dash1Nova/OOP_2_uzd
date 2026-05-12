@@ -4,6 +4,7 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <string>
 #include "student.h"
 
 int showMeniu();
@@ -18,9 +19,12 @@ void scanFile(Container& Students);
 bool generateFile();
 
 template <typename Container>
-void sortingStudentsTemplate();
+void sortingStudents(Container& Students, bool benchmarkMode = false, const std::string& filename = "");
 
 template <typename Container>
-void sortingStudents(Container& Students);
+void handleOutput(Container&);
+
+template <typename Container>
+bool readFile(const std::string&, Container&);
 
 #endif

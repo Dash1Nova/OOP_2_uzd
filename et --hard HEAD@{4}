@@ -1,0 +1,193 @@
+[33me95387d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mv2.0[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33me95387d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mv2.0[m[33m)[m HEAD@{1}: reset: moving to e95387d1700869600d1a738d5242248d5c722e32
+[33m50601b7[m HEAD@{2}: reset: moving to 50601b7e0ee6223cb3fc38c26d8daacb2240c38d
+[33m50601b7[m HEAD@{3}: reset: moving to 50601b7e0ee6223cb3fc38c26d8daacb2240c38d
+[33m50601b7[m HEAD@{4}: commit: added documentation with class description
+[33ma82e557[m HEAD@{5}: commit: added appropriate testing for move operator and constructor
+[33med6bc23[m HEAD@{6}: commit: correction of double declaration
+[33mdc77f8f[m HEAD@{7}: commit: move operator and conctructor for person class
+[33ma2da05d[m HEAD@{8}: commit: move operator and constructor corrections
+[33m16589e8[m HEAD@{9}: commit: added person.cpp
+[33md4dfe13[m HEAD@{10}: commit: implemented destructor fully
+[33m6cae4f7[m[33m ([m[1;33mtag: [m[1;33mV1.5_release[m[33m, [m[1;31morigin/v1.5[m[33m, [m[1;32mv1.5[m[33m)[m HEAD@{11}: checkout: moving from v1.5 to v2.0
+[33m6cae4f7[m[33m ([m[1;33mtag: [m[1;33mV1.5_release[m[33m, [m[1;31morigin/v1.5[m[33m, [m[1;32mv1.5[m[33m)[m HEAD@{12}: commit: corrections
+[33m10411c9[m HEAD@{13}: reset: moving to origin/v1.5
+[33m8c9cf18[m HEAD@{14}: commit: described changes with base class
+[33m44373a1[m HEAD@{15}: commit: added some testing corrections
+[33md705a25[m HEAD@{16}: commit: proved that person is an abstract class
+[33m26e9539[m HEAD@{17}: commit: corrections for base class and derived class
+[33m41cce95[m HEAD@{18}: commit: corrections for base class and derived class
+[33m40c55f8[m HEAD@{19}: commit: base class and derived class
+[33mb947030[m[33m ([m[1;33mtag: [m[1;33mV1.2_release[m[33m, [m[1;31morigin/v1.2[m[33m, [m[1;32mv1.2[m[33m)[m HEAD@{20}: checkout: moving from v1.2 to v1.5
+[33mb947030[m[33m ([m[1;33mtag: [m[1;33mV1.2_release[m[33m, [m[1;31morigin/v1.2[m[33m, [m[1;32mv1.2[m[33m)[m HEAD@{21}: reset: moving to origin/v1.2
+[33mdfcadd4[m HEAD@{22}: commit: corrections of readme
+[33m3522e08[m HEAD@{23}: commit: precisely discribed program
+[33mb35f46a[m HEAD@{24}: commit: added file testing
+[33m5323c56[m HEAD@{25}: commit: added testing for every method
+[33m04330c6[m HEAD@{26}: commit: corrections
+[33m1ee3c29[m HEAD@{27}: commit: added Rule of Five declarations
+[33mc23ab48[m HEAD@{28}: commit: added I/O operators
+[33mf80614f[m HEAD@{29}: commit: added move assignment and constructor
+[33mb4a5666[m HEAD@{30}: commit: added copy assignment and constructor
+[33mc796230[m HEAD@{31}: commit: added I/O operators
+[33m10c13a2[m[33m ([m[1;31morigin/v1.1[m[33m, [m[1;32mv1.1[m[33m)[m HEAD@{32}: checkout: moving from v1.1 to v1.2
+[33m10c13a2[m[33m ([m[1;31morigin/v1.1[m[33m, [m[1;32mv1.1[m[33m)[m HEAD@{33}: commit: full realization of destructor
+[33md52ec4b[m[33m ([m[1;33mtag: [m[1;33mV1.1_release[m[33m)[m HEAD@{34}: commit: corrections
+[33mb14ccc7[m HEAD@{35}: commit: added destructor
+[33m8b982e9[m HEAD@{36}: pull origin v1.1: Merge made by the 'ort' strategy.
+[33m67da41e[m HEAD@{37}: commit: added destructor
+[33mc11657b[m HEAD@{38}: pull origin v1.1: Merge made by the 'ort' strategy.
+[33m0515f38[m HEAD@{39}: commit: corected for classes 6.0
+[33md81ee52[m HEAD@{40}: commit: corected for classes 5.0
+[33m6ec45ad[m HEAD@{41}: commit: corected for classes 4.0
+[33m3929f33[m HEAD@{42}: commit: corected for classes 3.0
+[33mbd59e7b[m HEAD@{43}: commit: corected for classes 2.0
+[33ma4cc686[m HEAD@{44}: commit: corected for classes
+[33m654f9a6[m HEAD@{45}: commit: switched to classes
+[33m014bc85[m[33m ([m[1;33mtag: [m[1;33mV1.0_final[m[33m, [m[1;32mv1.0[m[33m)[m HEAD@{46}: checkout: moving from v1.0 to v1.1
+[33m014bc85[m[33m ([m[1;33mtag: [m[1;33mV1.0_final[m[33m, [m[1;32mv1.0[m[33m)[m HEAD@{47}: reset: moving to old/v1.0
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{48}: checkout: moving from main to v1.0
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{49}: reset: moving to old/main
+[33mb565f22[m HEAD@{50}: checkout: moving from v1.0 to main
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{51}: reset: moving to HEAD
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{52}: reset: moving to old/main
+[33me95387d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mv2.0[m[33m)[m HEAD@{53}: commit (cherry-pick): Add average time metrics for file operations
+[33mb7b2293[m HEAD@{54}: commit (cherry-pick): Add new image to README
+[33md3c5bbc[m HEAD@{55}: cherry-pick: Update README with testing confirmation images
+[33m37d9375[m HEAD@{56}: commit (cherry-pick): Add confirmation images to README
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{57}: reset: moving to 222380ba9ee871dac6fc52bd25bc91fea4dbb2d8
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{58}: reset: moving to 222380ba9ee871dac6fc52bd25bc91fea4dbb2d8
+[33m222380b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{59}: reset: moving to old/main
+[33m6e83ac7[m HEAD@{60}: commit (merge): Resolved merge conflict in README.md
+[33m66cc305[m HEAD@{61}: commit: corrections
+[33m325a2cc[m[33m ([m[1;31morigin/v1.0[m[33m)[m HEAD@{62}: reset: moving to origin/v1.0
+[33m50a89d3[m HEAD@{63}: commit: up to date meniu.cpp
+[33mc3a794b[m HEAD@{64}: commit: up to date readme
+[33m87e1bcc[m HEAD@{65}: reset: moving to HEAD~1
+[33mb230f77[m HEAD@{66}: commit: corrections
+[33m87e1bcc[m HEAD@{67}: commit: 3 strategies
+[33m0f4dcdc[m HEAD@{68}: pull: Merge made by the 'ort' strategy.
+[33m13699ee[m HEAD@{69}: commit: 3 strategies
+[33m5112a17[m[33m ([m[1;33mtag: [m[1;33mV1.0_initial[m[33m)[m HEAD@{70}: commit: corrections
+[33m526fbf3[m HEAD@{71}: pull: Merge made by the 'ort' strategy.
+[33mdac635b[m HEAD@{72}: commit: corrections
+[33md698fa3[m HEAD@{73}: commit: execution duration corrected 2.0
+[33md4c45a6[m HEAD@{74}: commit: execution duration corrected
+[33m787db87[m HEAD@{75}: commit: execution duration deleted
+[33m2cacf6c[m HEAD@{76}: pull: Merge made by the 'ort' strategy.
+[33m2140ce7[m HEAD@{77}: commit: execution duration deleted
+[33m1e09830[m HEAD@{78}: commit: execution duration
+[33m33e4dea[m HEAD@{79}: pull: Merge made by the 'ort' strategy.
+[33ma24116b[m HEAD@{80}: commit: execution duration
+[33m1490942[m HEAD@{81}: commit: trying to adjust for different containers 5.0
+[33m63ac19a[m HEAD@{82}: commit: trying to adjust for different containers 4.0
+[33m9481cd6[m HEAD@{83}: commit: trying to adjust for different containers 3.0
+[33me2ccd87[m HEAD@{84}: commit: trying to adjust for different containers 2.0
+[33m8c92d17[m HEAD@{85}: commit: trying to adjust for different containers
+[33m05c4e26[m HEAD@{86}: commit: adjusted for 3 container types
+[33m0fb5151[m HEAD@{87}: commit: changed gitignore 2.0
+[33m1e30955[m HEAD@{88}: commit: changed gitignore
+[33mc591726[m[33m ([m[1;33mtag: [m[1;33mV0.4-release[m[33m, [m[1;31morigin/v0.4[m[33m, [m[1;32mv0.4[m[33m)[m HEAD@{89}: checkout: moving from v0.4 to v1.0
+[33mc591726[m[33m ([m[1;33mtag: [m[1;33mV0.4-release[m[33m, [m[1;31morigin/v0.4[m[33m, [m[1;32mv0.4[m[33m)[m HEAD@{90}: commit: corrections 4.0
+[33m0ec6580[m HEAD@{91}: commit: corrections 3.0
+[33m5fdb832[m HEAD@{92}: pull: Merge made by the 'ort' strategy.
+[33mdc97538[m HEAD@{93}: commit: corrections
+[33mc638157[m HEAD@{94}: commit: corrections
+[33mb1b1e45[m HEAD@{95}: commit: corrections
+[33ma7c8eae[m HEAD@{96}: commit: corrections
+[33mc9c98df[m HEAD@{97}: commit: corrections
+[33m2033272[m HEAD@{98}: commit: corrections
+[33m1c7cef6[m HEAD@{99}: commit: corrections
+[33m5c29eea[m HEAD@{100}: commit: added sorting function
+[33m4df4b7b[m HEAD@{101}: commit: changed makefile
+[33m3f44cfb[m HEAD@{102}: commit: changed location of h file 3.0
+[33m16fe04c[m HEAD@{103}: pull: Merge made by the 'ort' strategy.
+[33me4e83ec[m HEAD@{104}: commit: changed location of h file 2.0
+[33m56602d5[m HEAD@{105}: commit: changed location of h file
+[33m71f0bbc[m HEAD@{106}: commit: changed makefile
+[33mb4af2a6[m HEAD@{107}: commit: corrections 5.0
+[33m120b2c2[m HEAD@{108}: commit: added generate file function
+[33m7b5d1ff[m HEAD@{109}: commit: corrections 5.0
+[33mf6e65b6[m HEAD@{110}: commit: corrections 4.0
+[33m6b86379[m HEAD@{111}: commit: corrections 3.0
+[33m11a1155[m HEAD@{112}: commit: corrections of file header file
+[33m6505480[m HEAD@{113}: commit: corrections 2.0
+[33mf1802c3[m HEAD@{114}: commit: corrections
+[33mf1938d1[m HEAD@{115}: commit: added file generation function
+[33md1a82ce[m[33m ([m[1;33mtag: [m[1;33mv0.3_release[m[33m, [m[1;31morigin/v0.3[m[33m, [m[1;32mv0.3[m[33m)[m HEAD@{116}: checkout: moving from v0.3 to v0.4
+[33md1a82ce[m[33m ([m[1;33mtag: [m[1;33mv0.3_release[m[33m, [m[1;31morigin/v0.3[m[33m, [m[1;32mv0.3[m[33m)[m HEAD@{117}: commit: corrected Makefile
+[33m357faa1[m HEAD@{118}: commit: corrections 2.0
+[33m30242f5[m HEAD@{119}: pull: Merge made by the 'ort' strategy.
+[33macd5863[m HEAD@{120}: commit: corrections
+[33m344b84e[m HEAD@{121}: commit: cpp main file
+[33maed8efa[m HEAD@{122}: commit: cpp file for meniu
+[33mf889871[m HEAD@{123}: commit: header file for meniu
+[33m884d8b1[m HEAD@{124}: commit: vector corrections 1.0
+[33m055f812[m HEAD@{125}: commit: cpp file for output
+[33m8aff1d3[m HEAD@{126}: commit: header file for output
+[33m53d4f1c[m HEAD@{127}: commit: cpp file for file handling
+[33m81a366d[m HEAD@{128}: commit: header file for file handling
+[33mdc21cd3[m HEAD@{129}: commit: header file for calculations
+[33m957b2e8[m HEAD@{130}: commit: cpp file for calculations
+[33m0d33001[m HEAD@{131}: commit: header file for input
+[33mbeae626[m HEAD@{132}: pull: Merge made by the 'ort' strategy.
+[33m95411bf[m HEAD@{133}: commit: cpp file for input
+[33m255f4fc[m HEAD@{134}: commit: header file for input
+[33m27b5e52[m HEAD@{135}: commit: header file for input 2.0
+[33m21ba8bc[m HEAD@{136}: commit: header file for input
+[33mf689ae5[m HEAD@{137}: commit: file with struct
+[33mb694139[m HEAD@{138}: commit: Validation of other functions and some corrections
+[33me1ddd13[m HEAD@{139}: commit: Generate grades and names validation
+[33mb174a13[m HEAD@{140}: commit: Generate grades validation
+[33m43be0ce[m HEAD@{141}: commit: Manual input validation
+[33m19d06c8[m HEAD@{142}: commit: Added exception handling functions
+[33ma83f6c1[m HEAD@{143}: commit: Completed exception handling for files
+[33m6108007[m HEAD@{144}: commit: Corrections 3.0
+[33m61073f5[m HEAD@{145}: commit: Corrections 2.0
+[33m10730cc[m HEAD@{146}: commit: Added a few functions
+[33m31629d8[m HEAD@{147}: commit: Added one more function
+[33m9947e45[m HEAD@{148}: commit: Added exceptions handling 2.0
+[33m90583bd[m HEAD@{149}: commit: Added exceptions handling 1.0
+[33m4b3beeb[m HEAD@{150}: commit: Corrections 1.0
+[33m1dc3c02[m HEAD@{151}: commit: Added new function 1.0
+[33m185e886[m[33m ([m[1;33mtag: [m[1;33mV0.2-Release[m[33m, [m[1;31morigin/v0.2[m[33m, [m[1;32mv0.2[m[33m)[m HEAD@{152}: checkout: moving from v0.2 to v0.3
+[33m185e886[m[33m ([m[1;33mtag: [m[1;33mV0.2-Release[m[33m, [m[1;31morigin/v0.2[m[33m, [m[1;32mv0.2[m[33m)[m HEAD@{153}: commit: Corrections 7.0
+[33mba1b242[m HEAD@{154}: commit: Corrections 6.0
+[33m5b91d44[m HEAD@{155}: commit: Corrections 5.0
+[33m78a5a45[m HEAD@{156}: commit: Corrections 4.0
+[33mcb9c16d[m HEAD@{157}: commit: Corrections 3.0
+[33mbd7a5fe[m HEAD@{158}: commit: Added time counting functionality
+[33m3c1d638[m HEAD@{159}: commit: Corrections2.0
+[33m0958f34[m HEAD@{160}: commit: Corrections
+[33m865b124[m HEAD@{161}: commit: File reading/writing logic + sorting data
+[33m8e9a339[m HEAD@{162}: commit: Added two functions for convenience
+[33mb5c01da[m HEAD@{163}: commit: Created function for reading from file
+[33m378daf3[m HEAD@{164}: pull origin v0.2: Merge made by the 'ort' strategy.
+[33mab8c9aa[m HEAD@{165}: commit: Created a file kursiokai
+[33m89f2530[m[33m ([m[1;33mtag: [m[1;33mv0.111[m[33m, [m[1;31morigin/v0.1[m[33m, [m[1;32mv0.1[m[33m)[m HEAD@{166}: checkout: moving from v0.1 to v0.2
+[33m89f2530[m[33m ([m[1;33mtag: [m[1;33mv0.111[m[33m, [m[1;31morigin/v0.1[m[33m, [m[1;32mv0.1[m[33m)[m HEAD@{167}: commit: Fully with arrays and correct
+[33mf2f215a[m HEAD@{168}: commit: Fully with arrays but not correct
+[33mbb8c919[m[33m ([m[1;33mtag: [m[1;33mv0.11[m[33m)[m HEAD@{169}: commit: Logic correction 2
+[33me63ed61[m HEAD@{170}: commit: Logic correction
+[33ma7a2a43[m[33m ([m[1;33mtag: [m[1;33mV0.1[m[33m)[m HEAD@{171}: commit: Final vector file version
+[33mfff5b7c[m HEAD@{172}: commit: Final array file version
+[33m32ba7fd[m HEAD@{173}: commit: Vector file with menu is correct
+[33m014c50d[m HEAD@{174}: commit: Added menu for array file
+[33m0c83924[m HEAD@{175}: commit: Added menu for vector file
+[33m6a6443a[m HEAD@{176}: commit: Finally working with array
+[33m94ced3f[m HEAD@{177}: commit: Draft with C array sorting
+[33m22aadf9[m HEAD@{178}: commit: Added file for arrays
+[33mb2b99e5[m HEAD@{179}: commit: Correctly working with vectors
+[33m786ab84[m HEAD@{180}: commit: Works with vectors
+[33m643f8c5[m HEAD@{181}: commit: Draft version of vector file
+[33m0655805[m[33m ([m[1;33mtag: [m[1;33mV.pradinė[m[33m, [m[1;31morigin/v.pradinė[m[33m, [m[1;32mv.pradinė[m[33m)[m HEAD@{182}: checkout: moving from v.pradinė to v0.1
+[33m0655805[m[33m ([m[1;33mtag: [m[1;33mV.pradinė[m[33m, [m[1;31morigin/v.pradinė[m[33m, [m[1;32mv.pradinė[m[33m)[m HEAD@{183}: commit: Added median and finally debugged
+[33m8668e3f[m HEAD@{184}: commit: Program partially debugged
+[33md9e1226[m HEAD@{185}: commit: Version with avg and required output
+[33m135f8bd[m HEAD@{186}: commit: Version that counts final mark with avg
+[33m6296925[m HEAD@{187}: commit: Version that counts average
+[33m5dd5703[m HEAD@{188}: commit: Added struct and user interaction
+[33m6a2906c[m HEAD@{189}: commit: Added new project to branch
+[33mb565f22[m HEAD@{190}: checkout: moving from main to v.pradinė
+[33mb565f22[m HEAD@{191}: commit: Created new project
+[33mbb95ebb[m HEAD@{192}: initial pull

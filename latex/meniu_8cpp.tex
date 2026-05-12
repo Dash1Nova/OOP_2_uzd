@@ -1,0 +1,233 @@
+\doxysection{src/\+meniu.cpp File Reference}
+\hypertarget{meniu_8cpp}{}\label{meniu_8cpp}\index{src/meniu.cpp@{src/meniu.cpp}}
+{\ttfamily \+\#include "{}meniu.\+h"{}}\newline
+{\ttfamily \+\#include "{}input\+Valid.\+h"{}}\newline
+{\ttfamily \+\#include "{}calculations.\+h"{}}\newline
+{\ttfamily \+\#include "{}output.\+h"{}}\newline
+{\ttfamily \+\#include "{}file\+Handling.\+h"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$list$>$}\newline
+{\ttfamily \+\#include $<$deque$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{meniu_8cpp_a1d9b2ed0e3e468b249ff1c7b017f8878}{show\+Meniu}} ()
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44}{manual\+Input}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59}{generate\+Grades}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8cpp_aebe7e315298953aad3820c5188092133}{generate\+Names\+Grades}} (Container \&Students)
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8}{scan\+File}} (Container \&Students)
+\item 
+bool \doxymbox{\hyperlink{meniu_8cpp_aa2cca741a5aa427af6233d81297f0639}{generate\+File}} ()
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898}{sorting\+Students}} (Container \&students)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_ac2d2014826a109ad18e8b77998ab68ae}{manual\+Input$<$ std::\+vector$<$ Student $>$ $>$}} (std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a33210b42a62aa0cc6fbb838cfda7d5fd}{manual\+Input$<$ std::\+list$<$ Student $>$ $>$}} (std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a7c93bcf8fae64e95dfeea036a1ed73d2}{manual\+Input$<$ std::\+deque$<$ Student $>$ $>$}} (std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_af0ea601fbace22649d739b1097defcf3}{generate\+Grades$<$ std::\+vector$<$ Student $>$ $>$}} (std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a5985987a1d9c37523950572b719bb491}{generate\+Grades$<$ std::\+list$<$ Student $>$ $>$}} (std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a3bb12ad6ad1336579e3de727f0436a3a}{generate\+Grades$<$ std::\+deque$<$ Student $>$ $>$}} (std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_afdd8d0aece732554a5748283804d24c2}{generate\+Names\+Grades$<$ std::\+vector$<$ Student $>$ $>$}} (std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a6a4535fa49a33c43ab5c60bf477a18a4}{generate\+Names\+Grades$<$ std::\+list$<$ Student $>$ $>$}} (std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a561952b1e1b8208ec60802c48b847324}{generate\+Names\+Grades$<$ std::\+deque$<$ Student $>$ $>$}} (std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_af482b321e54bd624ba4e8c30fda3194e}{scan\+File$<$ std::\+vector$<$ Student $>$ $>$}} (std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a425e4e61b489516314d850331ce2d2e3}{scan\+File$<$ std::\+list$<$ Student $>$ $>$}} (std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a9331c97bd45a259460d8f56c60054a29}{scan\+File$<$ std::\+deque$<$ Student $>$ $>$}} (std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_ae64e3fed30fa575c81401804465943af}{sorting\+Students$<$ std::\+vector$<$ Student $>$ $>$}} (std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_a0e1b35457d8fa9499318f7e8ac26d515}{sorting\+Students$<$ std::\+list$<$ Student $>$ $>$}} (std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template void \doxymbox{\hyperlink{meniu_8cpp_ac9b1346de7963ba83f8fcfb4a23e6b21}{sorting\+Students$<$ std::\+deque$<$ Student $>$ $>$}} (std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{meniu_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{meniu_8cpp_aa2cca741a5aa427af6233d81297f0639}\index{meniu.cpp@{meniu.cpp}!generateFile@{generateFile}}
+\index{generateFile@{generateFile}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateFile()}{generateFile()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_aa2cca741a5aa427af6233d81297f0639} 
+bool generate\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00129}{129}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59}\index{meniu.cpp@{meniu.cpp}!generateGrades@{generateGrades}}
+\index{generateGrades@{generateGrades}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateGrades()}{generateGrades()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59} 
+template$<$typename Container$>$ \\
+void generate\+Grades (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00057}{57}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_a3bb12ad6ad1336579e3de727f0436a3a}\index{meniu.cpp@{meniu.cpp}!generateGrades$<$ std::deque$<$ Student $>$ $>$@{generateGrades$<$ std::deque$<$ Student $>$ $>$}}
+\index{generateGrades$<$ std::deque$<$ Student $>$ $>$@{generateGrades$<$ std::deque$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateGrades$<$ std::deque$<$ Student $>$ $>$()}{generateGrades< std::deque< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a3bb12ad6ad1336579e3de727f0436a3a} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59}{generate\+Grades}}$<$ std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a5985987a1d9c37523950572b719bb491}\index{meniu.cpp@{meniu.cpp}!generateGrades$<$ std::list$<$ Student $>$ $>$@{generateGrades$<$ std::list$<$ Student $>$ $>$}}
+\index{generateGrades$<$ std::list$<$ Student $>$ $>$@{generateGrades$<$ std::list$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateGrades$<$ std::list$<$ Student $>$ $>$()}{generateGrades< std::list< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a5985987a1d9c37523950572b719bb491} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59}{generate\+Grades}}$<$ std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_af0ea601fbace22649d739b1097defcf3}\index{meniu.cpp@{meniu.cpp}!generateGrades$<$ std::vector$<$ Student $>$ $>$@{generateGrades$<$ std::vector$<$ Student $>$ $>$}}
+\index{generateGrades$<$ std::vector$<$ Student $>$ $>$@{generateGrades$<$ std::vector$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateGrades$<$ std::vector$<$ Student $>$ $>$()}{generateGrades< std::vector< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_af0ea601fbace22649d739b1097defcf3} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa387e4d880809fdc102d3245500bfe59}{generate\+Grades}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_aebe7e315298953aad3820c5188092133}\index{meniu.cpp@{meniu.cpp}!generateNamesGrades@{generateNamesGrades}}
+\index{generateNamesGrades@{generateNamesGrades}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateNamesGrades()}{generateNamesGrades()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_aebe7e315298953aad3820c5188092133} 
+template$<$typename Container$>$ \\
+void generate\+Names\+Grades (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00083}{83}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_a561952b1e1b8208ec60802c48b847324}\index{meniu.cpp@{meniu.cpp}!generateNamesGrades$<$ std::deque$<$ Student $>$ $>$@{generateNamesGrades$<$ std::deque$<$ Student $>$ $>$}}
+\index{generateNamesGrades$<$ std::deque$<$ Student $>$ $>$@{generateNamesGrades$<$ std::deque$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateNamesGrades$<$ std::deque$<$ Student $>$ $>$()}{generateNamesGrades< std::deque< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a561952b1e1b8208ec60802c48b847324} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aebe7e315298953aad3820c5188092133}{generate\+Names\+Grades}}$<$ std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a6a4535fa49a33c43ab5c60bf477a18a4}\index{meniu.cpp@{meniu.cpp}!generateNamesGrades$<$ std::list$<$ Student $>$ $>$@{generateNamesGrades$<$ std::list$<$ Student $>$ $>$}}
+\index{generateNamesGrades$<$ std::list$<$ Student $>$ $>$@{generateNamesGrades$<$ std::list$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateNamesGrades$<$ std::list$<$ Student $>$ $>$()}{generateNamesGrades< std::list< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a6a4535fa49a33c43ab5c60bf477a18a4} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aebe7e315298953aad3820c5188092133}{generate\+Names\+Grades}}$<$ std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_afdd8d0aece732554a5748283804d24c2}\index{meniu.cpp@{meniu.cpp}!generateNamesGrades$<$ std::vector$<$ Student $>$ $>$@{generateNamesGrades$<$ std::vector$<$ Student $>$ $>$}}
+\index{generateNamesGrades$<$ std::vector$<$ Student $>$ $>$@{generateNamesGrades$<$ std::vector$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{generateNamesGrades$<$ std::vector$<$ Student $>$ $>$()}{generateNamesGrades< std::vector< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_afdd8d0aece732554a5748283804d24c2} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aebe7e315298953aad3820c5188092133}{generate\+Names\+Grades}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44}\index{meniu.cpp@{meniu.cpp}!manualInput@{manualInput}}
+\index{manualInput@{manualInput}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{manualInput()}{manualInput()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44} 
+template$<$typename Container$>$ \\
+void manual\+Input (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00030}{30}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_a7c93bcf8fae64e95dfeea036a1ed73d2}\index{meniu.cpp@{meniu.cpp}!manualInput$<$ std::deque$<$ Student $>$ $>$@{manualInput$<$ std::deque$<$ Student $>$ $>$}}
+\index{manualInput$<$ std::deque$<$ Student $>$ $>$@{manualInput$<$ std::deque$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{manualInput$<$ std::deque$<$ Student $>$ $>$()}{manualInput< std::deque< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a7c93bcf8fae64e95dfeea036a1ed73d2} 
+template void \doxymbox{\hyperlink{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44}{manual\+Input}}$<$ std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a33210b42a62aa0cc6fbb838cfda7d5fd}\index{meniu.cpp@{meniu.cpp}!manualInput$<$ std::list$<$ Student $>$ $>$@{manualInput$<$ std::list$<$ Student $>$ $>$}}
+\index{manualInput$<$ std::list$<$ Student $>$ $>$@{manualInput$<$ std::list$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{manualInput$<$ std::list$<$ Student $>$ $>$()}{manualInput< std::list< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a33210b42a62aa0cc6fbb838cfda7d5fd} 
+template void \doxymbox{\hyperlink{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44}{manual\+Input}}$<$ std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_ac2d2014826a109ad18e8b77998ab68ae}\index{meniu.cpp@{meniu.cpp}!manualInput$<$ std::vector$<$ Student $>$ $>$@{manualInput$<$ std::vector$<$ Student $>$ $>$}}
+\index{manualInput$<$ std::vector$<$ Student $>$ $>$@{manualInput$<$ std::vector$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{manualInput$<$ std::vector$<$ Student $>$ $>$()}{manualInput< std::vector< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_ac2d2014826a109ad18e8b77998ab68ae} 
+template void \doxymbox{\hyperlink{meniu_8cpp_a2536355042e89f48e1129d52fceb4d44}{manual\+Input}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8}\index{meniu.cpp@{meniu.cpp}!scanFile@{scanFile}}
+\index{scanFile@{scanFile}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{scanFile()}{scanFile()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8} 
+template$<$typename Container$>$ \\
+void scan\+File (\begin{DoxyParamCaption}\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00112}{112}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_a9331c97bd45a259460d8f56c60054a29}\index{meniu.cpp@{meniu.cpp}!scanFile$<$ std::deque$<$ Student $>$ $>$@{scanFile$<$ std::deque$<$ Student $>$ $>$}}
+\index{scanFile$<$ std::deque$<$ Student $>$ $>$@{scanFile$<$ std::deque$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{scanFile$<$ std::deque$<$ Student $>$ $>$()}{scanFile< std::deque< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a9331c97bd45a259460d8f56c60054a29} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8}{scan\+File}}$<$ std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a425e4e61b489516314d850331ce2d2e3}\index{meniu.cpp@{meniu.cpp}!scanFile$<$ std::list$<$ Student $>$ $>$@{scanFile$<$ std::list$<$ Student $>$ $>$}}
+\index{scanFile$<$ std::list$<$ Student $>$ $>$@{scanFile$<$ std::list$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{scanFile$<$ std::list$<$ Student $>$ $>$()}{scanFile< std::list< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a425e4e61b489516314d850331ce2d2e3} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8}{scan\+File}}$<$ std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_af482b321e54bd624ba4e8c30fda3194e}\index{meniu.cpp@{meniu.cpp}!scanFile$<$ std::vector$<$ Student $>$ $>$@{scanFile$<$ std::vector$<$ Student $>$ $>$}}
+\index{scanFile$<$ std::vector$<$ Student $>$ $>$@{scanFile$<$ std::vector$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{scanFile$<$ std::vector$<$ Student $>$ $>$()}{scanFile< std::vector< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_af482b321e54bd624ba4e8c30fda3194e} 
+template void \doxymbox{\hyperlink{meniu_8cpp_aa8a887d1ed5a8f7f5dba105b6be6e6c8}{scan\+File}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a1d9b2ed0e3e468b249ff1c7b017f8878}\index{meniu.cpp@{meniu.cpp}!showMeniu@{showMeniu}}
+\index{showMeniu@{showMeniu}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{showMeniu()}{showMeniu()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a1d9b2ed0e3e468b249ff1c7b017f8878} 
+int show\+Meniu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00016}{16}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898}\index{meniu.cpp@{meniu.cpp}!sortingStudents@{sortingStudents}}
+\index{sortingStudents@{sortingStudents}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{sortingStudents()}{sortingStudents()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898} 
+template$<$typename Container$>$ \\
+void sorting\+Students (\begin{DoxyParamCaption}\item[{Container \&}]{students}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{meniu_8cpp_source_l00183}{183}} of file \doxymbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+\Hypertarget{meniu_8cpp_ac9b1346de7963ba83f8fcfb4a23e6b21}\index{meniu.cpp@{meniu.cpp}!sortingStudents$<$ std::deque$<$ Student $>$ $>$@{sortingStudents$<$ std::deque$<$ Student $>$ $>$}}
+\index{sortingStudents$<$ std::deque$<$ Student $>$ $>$@{sortingStudents$<$ std::deque$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{sortingStudents$<$ std::deque$<$ Student $>$ $>$()}{sortingStudents< std::deque< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_ac9b1346de7963ba83f8fcfb4a23e6b21} 
+template void \doxymbox{\hyperlink{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898}{sorting\+Students}}$<$ std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_a0e1b35457d8fa9499318f7e8ac26d515}\index{meniu.cpp@{meniu.cpp}!sortingStudents$<$ std::list$<$ Student $>$ $>$@{sortingStudents$<$ std::list$<$ Student $>$ $>$}}
+\index{sortingStudents$<$ std::list$<$ Student $>$ $>$@{sortingStudents$<$ std::list$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{sortingStudents$<$ std::list$<$ Student $>$ $>$()}{sortingStudents< std::list< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_a0e1b35457d8fa9499318f7e8ac26d515} 
+template void \doxymbox{\hyperlink{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898}{sorting\+Students}}$<$ std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{meniu_8cpp_ae64e3fed30fa575c81401804465943af}\index{meniu.cpp@{meniu.cpp}!sortingStudents$<$ std::vector$<$ Student $>$ $>$@{sortingStudents$<$ std::vector$<$ Student $>$ $>$}}
+\index{sortingStudents$<$ std::vector$<$ Student $>$ $>$@{sortingStudents$<$ std::vector$<$ Student $>$ $>$}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{sortingStudents$<$ std::vector$<$ Student $>$ $>$()}{sortingStudents< std::vector< Student > >()}}
+{\footnotesize\ttfamily \label{meniu_8cpp_ae64e3fed30fa575c81401804465943af} 
+template void \doxymbox{\hyperlink{meniu_8cpp_ae15a60e88f8f43c0f4d1944f9a945898}{sorting\+Students}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+

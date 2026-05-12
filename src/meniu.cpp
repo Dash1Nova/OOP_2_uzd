@@ -3,6 +3,7 @@
 #include "calculations.h"
 #include "output.h"
 #include "fileHandling.h"
+#include "vector.h"
 #include <iostream>
 #include <chrono>
 #include <iomanip>
@@ -12,6 +13,7 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <string>
 
 int showMeniu() {
     return inputInt(
@@ -180,13 +182,21 @@ bool generateFile() {
 }
 
 template <typename Container>
-void sortingStudents(Container& students) {
-    std::string filename;
-    std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
-    system("powershell ls data/*.txt");
-    std::cin >> filename;
+void sortingStudents(Container& students, bool benchmarkMode, const std::string& filename) {
+    std::string file;
 
-    std::ifstream in("data/" + filename);
+    if (!benchmarkMode)
+    {
+        std::cout << "Koki faila rusiuoti i vargsiukus ir kietakius: \n";
+        system("powershell ls data/*.txt");
+        std::cin >> file;
+    }
+    else
+    {
+        file = filename;
+    }
+
+    std::ifstream in("data/" + file);
     if (!in.is_open()) return;
 
     students.clear();
@@ -215,10 +225,20 @@ void sortingStudents(Container& students) {
     double readTime = std::chrono::duration<double>(readEnd - readStart).count();
     std::cout << "Failo skaitymas uztruko: " << readTime << " s\n";
 
-    int choiceOutput = inputInt("Rusiuoti pagal:\n"
-        "1 - Varda\n"
-        "2 - Pavarde\n"
-        "3 - Galutini bala\n", 1, 3);
+    int choiceOutput;
+
+    if (!benchmarkMode)
+    {
+        choiceOutput = inputInt(
+            "Rusiuoti pagal:\n"
+            "1 - Varda\n"
+            "2 - Pavarde\n"
+            "3 - Galutini bala\n", 1, 3);
+    }
+    else
+    {
+        choiceOutput = 3;
+    }
 
     auto sortStart = std::chrono::high_resolution_clock::now();
 
@@ -236,10 +256,20 @@ void sortingStudents(Container& students) {
     double sortTime = std::chrono::duration<double>(sortEnd - sortStart).count();
     std::cout << "Bendras studentu rusiavimas uztruko: " << sortTime << " s\n";
 
-    int strategy = inputInt("Pasirinkite studentu skirstymo strategija:\n"
-        "1 - du nauji konteineriai\n"
-        "2 - vienas naujas konteineris ir trynimas is bendro konteinerio\n"
-        "3 - efektyvus metodai\n", 1, 3);
+    int strategy;
+
+    if (!benchmarkMode)
+    {
+        strategy = inputInt(
+            "Pasirinkite studentu skirstymo strategija:\n"
+            "1 - du nauji konteineriai\n"
+            "2 - vienas naujas konteineris ir trynimas is bendro konteinerio\n"
+            "3 - efektyvus metodai\n", 1, 3);
+    }
+    else
+    {
+        strategy = 3;
+    }
 
     Container vargsiukai, kietiakai;
 
@@ -311,6 +341,13 @@ template void scanFile<std::vector<Student>>(std::vector<Student>&);
 template void scanFile<std::list<Student>>(std::list<Student>&);
 template void scanFile<std::deque<Student>>(std::deque<Student>&);
 
-template void sortingStudents<std::vector<Student>>(std::vector<Student>&);
-template void sortingStudents<std::list<Student>>(std::list<Student>&);
-template void sortingStudents<std::deque<Student>>(std::deque<Student>&);
+template void manualInput<Vector<Student>>(Vector<Student>&);
+template void generateGrades<Vector<Student>>(Vector<Student>&);
+template void generateNamesGrades<Vector<Student>>(Vector<Student>&);
+template void scanFile<Vector<Student>>(Vector<Student>&);
+template void handleOutput<Vector<Student>>(Vector<Student>&);
+template bool readFile<Vector<Student>>(const std::string&, Vector<Student>&);
+template void sortingStudents<std::vector<Student>>(std::vector<Student>&, bool, const std::string&);
+template void sortingStudents<std::list<Student>>(std::list<Student>&, bool, const std::string&);
+template void sortingStudents<std::deque<Student>>(std::deque<Student>&, bool, const std::string&);
+template void sortingStudents<Vector<Student>>(Vector<Student>&, bool, const std::string&);

@@ -1,0 +1,45 @@
+\doxysubsection{testing::\+internal::\+Invoke\+Argument\+Action\texorpdfstring{$<$}{<} index, Params \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structtesting_1_1internal_1_1_invoke_argument_action}{}\label{structtesting_1_1internal_1_1_invoke_argument_action}\index{testing::internal::InvokeArgumentAction$<$ index, Params $>$@{testing::internal::InvokeArgumentAction$<$ index, Params $>$}}
+
+
+{\ttfamily \+\#include $<$gmock-\/more-\/actions.\+h$>$}
+
+
+
+Collaboration diagram for testing::\+internal::\+Invoke\+Argument\+Action\texorpdfstring{$<$}{<} index, Params \texorpdfstring{$>$}{>}:\+
+% FIG 0
+\doxysubsubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args, typename = typename std::\+enable\+\_\+if$<$(index $<$ sizeof...(\+Args))$>$::\+type$>$ }\\auto \doxymbox{\hyperlink{structtesting_1_1internal_1_1_invoke_argument_action_aee7d9f321e8f614bd2d6a80b3231f0f3}{operator()}} (Args \&\&...args) const -\/$>$ decltype(\doxymbox{\hyperlink{namespacetesting_1_1internal_a1adfdd72431682ee2ce6ed1b8b751c6d}{internal::\+\+Invoke\+Argument}}(std::\+get$<$ index $>$(std::\+forward\+\_\+as\+\_\+tuple(std::\+forward$<$ Args $>$(args)...)), std::\+declval$<$ const Params \& $>$()...))
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classtesting_1_1internal_1_1_flat_tuple}{internal::\+\+Flat\+Tuple}}$<$ Params... $>$ \doxymbox{\hyperlink{structtesting_1_1internal_1_1_invoke_argument_action_a7f5d847630b6bfc6474da4d174b30bd3}{params}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{structtesting_1_1internal_1_1_invoke_argument_action_doc-func-members}
+\doxysubsubsection{Member Function Documentation}
+\Hypertarget{structtesting_1_1internal_1_1_invoke_argument_action_aee7d9f321e8f614bd2d6a80b3231f0f3}\index{testing::internal::InvokeArgumentAction$<$ index, Params $>$@{testing::internal::InvokeArgumentAction$<$ index, Params $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!testing::internal::InvokeArgumentAction$<$ index, Params $>$@{testing::internal::InvokeArgumentAction$<$ index, Params $>$}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{structtesting_1_1internal_1_1_invoke_argument_action_aee7d9f321e8f614bd2d6a80b3231f0f3} 
+template$<$std::\+size\+\_\+t index, typename... Params$>$ \\
+template$<$typename... Args, typename = typename std::\+enable\+\_\+if$<$(index $<$ sizeof...(\+Args))$>$::\+type$>$ \\
+auto \doxymbox{\hyperlink{structtesting_1_1internal_1_1_invoke_argument_action}{testing::\+internal::\+\+Invoke\+Argument\+Action}}$<$ index, Params $>$::\+operator() (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption}) const -\/$>$ decltype(\doxymbox{\hyperlink{namespacetesting_1_1internal_a1adfdd72431682ee2ce6ed1b8b751c6d}{internal::\+\+Invoke\+Argument}}( std::\+get$<$ index $>$(std::\+forward\+\_\+as\+\_\+tuple(std::\+forward$<$ Args $>$(args)...)), std::\+declval$<$ const Params \& $>$()...))\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structtesting_1_1internal_1_1_invoke_argument_action_doc-variable-members}
+\doxysubsubsection{Member Data Documentation}
+\Hypertarget{structtesting_1_1internal_1_1_invoke_argument_action_a7f5d847630b6bfc6474da4d174b30bd3}\index{testing::internal::InvokeArgumentAction$<$ index, Params $>$@{testing::internal::InvokeArgumentAction$<$ index, Params $>$}!params@{params}}
+\index{params@{params}!testing::internal::InvokeArgumentAction$<$ index, Params $>$@{testing::internal::InvokeArgumentAction$<$ index, Params $>$}}
+\doxyparagraph{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily \label{structtesting_1_1internal_1_1_invoke_argument_action_a7f5d847630b6bfc6474da4d174b30bd3} 
+template$<$std::\+size\+\_\+t index, typename... Params$>$ \\
+\doxymbox{\hyperlink{classtesting_1_1internal_1_1_flat_tuple}{internal::\+\+Flat\+Tuple}}$<$Params...$>$ \doxymbox{\hyperlink{structtesting_1_1internal_1_1_invoke_argument_action}{testing::\+internal::\+\+Invoke\+Argument\+Action}}$<$ index, Params $>$::\+params}
+

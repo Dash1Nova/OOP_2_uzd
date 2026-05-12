@@ -1,0 +1,797 @@
+\doxysection{build\+\_\+test/\+\+\_\+deps/\+googletest-\/src/\+googlemock/\+test/\+gmock\+\_\+link\+\_\+test.h File Reference}
+\hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h}{}\label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h}\index{build\_test/\_deps/googletest-\/src/googlemock/test/gmock\_link\_test.h@{build\_test/\_deps/googletest-\/src/googlemock/test/gmock\_link\_test.h}}
+{\ttfamily \+\#include "{}gmock/\+gmock.\+h"{}}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}gtest/\+gtest.\+h"{}}\newline
+{\ttfamily \+\#include "{}gtest/\+internal/\+gtest-\/port.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_interface}{Interface}}
+\item 
+class \doxymbox{\hyperlink{class_mock}{Mock}}
+\item 
+class \doxymbox{\hyperlink{class_invoke_helper}{Invoke\+Helper}}
+\item 
+class \doxymbox{\hyperlink{class_field_helper}{Field\+Helper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Return\+Void)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Return)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Return\+Null)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Return\+Ref)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Assign)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Set\+Arg\+Pointee)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Set\+Array\+Argument)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Set\+Errno\+And\+Return)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Invoke)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Invoke\+Without\+Args)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Invoke\+Argument)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a443d44d009c84175febff2fc677517b4}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+With\+Arg)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+With\+Args)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Without\+Args)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Do\+All)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Do\+Default)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Ignore\+Result)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Action\+Macro)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Action\+PMacro)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Action\+P2\+Macro)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Anything)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+MatcherA)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matchers\+Eq)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matchers\+Relations)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Not\+Null)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Is\+Null)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Ref)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Typed\+Eq)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matchers\+Floating\+Point)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a77a83a48b183a392eddae15de6162950}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Contains\+Regex)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Matches\+Regex)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e620555ef048587252b680112dca0a1}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matchers\+Substrings)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matchers\+String\+Equality)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Elements\+Are)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Elements\+Are\+Array)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af8960bb8270f5b279a8f7b41d3b045b5}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Is\+Subset\+Of)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac35b16985b69c6aee820e850a90a3a92}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Is\+Superset\+Of)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Container\+Eq)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Field)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Property)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Result\+Of)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Pointee)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Truly)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+All\+Of)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Any\+Of)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Not)
+\item 
+\doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996}{TEST}} (\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}, Test\+Matcher\+Cast)
+\item 
+{\footnotesize template$<$typename T1, typename T2$>$ }\\Polymorphic\+Action$<$ internal::\+\+Assign\+Action$<$ T1, T2 $>$ $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a630f14770743960d9d1b7c71cfd9034c}{Assign}} (T1 \texorpdfstring{$\ast$}{*}ptr, T2 val)
+\item 
+{\footnotesize template$<$typename \doxymbox{\hyperlink{class_action}{Action}}$>$ }\\std::\+decay$<$ \doxymbox{\hyperlink{class_action}{Action}} $>$::\+type \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae074784806eb494db69cf3de6f804d14}{Do\+All}} (\doxymbox{\hyperlink{class_action}{Action}} \&\&action)
+\item 
+internal::\+\+Do\+Default\+Action \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae041df61ff61ccb9753ba15b4309e1a6}{Do\+Default}} ()
+\item 
+{\footnotesize template$<$typename A$>$ }\\internal::\+\+Ignore\+Result\+Action$<$ A $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a257c9395b54e9267a0348a6310128889}{Ignore\+Result}} (const A \&an\+\_\+action)
+\item 
+{\footnotesize template$<$class Class, typename Method\+Ptr$>$ }\\internal::\+\+Invoke\+Method\+Action$<$ Class, Method\+Ptr $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af6a7c9befa6ff00198434995586151c3}{Invoke}} (Class \texorpdfstring{$\ast$}{*}obj\+\_\+ptr, Method\+Ptr method\+\_\+ptr)
+\item 
+{\footnotesize template$<$std::\+size\+\_\+t index, typename... Params$>$ }\\internal::\+\+Invoke\+Argument\+Action$<$ index, typename std::\+decay$<$ Params $>$::\+type... $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8d650b3e74191f6e3ce3f5f6b7156158}{Invoke\+Argument}} (Params \&\&...params)
+\item 
+{\footnotesize template$<$typename Function\+Impl$>$ }\\internal::\+\+Invoke\+Without\+Args\+Action$<$ typename std::\+decay$<$ Function\+Impl $>$::\+type $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aabc08d610483908c8346f2e3318ad449}{Invoke\+Without\+Args}} (Function\+Impl function\+\_\+impl)
+\item 
+{\footnotesize template$<$typename R$>$ }\\internal::\+\+Return\+Action$<$ R $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adae3994eb444d1ad2dd602454b854663}{Return}} (R value)
+\item 
+Polymorphic\+Action$<$ internal::\+\+Return\+Null\+Action $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af05e07c0484961f2a30ba44d1d1816fe}{Return\+Null}} ()
+\item 
+{\footnotesize template$<$typename R$>$ }\\internal::\+\+Return\+Ref\+Action$<$ R $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac17089d5ca6377944d3792fbdc5c5d9b}{Return\+Ref}} (R \&x)
+\item 
+{\footnotesize template$<$size\+\_\+t N, typename T$>$ }\\internal::\+\+Set\+Argument\+Pointee\+Action$<$ N, T $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6e0d2e2c84a1fc7477fcb84be09d5560}{Set\+Arg\+Pointee}} (T value)
+\item 
+{\footnotesize template$<$size\+\_\+t k, typename I1, typename I2$>$ }\\internal::\+\+Set\+Array\+Argument\+Action$<$ k, I1, I2 $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a7c63dd6a2f46c354608d99ba35e761}{Set\+Array\+Argument}} (I1 first, I2 last)
+\item 
+{\footnotesize template$<$size\+\_\+t k, typename Inner\+Action$>$ }\\internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type, k $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ab27beef02a13e44e0448b9c50e763e0b}{With\+Arg}} (Inner\+Action \&\&action)
+\item 
+{\footnotesize template$<$size\+\_\+t k, size\+\_\+t... ks, typename Inner\+Action$>$ }\\internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type, k, ks... $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4b8dc8233e7b92226ffe51e0d0040604}{With\+Args}} (Inner\+Action \&\&action)
+\item 
+{\footnotesize template$<$typename Inner\+Action$>$ }\\internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e5b756e6cf3ebf3abfdc1c913eb6376}{Without\+Args}} (Inner\+Action \&\&action)
+\item 
+{\footnotesize template$<$typename T$>$ }\\Polymorphic\+Action$<$ internal::\+\+Set\+Errno\+And\+Return\+Action$<$ T $>$ $>$ \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6f466024040fa05349773514ce1c6647}{Set\+Errno\+And\+Return}} (int errval, T result)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a630f14770743960d9d1b7c71cfd9034c}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!Assign@{Assign}}
+\index{Assign@{Assign}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{Assign()}{Assign()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a630f14770743960d9d1b7c71cfd9034c} 
+template$<$typename T1, typename T2$>$ \\
+Polymorphic\+Action$<$ internal::\+\+Assign\+Action$<$ T1, T2 $>$ $>$ \doxymbox{\hyperlink{namespacetesting_a630f14770743960d9d1b7c71cfd9034c}{testing::\+\+Assign}} (\begin{DoxyParamCaption}\item[{T1 \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{T2}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02035}{2035}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae074784806eb494db69cf3de6f804d14}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!DoAll@{DoAll}}
+\index{DoAll@{DoAll}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{DoAll()}{DoAll()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae074784806eb494db69cf3de6f804d14} 
+template$<$typename \doxymbox{\hyperlink{class_action}{Action}}$>$ \\
+std::\+decay$<$ \doxymbox{\hyperlink{class_action}{Action}} $>$::\+type \doxymbox{\hyperlink{namespacetesting_ae074784806eb494db69cf3de6f804d14}{testing::\+\+Do\+All}} (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_action}{Action}} \&\&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01885}{1885}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae041df61ff61ccb9753ba15b4309e1a6}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!DoDefault@{DoDefault}}
+\index{DoDefault@{DoDefault}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{DoDefault()}{DoDefault()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ae041df61ff61ccb9753ba15b4309e1a6} 
+internal::\+\+Do\+Default\+Action \doxymbox{\hyperlink{namespacetesting_ae041df61ff61ccb9753ba15b4309e1a6}{testing::\+\+Do\+Default}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02016}{2016}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a257c9395b54e9267a0348a6310128889}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!IgnoreResult@{IgnoreResult}}
+\index{IgnoreResult@{IgnoreResult}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{IgnoreResult()}{IgnoreResult()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a257c9395b54e9267a0348a6310128889} 
+template$<$typename A$>$ \\
+internal::\+\+Ignore\+Result\+Action$<$ A $>$ \doxymbox{\hyperlink{namespacetesting_a257c9395b54e9267a0348a6310128889}{testing::\+\+Ignore\+Result}} (\begin{DoxyParamCaption}\item[{const A \&}]{an\+\_\+action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02090}{2090}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af6a7c9befa6ff00198434995586151c3}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af6a7c9befa6ff00198434995586151c3} 
+template$<$class Class, typename Method\+Ptr$>$ \\
+internal::\+\+Invoke\+Method\+Action$<$ Class, Method\+Ptr $>$ \doxymbox{\hyperlink{namespacetesting_af6a7c9befa6ff00198434995586151c3}{testing::\+\+Invoke}} (\begin{DoxyParamCaption}\item[{Class \texorpdfstring{$\ast$}{*}}]{obj\+\_\+ptr}{, }\item[{Method\+Ptr}]{method\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02066}{2066}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8d650b3e74191f6e3ce3f5f6b7156158}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!InvokeArgument@{InvokeArgument}}
+\index{InvokeArgument@{InvokeArgument}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{InvokeArgument()}{InvokeArgument()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8d650b3e74191f6e3ce3f5f6b7156158} 
+template$<$std::\+size\+\_\+t index, typename... Params$>$ \\
+internal::\+\+Invoke\+Argument\+Action$<$ index, typename std::\+decay$<$ Params $>$::\+type... $>$ \doxymbox{\hyperlink{namespacetesting_a8d650b3e74191f6e3ce3f5f6b7156158}{testing::\+\+Invoke\+Argument}} (\begin{DoxyParamCaption}\item[{Params \&\&...}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-more-actions_8h_source_l00650}{650}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-more-actions_8h_source}{gmock-\/more-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aabc08d610483908c8346f2e3318ad449}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!InvokeWithoutArgs@{InvokeWithoutArgs}}
+\index{InvokeWithoutArgs@{InvokeWithoutArgs}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{InvokeWithoutArgs()}{InvokeWithoutArgs()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aabc08d610483908c8346f2e3318ad449} 
+template$<$typename Function\+Impl$>$ \\
+internal::\+\+Invoke\+Without\+Args\+Action$<$ typename std::\+decay$<$ Function\+Impl $>$::\+type $>$ \doxymbox{\hyperlink{namespacetesting_aabc08d610483908c8346f2e3318ad449}{testing::\+\+Invoke\+Without\+Args}} (\begin{DoxyParamCaption}\item[{Function\+Impl}]{function\+\_\+impl}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02074}{2074}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adae3994eb444d1ad2dd602454b854663}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!Return@{Return}}
+\index{Return@{Return}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{Return()}{Return()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adae3994eb444d1ad2dd602454b854663} 
+template$<$typename R$>$ \\
+internal::\+\+Return\+Action$<$ R $>$ \doxymbox{\hyperlink{namespacetesting_adae3994eb444d1ad2dd602454b854663}{testing::\+\+Return}} (\begin{DoxyParamCaption}\item[{R}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01955}{1955}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af05e07c0484961f2a30ba44d1d1816fe}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!ReturnNull@{ReturnNull}}
+\index{ReturnNull@{ReturnNull}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{ReturnNull()}{ReturnNull()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af05e07c0484961f2a30ba44d1d1816fe} 
+Polymorphic\+Action$<$ internal::\+\+Return\+Null\+Action $>$ \doxymbox{\hyperlink{namespacetesting_af05e07c0484961f2a30ba44d1d1816fe}{testing::\+\+Return\+Null}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01960}{1960}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac17089d5ca6377944d3792fbdc5c5d9b}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!ReturnRef@{ReturnRef}}
+\index{ReturnRef@{ReturnRef}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{ReturnRef()}{ReturnRef()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac17089d5ca6377944d3792fbdc5c5d9b} 
+template$<$typename R$>$ \\
+internal::\+\+Return\+Ref\+Action$<$ R $>$ \doxymbox{\hyperlink{namespacetesting_ac17089d5ca6377944d3792fbdc5c5d9b}{testing::\+\+Return\+Ref}} (\begin{DoxyParamCaption}\item[{R \&}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01971}{1971}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6e0d2e2c84a1fc7477fcb84be09d5560}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!SetArgPointee@{SetArgPointee}}
+\index{SetArgPointee@{SetArgPointee}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{SetArgPointee()}{SetArgPointee()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6e0d2e2c84a1fc7477fcb84be09d5560} 
+template$<$size\+\_\+t N, typename T$>$ \\
+internal::\+\+Set\+Argument\+Pointee\+Action$<$ N, T $>$ \doxymbox{\hyperlink{namespacetesting_a6e0d2e2c84a1fc7477fcb84be09d5560}{testing::\+\+Set\+Arg\+Pointee}} (\begin{DoxyParamCaption}\item[{T}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02023}{2023}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a7c63dd6a2f46c354608d99ba35e761}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!SetArrayArgument@{SetArrayArgument}}
+\index{SetArrayArgument@{SetArrayArgument}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{SetArrayArgument()}{SetArrayArgument()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a7c63dd6a2f46c354608d99ba35e761} 
+template$<$size\+\_\+t k, typename I1, typename I2$>$ \\
+internal::\+\+Set\+Array\+Argument\+Action$<$ k, I1, I2 $>$ \doxymbox{\hyperlink{namespacetesting_a2a7c63dd6a2f46c354608d99ba35e761}{testing::\+\+Set\+Array\+Argument}} (\begin{DoxyParamCaption}\item[{I1}]{first}{, }\item[{I2}]{last}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02159}{2159}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6f466024040fa05349773514ce1c6647}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!SetErrnoAndReturn@{SetErrnoAndReturn}}
+\index{SetErrnoAndReturn@{SetErrnoAndReturn}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{SetErrnoAndReturn()}{SetErrnoAndReturn()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a6f466024040fa05349773514ce1c6647} 
+template$<$typename T$>$ \\
+Polymorphic\+Action$<$ internal::\+\+Set\+Errno\+And\+Return\+Action$<$ T $>$ $>$ \doxymbox{\hyperlink{namespacetesting_a6f466024040fa05349773514ce1c6647}{testing::\+\+Set\+Errno\+And\+Return}} (\begin{DoxyParamCaption}\item[{int}]{errval}{, }\item[{T}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l02043}{2043}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Action\+Macro}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00442}{442}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Action\+P2\+Macro}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00470}{470}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Action\+PMacro}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00454}{454}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Assign}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00282}{282}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Do\+All}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00385}{385}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Do\+Default}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00395}{395}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Ignore\+Result}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00405}{405}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Invoke}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00325}{325}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Invoke\+Argument}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00350}{350}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Invoke\+Without\+Args}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00337}{337}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+MatcherA}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00487}{487}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+All\+Of}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00670}{670}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Any\+Of}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00676}{676}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Anything}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00480}{480}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Cast}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00688}{688}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Container\+Eq}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00620}{620}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a77a83a48b183a392eddae15de6162950}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a77a83a48b183a392eddae15de6162950} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Contains\+Regex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00557}{557}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Elements\+Are}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00589}{589}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Elements\+Are\+Array}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00596}{596}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Field}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00628}{628}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Is\+Null}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00521}{521}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af8960bb8270f5b279a8f7b41d3b045b5}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_af8960bb8270f5b279a8f7b41d3b045b5} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Is\+Subset\+Of}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00604}{604}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac35b16985b69c6aee820e850a90a3a92}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac35b16985b69c6aee820e850a90a3a92} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Is\+Superset\+Of}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00612}{612}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Matches\+Regex}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00564}{564}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Not}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00682}{682}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Not\+Null}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00514}{514}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Pointee}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00656}{656}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Property}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00639}{639}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [29/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Ref}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00528}{528}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [30/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Result\+Of}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00650}{650}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [31/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matchers\+Eq}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00494}{494}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [32/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matchers\+Floating\+Point}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00545}{545}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [33/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matchers\+Relations}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00503}{503}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [34/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matchers\+String\+Equality}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00580}{580}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e620555ef048587252b680112dca0a1}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [35/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e620555ef048587252b680112dca0a1} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matchers\+Substrings}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00571}{571}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [36/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Truly}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00664}{664}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [37/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Matcher\+Typed\+Eq}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00536}{536}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [38/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Return}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00256}{256}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [39/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Return\+Null}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00265}{265}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [40/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Return\+Ref}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00273}{273}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [41/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Return\+Void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00248}{248}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [42/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Set\+Arg\+Pointee}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00291}{291}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [43/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Set\+Array\+Argument}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00300}{300}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [44/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Set\+Errno\+And\+Return}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00313}{313}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a443d44d009c84175febff2fc677517b4}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [45/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a443d44d009c84175febff2fc677517b4} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+With\+Arg}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00359}{359}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [46/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+With\+Args}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00368}{368}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [47/47]}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771} 
+TEST (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2test_2gmock__link2__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}}}]{}{, }\item[{Test\+Without\+Args}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source_l00377}{377}} of file \doxymbox{\hyperlink{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_source}{gmock\+\_\+link\+\_\+test.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ab27beef02a13e44e0448b9c50e763e0b}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!WithArg@{WithArg}}
+\index{WithArg@{WithArg}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{WithArg()}{WithArg()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_ab27beef02a13e44e0448b9c50e763e0b} 
+template$<$size\+\_\+t k, typename Inner\+Action$>$ \\
+internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type, k $>$ \doxymbox{\hyperlink{namespacetesting_ab27beef02a13e44e0448b9c50e763e0b}{testing::\+\+With\+Arg}} (\begin{DoxyParamCaption}\item[{Inner\+Action \&\&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01905}{1905}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4b8dc8233e7b92226ffe51e0d0040604}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!WithArgs@{WithArgs}}
+\index{WithArgs@{WithArgs}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{WithArgs()}{WithArgs()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a4b8dc8233e7b92226ffe51e0d0040604} 
+template$<$size\+\_\+t k, size\+\_\+t... ks, typename Inner\+Action$>$ \\
+internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type, k, ks... $>$ \doxymbox{\hyperlink{namespacetesting_a4b8dc8233e7b92226ffe51e0d0040604}{testing::\+\+With\+Args}} (\begin{DoxyParamCaption}\item[{Inner\+Action \&\&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01916}{1916}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
+\Hypertarget{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e5b756e6cf3ebf3abfdc1c913eb6376}\index{gmock\_link\_test.h@{gmock\_link\_test.h}!WithoutArgs@{WithoutArgs}}
+\index{WithoutArgs@{WithoutArgs}!gmock\_link\_test.h@{gmock\_link\_test.h}}
+\doxysubsubsection{\texorpdfstring{WithoutArgs()}{WithoutArgs()}}
+{\footnotesize\ttfamily \label{test_2__deps_2googletest-src_2googlemock_2test_2gmock__link__test_8h_a0e5b756e6cf3ebf3abfdc1c913eb6376} 
+template$<$typename Inner\+Action$>$ \\
+internal::\+\+With\+Args\+Action$<$ typename std::\+decay$<$ Inner\+Action $>$::\+type $>$ \doxymbox{\hyperlink{namespacetesting_a0e5b756e6cf3ebf3abfdc1c913eb6376}{testing::\+\+Without\+Args}} (\begin{DoxyParamCaption}\item[{Inner\+Action \&\&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source_l01925}{1925}} of file \doxymbox{\hyperlink{__deps_2googletest-src_2googlemock_2include_2gmock_2gmock-actions_8h_source}{gmock-\/actions.\+h}}.
+
