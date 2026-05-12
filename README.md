@@ -330,19 +330,35 @@ Buvo palygintas std::vector ir realizuoto Vector konteinerių atminties perskirs
 Išvados: Tiek std::vector, tiek realizuotas Vector konteineriai atliko vienodą skaičių atminties perskirstymų visais testuotais dydžiais.
 std::vector visais atvejais veikė šiek tiek greičiau nei realizuotas Vector.
 
+std::vector ir sukurto konteinerio Vector spartos palyginimas:
+
+| Failo dydis    | std::vector      | Vector          |
+|----------------|------------------|-----------------|
+| 100 000        | 0.25475 s        | 0.350412 s      |
+| 1 000 000      | 2.64173 s        | 3.7302 s        |
+| 10 000 000     | 29.3114 s        | 61.2496 s       |
+
+Rezultatų analizė: Atlikus std::vector ir Vector realizacijos spartos palyginimą, matyti tendencija, kad visais testuotais atvejais std::vector yra greitesnis.
+Skirtumas tampa ypač ryškus didėjant duomenų kiekiui: esant 100 000 įrašų, skirtumas dar nedidelis, tačiau prie 10 000 000 įrašų Vector jau yra daugiau nei 
+dvigubai lėtesnis. Tai rodo, kad standartinė bibliotekos realizacija yra stipriai optimizuota (atminties valdymas, kopijavimas, alokacijų strategijos), 
+o rankiniu būdu sukurta Vector versija, nors funkcionaliai teisinga, spartos atžvilgiu jai neprilygsta. std::vector yra efektyvesnis pasirinkimas dideliems 
+duomenų kiekiams.
+
 ## Naudojimosi instrukcija
 
 Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.10). Atidarykite terminalą ir nueikite į projekto katalogą. 
 
 **Programos paruošimas naudojimuisi:** (šituos žingsnius reikia daryti tik pirmą kartą leidžiant programą)
-1. Sukurkite programos direktoriją terminale įrašydami: mkdir build
-2. Pereikite į sukurtą aplankalą terminale įrašydami komandą: cd build
-3. Paruoškite programą kompiliavimui su komanda: cmake ..
-4. Sukompiliuokite projektą: cmake --build . (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite
-   projektą))
+1. Paruoškite programą kompiliavimui: cmake -S . -B build
+2. Suompiliuokite programą (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite
+   projektą)): cmake --build build --config Release
+(jei kažką pakeitėte kode, prieš paleisdami programą būtinai ištrinkite pagrindiniame programos kataloge aplankalą build ir pakartokite visas komandas iš naujo)
 
 **Programos paleidimas:**
 
-Norėdami paleisti programą, terminale įveskite komandą: output\Debug\programa.exe
+Norėdami paleisti programą, terminale įveskite komandą: build\output\Release\programa.exe
 
-Norėdami paleisti testus, terminale įveskite komandą: build\Debug\testai.exe
+Norėdami paleisti testus, terminale įveskite komandą (pasirinktinai vieną iš trijų, priklausomai nuo to, kurį testą norite paleisti): 
+• build\Release\student_tests.exe
+• build\Release\vector_tests.exe
+• build\Release\benchmark_tests.exe
