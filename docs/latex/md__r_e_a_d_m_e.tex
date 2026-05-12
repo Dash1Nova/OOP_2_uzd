@@ -1,0 +1,265 @@
+\chapter{Aprašymas }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Aprašymas@{Aprašymas}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Ši programa skaičiuoja studentų galutinius pažymius pagal suvestus ranka arba sugeneruotus namų darbų pažymius bei egzamino įvertinimus.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Release v.\+pradinė}{Release v.\+pradinė}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Sukurtas pagrindinis programos funkcionalumas:\+ programa leidžia įvesti studentų vardus, pavardes, namų darbų rezultatus ir egzamino balą. Galutinis balas skaičiuojamas pagal namų darbų vidurkį arba medianą (vartotojas gali pasirinkti). Rezultatai pateikiami dviejų skaičių po kablelio tikslumu. Vieno studento duomenys saugomi struktūroje.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Release v0.\+1}{Release v0.\+1}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Programa papildyta ir veikia su nežinomu studentų ir namų darbų skaičiumi prieš įvedimą. Yra dvi versijos:\+ viena realizuota su C masyvais, kita -\/ su std::\+vector. Pridėta galimybė atsitiktinai generuoti namų darbų ir egzamino įvertinimus. Sukurtas meniu skirtingiems programos vykdymo variantams:\+ galima įvesti viską ranka, generuoti tik pažymius, generuoti studentų vardus, pavardes ir pažymius, baigti darbą.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Release v0.\+2}{Release v0.\+2}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Programa papildyta, kad vartotojas galėtų nuskaityti studentų duomenis iš failo (tik std::\+vector versija). Programa leidžia pasirinkti duomenų rūšiavimo būdą:\+ pagal vardą, pavardę arba galutinį pažymį (vidurkį arba medianą). Išvedimas galimas tiek terminale, tiek faile, išvestis išlygiuota.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Release v0.\+3}{Release v0.\+3}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Funkcijų deklaracijos ir structūra perkelti į atskirus antraštinius (\texorpdfstring{$\ast$}{*}.h) failus. Programa padalinta į kelis \texorpdfstring{$\ast$}{*}.cpp failus pagal funkcionalumą, kad būtų lengviau peržiūrėti ir pildyti kodą. Pridėtas klaidų gaudymo metodas (Eception Handling):\+ gaudomos failų atidarymo klaidos, tikrinama įvestis, kad vartotojas negalėtų įvesti neleistinų reikšmių, visi pranešimai išvedami lietuvių kalba.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Release v0.\+4}{Release v0.\+4}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Sukurta funkcija, kuri generuoja studentų failus pagal nurodytą įrašų skaičių. Vardai ir pavardės generuojami šabloniškai. Studentai su galutiniu balu \texorpdfstring{$<$}{<} 5.\+0 perkeliami į failą „vargšiukai“, studentai su galutiniu balu \texorpdfstring{$>$}{>}= 5.\+0 perkeliami į failą „kietiakai“. Buvo atlikti du tyrimai:\+ buvo matuojama, kiek užtrunka sugeneruoti failą su nurodytu įrašų skaičiumi bei matuojamas duomenų apdorojimos laikas:\+ failo nuskaitymas, studentų rūšiavimas į dvi grupes, išvedimas į failus, bendras programos vykdymo laikas. Tyrimų rezultatai užfiksuoti ir pateikti lentelėse \doxylink{_r_e_a_d_m_e_8md}{README.\+md} faile v0.\+4 šakoje su komentarais.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Release v1.\+0-\/initial}{Release v1.\+0-\/initial}}\label{md__r_e_a_d_m_e_autotoc_md6}
+Po v0.\+4 versijos programos pritaikymo naudojimui su 3 skirtingų tipų konteineriais (vector, list, deque), buvo atliktas papildomas programos veikimo spartos tyrimas, kuriuo buvo siekiama įvertinti, kaip keičiasi programos našumas naudojant skirtingus C++ standartinės bibliotekos konteinerius. Kadangi failų kūrimo bei rezultatų išvedimo į failus sparta nepriklauso nuo naudojamo kontenerio tipo, šio tyrimo metu buvo matuojamas tik šių dalių įvykdymo sparta:\+ duomenų nuskaitymas iš failo į pasirinktą konteinerį, studentų rūšiavimas didėjimo tvarka konteneryje, studentų skirstymas į dvi grupes. Tyrimo patikimumui visi testai buvo atliekami su tais pačiais failais 5 skirtingų dydžių:\+ 1000, 10000, 100000, 1000000 ir 10000000 įrašų apimties.
+
+Lentelėse pateikiamas bendras šių trijų operacijų vykdymo laikas.\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Testavimo sistemos parametrai:\+}{Testavimo sistemos parametrai:\+}}\label{md__r_e_a_d_m_e_autotoc_md7}
+• CPU:\+ AMD Ryzen 7 7730U with Radeon Graphics; ~\newline
+ • RAM:\+ 16 GB DDR4; ~\newline
+ • Diskas:\+ SSD 512 GB.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{Laiko matavimų lentelė}{Laiko matavimų lentelė}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su vector (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su list (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su deque (s)  \\
+1 000  &0.\+0133683  &0.\+0245043  &0.\+013581  \\
+10 000  &0.\+1332899  &0.\+2441353  &0.\+1357364  \\
+100 000  &1.\+316732  &2.\+518383  &1.\+357291  \\
+1 000 000  &12.\+47667  &26.\+27343  &18.\+68001  \\
+10 000 000  &120.\+9164  &263.\+7273  &181.\+5412  \\
+\end{DoxyTable}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{Pakartotinų matavimų lentelė}{Pakartotinų matavimų lentelė}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su vector (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su list (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su deque (s)  \\
+1 000  &0.\+0133868  &0.\+0225857  &0.\+013564  \\
+10 000  &0.\+1343509  &0.\+2437381  &0.\+1339266  \\
+100 000  &1.\+314891  &2.\+419675  &1.\+338495  \\
+1 000 000  &12.\+59094  &26.\+27369  &18.\+69661  \\
+10 000 000  &121.\+0477  &263.\+9848  &182.\+5063  \\
+\end{DoxyTable}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{Laiko matavimų vidurkis}{Laiko matavimų vidurkis}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su vector (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su list (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Programa su deque (s)  \\
+1 000  &0.\+01337755  &0.\+024545  &0.\+0135725  \\
+10 000  &0.\+1338204  &0.\+2439367  &0.\+1348315  \\
+100 000  &1.\+3158115  &2.\+5160365  &1.\+347893  \\
+1 000 000  &12.\+533805  &26.\+27356  &18.\+68831  \\
+10 000 000  &120.\+98205  &263.\+85605  &181.\+42375  \\
+\end{DoxyTable}
+
+
+Pagal laiko matavimų rezultatus matosi, jog sparčiausiai programa veikė su std::\+vector tipo konteineriais, o lėčiausiai su std::\+list, nors teoriškai sparčiausias turėjo būti std::\+vector, o lėčiausias std::\+list. Taip nutinka dėl konteinerių skirtingos atminties panaudojimo. std::\+vector naudoja vientisą atmintį, std::\+deque -\/ blokinę atmintį, o std::\+list elementai pasiekiami per rodykles.\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{Release v1.\+0}{Release v1.\+0}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Po pradinio relese išleidimo buvo padarytas programos optimizavimas 3 skirtingomis strategijomis su fiksuotu konteneriu -\/ std::\+vector. Lentelėje pateikiami matavimų vidurkiai.\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{\texorpdfstring{1 strategija (pateikiamas kelių testų laikų vidurkis)}{1 strategija (pateikiamas kelių testų laikų vidurkis)}}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+list  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+deque  \\
+1 000  &0.\+0130354  &0.\+0223829  &0.\+0139401  \\
+10 000  &0.\+1240486  &0.\+2324099  &0.\+1570868  \\
+100 000  &1.\+28094  &2.\+332449  &1.\+538205  \\
+1 000 000  &12.\+72145  &26.\+55926  &18.\+5782  \\
+10 000 000  &120.\+6255  &261.\+365  &180.\+152  \\
+\end{DoxyTable}
+
+
+std::\+vector yra greičiausias, nes naudoja vientisą atmintį ir pasižymi geriausia cache lokalizacija, std::\+deque -\/ šiek tiek lėtesnis dėl segmentuotos atminties, std::\+list -\/ lėčiausias, nes elementai saugomi per rodykles, o tai blogina cache panaudojimą.\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{\texorpdfstring{2 strategija (pateikiamas kelių testų laikų vidurkis)}{2 strategija (pateikiamas kelių testų laikų vidurkis)}}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+list  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+deque  \\
+1 000  &0.\+0371157  &0.\+0032958  &0.\+0209625  \\
+10 000  &3.\+45011  &0.\+0320269  &2.\+27534  \\
+100 000  &385.\+784  &0.\+344122  &174.\+784  \\
+1 000 000  &\texorpdfstring{$>$}{>} 1 h (nebaigta)  &3.\+73521  &\texorpdfstring{$>$}{>} 1 h (nebaigta)  \\
+10 000 000  &\texorpdfstring{$>$}{>} 1 h (nebaigta)  &32.\+9376  &\texorpdfstring{$>$}{>} 1 h (nebaigta)  \\
+\end{DoxyTable}
+
+
+Testavimas su std:\+:\+ vector ir std::\+deque dideliems failams (1 000 000 ir 10 000 000 įrašų) nebuvo pilnai užbaigtas dėl labai ilgo vykdymo laiko (virš 1 valandos). Tai rodo, kad ši strategija su šiuo konteineriu yra neefektyvi dideliems duomenų kiekiams.
+
+Galima pastebėti, kad su std::\+list 2 strategija veikia greičiausiai, o pats lečiausias yra std::\+vector. std::\+list konteineryje elementų šalinimas vykdomas O(1) sudėtingumu, nes pakanka pakeisti rodykles į gretimus elementus, nereikia perkelti likusių duomenų. Tuo tarpu std::\+vector konteineryje erase operacija yra O(n), nes po kiekvieno pašalinimo visi sekantys elementai turi būti perstumti atmintyje. Kadangi šioje strategijoje šalinimo operacija atliekama daug kartų, bendras veikimo laikas stipriai išauga, ypač dirbant su dideliais duomenų kiekiais. std::\+deque konteineris šiuo atveju pasirodo geriau nei std::\+vector, tačiau vis tiek ženkliai atsilieka nuo std::\+list. Taip yra todėl, kad skirtingai nei std::\+vector, kuris naudoja vientisą atminties bloką, std::\+deque yra sudarytas iš kelių mažesnių atminties blokų (segmentų), sujungtų per indeksavimo mechanizmą, kas šiek tiek paspartina elementų perstumimą, lyginant su std::\+vector.\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{3 strategija (pateikiamas kelių testų laikų vidurkis)}{3 strategija (pateikiamas kelių testų laikų vidurkis)}}\label{md__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+list  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+deque  \\
+1 000  &0.\+0025987  &0.\+0034226  &0.\+0046571  \\
+10 000  &0.\+0255509  &0.\+0374303  &0.\+0391001  \\
+100 000  &0.\+276189  &0.\+351151  &0.\+55269  \\
+1 000 000  &3.\+0776  &4.\+90309  &3.\+80778  \\
+10 000 000  &33.\+412  &43.\+9702  &33.\+0299  \\
+\end{DoxyTable}
+
+
+3 strategijoje naudojamas efektyvus STL algoritmas, kuris leidžia išvengti brangių šalinimo (erase) operacijų ir sumažinti kopijavimo kiekį. Elementai yra swap\textquotesingle{}inami tame pačiame konteineryje. std::\+vector čia buvo greičiausias, nes turi nuoseklią atmintį, std::\+deque naudoja segmentuotą atmintį, o partition metu vyksta daug perrikiavimų tarp segmentų, todėl blogiau panaudojamas cache.
+
+Bendra išvada:\+
+
+3 strategija yra efektyviausia, nes ji išvengia brangių šalinimo operacijų ir sumažina kopijavimo kiekį, naudodama optimizuotus STL algoritmus. Tuo tarpu 2 strategija tampa neefektyvi dėl dažnų erase operacijų, o 1 strategija, nors ir paprasta, reikalauja papildomo kopijavimo ir atminties.
+
+Nuotraukos, kad tyrimai įvyko:\+
+
+  \hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{\texorpdfstring{Versija 1.\+1.}{Versija 1.\+1.}}\label{md__r_e_a_d_m_e_autotoc_md15}
+Buvo ištirta programos veikimo sparta su dviem skirtingomis realizacijomis:\+ struktūra \doxylink{class_student}{Student} ir klase \doxylink{class_student}{Student}. Testavimui buvo naudojami dviejų skirtingų dydžių failai -\/ 1 000 000 ir 10 000 000 įrašų. Tyrimas buvo daromas su trimis skirtingo optimizavimo lygio vėliavėlėmis (-\/O1, -\/O2, -\/O3). Tokių būdu buvo dar patikrinta, kokios įtakos jie turi programos vykdymo spartai. Tyrimo rezultatai pateikti lentelėje.\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{\texorpdfstring{Laiko matavimų lentelė (pateikiamas kelių testų laikų vidurkis)}{Laiko matavimų lentelė (pateikiamas kelių testų laikų vidurkis)}}\label{md__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyTable}{5}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Versija  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}O1 (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}O2 (s)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}O3 (s)  \\
+Struktūra  &1 000 000  &1.\+39518  &1.\+14231  &1.\+41373  \\
+Struktūra  &10 000 000  &13.\+0076  &12.\+2371  &13.\+4431  \\
+Klasė  &1 000 000  &1.\+30656  &1.\+28801  &1.\+30197  \\
+Klasė  &10 000 000  &13.\+7888  &13.\+4625  &13.\+4954  \\
+\end{DoxyTable}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysection{\texorpdfstring{exe failų dydžių lentelė}{exe failų dydžių lentelė}}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Versija  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}exe failo dydis su O1 (KB)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}exe failo dydis su O2 (KB)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}exe failo dydis su O3 (KB)  \\
+Struktūra  &459  &431  &429  \\
+Klasė  &459  &431  &438  \\
+\end{DoxyTable}
+
+
+Išvada:\+ Teoriškai -\/O3 optimizacija turėjo būti sparčiausia visais atvejais, tačiau praktiškai -\/O2 optimizavimas buvo sparčiausias, tiek su struktūra, tiek su klase abiejų failų dydžių atveju, o -\/O3 optimizacija net pablogina veikimą. Tarp struktūros ir klasės pagal vykdymo greitį skirtumų beveik nėra. -\/O3 gali turėti labai daug instrukcijų, kurios netelpa į L1 cache atmintį, tad CPU tenka laukti instrukcijų iš šiek tiek lėtesnių L2/\+\+L3, dėl to optimizacija gali būti neefektyvi. Todėl efektyviausia optimizacija dažnai gali būti su -\/O2 vėliavėle.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{\texorpdfstring{Versija 1.\+2.}{Versija 1.\+2.}}\label{md__r_e_a_d_m_e_autotoc_md18}
+Ši programa skirta studentų duomenų valdymui. Programos \doxylink{class_student}{Student} klasė saugo studento vardą, pavardę, namų darbų pažymius, egzamino pažymius bei apskaičiuoja galutinį įvertinimą pagal medianą ir vidurkį.\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysection{\texorpdfstring{Student klasės struktūra}{Student klasės struktūra}}\label{md__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+name\+\_\+  &std::\+string  &Vardas  \\
+surname\+\_\+  &std::\+string  &Pavardė  \\
+nd\+\_\+  &std::\+vector$<$int$>$  &Namų darbų balai  \\
+egz\+\_\+  &int  &Egzamino balas  \\
+final\+Avg\+\_\+  &double  &Galutinis pagal vidurkį  \\
+final\+Med\+\_\+  &double  &Galutinis pagal medianą  \\
+\end{DoxyTable}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{\texorpdfstring{Išvesties ir įvesties operatorių perdengimas}{Išvesties ir įvesties operatorių perdengimas}}\label{md__r_e_a_d_m_e_autotoc_md20}
+Klasės objektų naudojimosi patogumui buvo perdengti įvedimo ir išvedimo operatoriai.
+
+Įvestis vykdoma per {\ttfamily std::\+istream}, todėl įvesties operatorius veikia su:\+
+\begin{DoxyEnumerate}
+\item rankiniu įvedimu ({\ttfamily cin})
+\item automatiniu įvedimu ({\ttfamily stringstream})
+\item įvedimu iš failo ({\ttfamily ifstream})
+\end{DoxyEnumerate}
+
+Išvestis vykdoma per std::\+ostream, todėl išvesties operatorius gali būti naudojamas:\+
+\begin{DoxyEnumerate}
+\item išvedimui į ekraną ({\ttfamily cout})
+\item išvedimui į failą ({\ttfamily ofstream})
+\end{DoxyEnumerate}
+
+Programa taip pat turi rankinius testus, kurie tikrina:\+
+\begin{DoxyItemize}
+\item konstruktorius
+\item kopijavimą
+\item move semantiką
+\item destruktorių
+\item getter\textquotesingle{}ius ir setter\textquotesingle{}ius
+\item įvesties ir išvesties operatorius
+\item skaičiavimo tikslumą
+\end{DoxyItemize}
+
+Fotografijos:\+
+
+  \hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysection{\texorpdfstring{Versija 1.\+5.}{Versija 1.\+5.}}\label{md__r_e_a_d_m_e_autotoc_md21}
+Taip pat vėliau buvo pridėta abstrakti klasė \doxylink{class_person}{Person}. \doxylink{class_person}{Person} klasė turi čiuos kintamuosius:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+name\+\_\+  &std::\+string  &Vardas  \\
+surname\+\_\+  &std::\+string  &Pavardė  \\
+\end{DoxyTable}
+
+
+Tada \doxylink{class_student}{Student} klasėje lieka tik šie keturi kintamieji:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Kintamasis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Aprašymas  \\
+nd\+\_\+  &std::\+vector$<$int$>$  &Namų darbų balai  \\
+egz\+\_\+  &int  &Egzamino balas  \\
+final\+Avg\+\_\+  &double  &Galutinis pagal vidurkį  \\
+final\+Med\+\_\+  &double  &Galutinis pagal medianą  \\
+\end{DoxyTable}
+
+
+Kadangi ši klasė yra abstrakti, negalima sukurti šios klasės objektų. Tai pagrindžia šios klasės testas, kuris bando sukurti \doxylink{class_person}{Person} objektą, tačiau tuo atveju testavimų failas nesikompiliuoja.
+
+Fototgrafijos, įrodančios, kad taip tikrai yra:\+
+
+ 
+
+Programa išliko veiksni po 1.\+2 versijos logikos įgyvendinimo:\+
+
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysection{\texorpdfstring{Versija 2.\+0.}{Versija 2.\+0.}}\label{md__r_e_a_d_m_e_autotoc_md22}
+Šioje projekto versijoje su Doxygen įrankiu buvo parengta dokumentacija HTML formatu ir PDF formatu per La\+Tex, kuri aprašo projekte sukurtą klasę. Taip pat buvo realizuoti automatiniai unit testai programos klasės copy konstruktoriui, copy priskirimo operatoriui, move konstruktoriui, move priskirimo operatoriui, getteriams, setteriams, skaičiavimo logikai, polimorfizmui, išvedimo ir įvedimo operatoriams su failais. Projektui buvo sudarytas diegimo failas CMake\+Lists.\+txt, kuris atskirai generuoja paleidimo failus pačiai programai ir unit testams.
+
+Visi Google unit testai (jų iš viso yra 12) buvo įvykdyti sėkmingai:\+
+
+
+
+Klasė ir visi Rule of Five komponentai veikia teisingai, failų I/\+O ir skaičiavimų logika taip pat yra teisinga.\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysection{\texorpdfstring{Versija 3.\+0.}{Versija 3.\+0.}}\label{md__r_e_a_d_m_e_autotoc_md23}
+Vektoriaus funkcijų pavyzdžių aprašymai:\+
+\begin{DoxyEnumerate}
+\item push\+\_\+back() Prideda naują elementą į vector pabaigą. Jei dabartinė talpa (capacity) yra pilna, automatiškai išskiriama nauja atmintis ir talpa padidinama (dvigubinama). Pvz.:\+ \doxylink{class_vector}{Vector$<$int$>$} v; v.\+push\+\_\+back(1); v.\+push\+\_\+back(2);
+\item erase() Pašalina elementą pagal indeksą. Visi elementai po pašalinto elemento yra perstumiami į kairę. Operacijos sudėtingumas yra O(n), nes reikia perkopijuoti likusius elementus. Pvz.:\+ \doxylink{class_vector}{Vector$<$int$>$} v; v.\+push\+\_\+back(1); v.\+push\+\_\+back(2); v.\+push\+\_\+back(3);
+
+v.\+erase(1);
+\item resize() Pakeičia vector dydį. Jei naujas dydis didesnis, pridedami nauji elementai su default reikšme. Jei mažesnis – pertekliniai elementai pašalinami. Pvz.:\+ \doxylink{class_vector}{Vector$<$int$>$} v; v.\+push\+\_\+back(1); v.\+resize(5);
+\item operator\+[]\+ Leidžia tiesiogiai pasiekti elementą pagal indeksą be ribų tikrinimo. Greita, bet nesaugu operacija (gali sukelti undefined behavior jei indeksas neteisingas). Pvz.:\+ \doxylink{class_vector}{Vector$<$int$>$} v; v.\+push\+\_\+back(10); v\+[0]\+ = 100;
+\item at() Veikia kaip operator\+[]\+, bet su papildomu vektoriaus ribų tikrinimu. Jei elemento indeksas yra už ribų, išvedama std::\+out\+\_\+of\+\_\+range žinutė. Pvz.:\+ \doxylink{class_vector}{Vector$<$int$>$} v; v.\+push\+\_\+back(10); int x = v.\+at(0);
+\end{DoxyEnumerate}
+
+std::\+vector ir \doxylink{class_vector}{Vector} spartos palyginimas Benchmark atliktas naudojant $<$chrono$>$ biblioteka. ~\newline
+ Matuotas push\+\_\+back() operacijos laikas, užpildant tuščius vektorius. ~\newline
+ Kiekvienas testas vykdytas atskirai, naudojant naujus (tuščius) vektorius. Kompiliuojama buvo su -\/O2 vėliavėle.
+
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Elementų skaičius  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector (ms)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{class_vector}{Vector} (ms)  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Skirtumas (ms)  \\
+10 000  &0  &0  &0  \\
+100 000  &0  &0  &0  \\
+1 000 000  &2  &2  &0  \\
+10 000 000  &29  &44  &15  \\
+100 000 000  &351  &461  &110  \\
+\end{DoxyTable}
+
+
+Rezultatų analizė:\+ std::\+vector yra žymiai greitesnis už sukurtą \doxylink{class_vector}{Vector} konteinerį. std::\+vector yra optimizuotas STL konteineris, kuris naudoja efektyvų atminties valdymą ir mažina reallocations skaičių. Sukurtas \doxylink{class_vector}{Vector} naudoja paprastą new/\+delete ir rankinį kopijavimą, todėl yra lėtesnis. Didėjant elementų skaičiui, skirtumas tampa ryškesnis dėl dažnesnių atminties perskirstymų.
+
+
+
+Realokacijų skaičiaus analizė:\+ Buvo palygintas std::\+vector ir realizuoto \doxylink{class_vector}{Vector} konteinerių atminties perskirstymų skaičius užpildant konteinerius 10000, 100000, 1000000, 10000000, 100000000 elementų. Atminties perskirstymas buvo laikomas įvykusiu tada, kai konteinerio capacity() reikšmė pasikeisdavo po push\+\_\+back() operacijos.
+
+
+\begin{DoxyTable}{5}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Elementų skaičius  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector laikas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector perskirstymai  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{class_vector}{Vector} laikas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{class_vector}{Vector} perskirstymai  \\
+10 000  &0 ms  &15  &0 ms  &15  \\
+100 000  &0 ms  &18  &0 ms  &18  \\
+1 000 000  &2 ms  &21  &2 ms  &21  \\
+10 000 000  &40 ms  &25  &49 ms  &25  \\
+100 000 000  &380 ms  &28  &422 ms  &28  \\
+\end{DoxyTable}
+
+
+Išvados:\+ Tiek std::\+vector, tiek realizuotas \doxylink{class_vector}{Vector} konteineriai atliko vienodą skaičių atminties perskirstymų visais testuotais dydžiais. std::\+vector visais atvejais veikė šiek tiek greičiau nei realizuotas \doxylink{class_vector}{Vector}.
+
+std::\+vector ir sukurto konteinerio \doxylink{class_vector}{Vector} spartos palyginimas:\+
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Failo dydis  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}std::\+vector  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}\doxylink{class_vector}{Vector}  \\
+100 000  &0.\+25475 s  &0.\+350412 s  \\
+1 000 000  &2.\+64173 s  &3.\+7302 s  \\
+10 000 000  &29.\+3114 s  &61.\+2496 s  \\
+\end{DoxyTable}
+
+
+Rezultatų analizė:\+ Atlikus std::\+vector ir \doxylink{class_vector}{Vector} realizacijos spartos palyginimą, matyti tendencija, kad visais testuotais atvejais std::\+vector yra greitesnis. Skirtumas tampa ypač ryškus didėjant duomenų kiekiui:\+ esant 100 000 įrašų, skirtumas dar nedidelis, tačiau prie 10 000 000 įrašų \doxylink{class_vector}{Vector} jau yra daugiau nei dvigubai lėtesnis. Tai rodo, kad standartinė bibliotekos realizacija yra stipriai optimizuota (atminties valdymas, kopijavimas, alokacijų strategijos), o rankiniu būdu sukurta \doxylink{class_vector}{Vector} versija, nors funkcionaliai teisinga, spartos atžvilgiu jai neprilygsta. std::\+vector yra efektyvesnis pasirinkimas dideliems duomenų kiekiams.\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysection{\texorpdfstring{Naudojimosi instrukcija}{Naudojimosi instrukcija}}\label{md__r_e_a_d_m_e_autotoc_md24}
+Įsitikinkite, kad turite įdiegtą CMake (minimali rekomenduojama versija yra 3.\+10). Atidarykite terminalą ir nueikite į projekto katalogą.
+
+{\bfseries{Programos paruošimas naudojimuisi:\+}} (šituos žingsnius reikia daryti tik pirmą kartą leidžiant programą)
+\begin{DoxyEnumerate}
+\item Paruoškite programą kompiliavimui:\+ cmake -\/S . -\/B build
+\item Suompiliuokite programą (jei kažką pakeotėte savo kode, prieš paleisdami programą būtinai pakartokite šią komandą (perkompiliuokite projektą)):\+ cmake --build build --config Release (jei kažką pakeitėte kode, prieš paleisdami programą būtinai ištrinkite pagrindiniame programos kataloge aplankalą build ir pakartokite visas komandas iš naujo)
+\end{DoxyEnumerate}
+
+{\bfseries{Programos paleidimas:\+}}
+
+Norėdami paleisti programą, terminale įveskite komandą:\+ build\textbackslash{}output\textbackslash{}\+Release\textbackslash{}programa.\+exe
+
+Norėdami paleisti testus, terminale įveskite komandą (pasirinktinai vieną iš trijų, priklausomai nuo to, kurį testą norite paleisti):\+ • build\textbackslash{}\+Release\textbackslash{}student\+\_\+tests.\+exe • build\textbackslash{}\+Release\textbackslash{}vector\+\_\+tests.\+exe • build\textbackslash{}\+Release\textbackslash{}benchmark\+\_\+tests.\+exe 
