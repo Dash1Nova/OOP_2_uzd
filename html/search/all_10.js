@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['joinaskeyvaluetuple_0',['JoinAsKeyValueTuple',['../namespacetesting_1_1internal.html#ac75a9353286d1b50c872ea2b195f3b4a',1,'testing::internal']]],
-  ['joiner_1',['JOINER',['../__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a417889002d582097e444f103350c05cb',1,'JOINER:&#160;gmock-pp-string_test.cc'],['../test_2__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a417889002d582097e444f103350c05cb',1,'JOINER:&#160;gmock-pp-string_test.cc'],['../wtests_2__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a417889002d582097e444f103350c05cb',1,'JOINER:&#160;gmock-pp-string_test.cc']]],
-  ['joiner_5fcat_2',['JOINER_CAT',['../__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a061e03ac22467881369813e8d73ddf61',1,'JOINER_CAT:&#160;gmock-pp-string_test.cc'],['../test_2__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a061e03ac22467881369813e8d73ddf61',1,'JOINER_CAT:&#160;gmock-pp-string_test.cc'],['../wtests_2__deps_2googletest-src_2googlemock_2test_2gmock-pp-string__test_8cc.html#a061e03ac22467881369813e8d73ddf61',1,'JOINER_CAT:&#160;gmock-pp-string_test.cc']]],
-  ['json_20report_3',['JSON Report',['../md_build_2__deps_2googletest-src_2docs_2advanced.html#autotoc_md77',1,'Generating a JSON Report'],['../md_build__test_2__deps_2googletest-src_2docs_2advanced.html#autotoc_md497',1,'Generating a JSON Report'],['../md_build__wtests_2__deps_2googletest-src_2docs_2advanced.html#autotoc_md917',1,'Generating a JSON Report']]]
-];
