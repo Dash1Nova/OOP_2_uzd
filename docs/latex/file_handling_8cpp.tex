@@ -3,6 +3,7 @@
 {\ttfamily \+\#include "{}file\+Handling.\+h"{}}\newline
 {\ttfamily \+\#include "{}calculations.\+h"{}}\newline
 {\ttfamily \+\#include "{}input\+Valid.\+h"{}}\newline
+{\ttfamily \+\#include "{}vector.\+h"{}}\newline
 {\ttfamily \+\#include $<$fstream$>$}\newline
 {\ttfamily \+\#include $<$sstream$>$}\newline
 {\ttfamily \+\#include $<$iostream$>$}\newline
@@ -28,6 +29,8 @@ template bool \doxymbox{\hyperlink{file_handling_8cpp_a7dbc9aa6f03a2ee45a8b46abc
 template bool \doxymbox{\hyperlink{file_handling_8cpp_acd2767983257307a1e262e710e4ee199}{read\+File$<$ std::\+list$<$ Student $>$ $>$}} (const std::\+string \&, std::\+list$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
 \item 
 template bool \doxymbox{\hyperlink{file_handling_8cpp_abcaa042a2af00b8cc514e6de33ee5f9b}{read\+File$<$ std::\+deque$<$ Student $>$ $>$}} (const std::\+string \&, std::\+deque$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
+\item 
+template bool \doxymbox{\hyperlink{file_handling_8cpp_ab866b9d83a6758cd09b2cc5c33fdb276}{read\+File$<$ Vector$<$ Student $>$ $>$}} (const std::\+string \&, \doxymbox{\hyperlink{class_vector}{Vector}}$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&)
 \end{DoxyCompactItemize}
 
 
@@ -40,10 +43,6 @@ template bool \doxymbox{\hyperlink{file_handling_8cpp_abcaa042a2af00b8cc514e6de3
 {\footnotesize\ttfamily \label{file_handling_8cpp_abd98d4e6a0351b31b6b7294e3acc7438} 
 template$<$typename Container$>$ \\
 bool create\+File (\begin{DoxyParamCaption}\item[{const Container \&}]{Students}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
-
-
-
-Definition at line \doxymbox{\hyperlink{file_handling_8cpp_source_l00013}{13}} of file \doxymbox{\hyperlink{file_handling_8cpp_source}{file\+Handling.\+cpp}}.
 
 \Hypertarget{file_handling_8cpp_ad4f42232033cf8afa9185496496b7148}\index{fileHandling.cpp@{fileHandling.cpp}!createFile$<$ std::deque$<$ Student $>$ $>$@{createFile$<$ std::deque$<$ Student $>$ $>$}}
 \index{createFile$<$ std::deque$<$ Student $>$ $>$@{createFile$<$ std::deque$<$ Student $>$ $>$}!fileHandling.cpp@{fileHandling.cpp}}
@@ -70,10 +69,6 @@ template bool \doxymbox{\hyperlink{file_handling_8cpp_abd98d4e6a0351b31b6b7294e3
 template$<$typename Container$>$ \\
 bool read\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{, }\item[{Container \&}]{Students}{}\end{DoxyParamCaption})}
 
-
-
-Definition at line \doxymbox{\hyperlink{file_handling_8cpp_source_l00050}{50}} of file \doxymbox{\hyperlink{file_handling_8cpp_source}{file\+Handling.\+cpp}}.
-
 \Hypertarget{file_handling_8cpp_abcaa042a2af00b8cc514e6de33ee5f9b}\index{fileHandling.cpp@{fileHandling.cpp}!readFile$<$ std::deque$<$ Student $>$ $>$@{readFile$<$ std::deque$<$ Student $>$ $>$}}
 \index{readFile$<$ std::deque$<$ Student $>$ $>$@{readFile$<$ std::deque$<$ Student $>$ $>$}!fileHandling.cpp@{fileHandling.cpp}}
 \doxysubsubsection{\texorpdfstring{readFile$<$ std::deque$<$ Student $>$ $>$()}{readFile< std::deque< Student > >()}}
@@ -91,4 +86,10 @@ template bool \doxymbox{\hyperlink{file_handling_8cpp_af8f71673900e8a607a597a387
 \doxysubsubsection{\texorpdfstring{readFile$<$ std::vector$<$ Student $>$ $>$()}{readFile< std::vector< Student > >()}}
 {\footnotesize\ttfamily \label{file_handling_8cpp_a7dbc9aa6f03a2ee45a8b46abc75c3a05} 
 template bool \doxymbox{\hyperlink{file_handling_8cpp_af8f71673900e8a607a597a387679d2e0}{read\+File}}$<$ std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{}{, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{file_handling_8cpp_ab866b9d83a6758cd09b2cc5c33fdb276}\index{fileHandling.cpp@{fileHandling.cpp}!readFile$<$ Vector$<$ Student $>$ $>$@{readFile$<$ Vector$<$ Student $>$ $>$}}
+\index{readFile$<$ Vector$<$ Student $>$ $>$@{readFile$<$ Vector$<$ Student $>$ $>$}!fileHandling.cpp@{fileHandling.cpp}}
+\doxysubsubsection{\texorpdfstring{readFile$<$ Vector$<$ Student $>$ $>$()}{readFile< Vector< Student > >()}}
+{\footnotesize\ttfamily \label{file_handling_8cpp_ab866b9d83a6758cd09b2cc5c33fdb276} 
+template bool \doxymbox{\hyperlink{file_handling_8cpp_af8f71673900e8a607a597a387679d2e0}{read\+File}}$<$ \doxymbox{\hyperlink{class_vector}{Vector}}$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ $>$ (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{}{, }\item[{\doxymbox{\hyperlink{class_vector}{Vector}}$<$ \doxymbox{\hyperlink{class_student}{Student}} $>$ \&}]{}{}\end{DoxyParamCaption})}
 
