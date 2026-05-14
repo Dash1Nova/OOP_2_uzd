@@ -24,6 +24,10 @@ add_executable(programa src/main.cpp)
 target_link_libraries(programa core)
 
 set_target_properties(programa PROPERTIES
+    LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator' uiAccess='false'\""
+)
+
+set_target_properties(programa PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output"
 )
 
@@ -74,16 +78,16 @@ set(CPACK_PACKAGE_FILE_NAME "setup")
 set(CPACK_GENERATOR "NSIS")
 
 set(CPACK_NSIS_INSTALL_ROOT "$PROGRAMFILES64")
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "VU\\\\Vardenis-Pavardenis")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "VU\\\\Darja-Ždanovič")
 
 set(CPACK_NSIS_REQUEST_EXECUTION_LEVEL admin)
 
 set(CPACK_NSIS_CREATE_ICONS_EXTRA
-    "CreateShortCut '$DESKTOP\\\\VU - Vardenis-Pavardenis.lnk' '$INSTDIR\\\\programa.exe'"
+    "CreateShortCut '$DESKTOP\\\\VU - Darja-Ždanovič.lnk' '$INSTDIR\\\\programa.exe'"
 )
 
 set(CPACK_NSIS_MENU_LINKS
-    "programa.exe" "VU\\\\Vardenis-Pavardenis"
+    "programa.exe" "VU\\\\Darja-Ždanovič"
 )
 
 include(CPack)
